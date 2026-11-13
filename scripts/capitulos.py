@@ -13,4 +13,5 @@ CAPITULOS = {
     4: {"nome": "Sapata e Lona Freio", "ini": 33, "fim": 39},
     5: {"nome": "Mola Freio e Rebite Lona", "ini": 40, "fim": 42},
     6: {"nome": "Anel Elástico, Rolete e Trava", "ini": 43, "fim": 47},
+    7: {"nome": "Anel Pista, Buchas e Eixos", "ini": 48, "fim": 56},
 }
