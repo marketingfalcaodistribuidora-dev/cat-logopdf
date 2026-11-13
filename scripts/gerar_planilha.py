@@ -111,7 +111,7 @@ def escrever(ws, regs, com_categoria=True):
 
 def main():
     caps = {}
-    for f in sorted(glob.glob(os.path.join(BASE, "dados", "cap*.json"))):
+    for f in sorted(glob.glob(os.path.join(BASE, "dados", "cap[0-9][0-9].json"))):
         regs = json.load(open(f, encoding="utf-8"))
         if regs:
             caps[regs[0]["cap_num"]] = regs
@@ -142,6 +142,16 @@ def main():
     resumo.append(["", "Ordenação: categoria → marca (montadora) → marca do produto → tipo → tamanho crescente."])
     resumo.append(["", "Fotos: pasta 'Fotos Catálogo 2026', um arquivo por produto, nomeado com a descrição e o código."])
     resumo.append(["", "Produtos repetidos no catálogo (mais de uma marca/categoria) aparecem em cada lugar onde constam."])
+    obs = wb.create_sheet("Observações")
+    obs.append(["Categoria", "Observação da leitura (cards sem código interno, repetições, marcas não visíveis etc.)"])
+    for c in obs[1]:
+        c.fill, c.font = HDR_FILL, HDR_FONT
+    obs.column_dimensions["A"].width = 32
+    obs.column_dimensions["B"].width = 150
+    for f in sorted(glob.glob(os.path.join(BASE, "dados", "cap[0-9][0-9]_notas.json"))):
+        d = json.load(open(f, encoding="utf-8"))
+        for nota in d["notas"]:
+            obs.append([f"{d['cap_num']:02d} {d['capitulo']}", nota])
     wb.save(SAIDA)
     print("planilha:", SAIDA, "linhas:", len(todos))
 

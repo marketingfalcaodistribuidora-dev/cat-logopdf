@@ -134,11 +134,11 @@ def tipo_auto(desc, tipos):
 def load_ajustes(n):
     path = os.path.join(BASE, "ajustes", f"cap{n:02d}.py")
     if not os.path.exists(path):
-        return {}, [], []
+        return {}, [], [], []
     spec = importlib.util.spec_from_file_location(f"aj{n}", path)
     mod = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(mod)
-    return getattr(mod, "AJ", {}), getattr(mod, "ADD", []), getattr(mod, "TIPOS", [])
+    return getattr(mod, "AJ", {}), getattr(mod, "ADD", []), getattr(mod, "TIPOS", []), getattr(mod, "NOTAS", [])
 
 
 def photo_spec(card):
@@ -186,6 +186,9 @@ def salvar_foto(doc, pno, spec, path):
                 img = bg
             if img.width > 1400 or img.height > 1400:
                 img.thumbnail((1400, 1400))
+            elif max(img.size) < 400 and min(img.size) >= 20:  # imagem muito pequena no PDF: amplia para uso
+                f = 400 / max(img.size)
+                img = img.resize((round(img.width * f), round(img.height * f)), Image.LANCZOS)
             if img.width >= 40 and img.height >= 40:
                 img.save(path, "JPEG", quality=88)
                 return
@@ -315,7 +318,7 @@ def main():
     n = int(sys.argv[1])
     cap = CAPITULOS[n]
     nome, p0, p1 = cap["nome"], cap["ini"], cap["fim"]
-    AJ, ADD, TIPOS = load_ajustes(n)
+    AJ, ADD, TIPOS, NOTAS = load_ajustes(n)
     doc = fitz.open(PDF)
     pasta = os.path.join(FOTOS_DIR, f"{n:02d} - {safe_name(nome)}")
     os.makedirs(pasta, exist_ok=True)
@@ -402,6 +405,8 @@ def main():
     os.makedirs(os.path.join(BASE, "dados"), exist_ok=True)
     with open(os.path.join(BASE, "dados", f"cap{n:02d}.json"), "w", encoding="utf-8") as f:
         json.dump(out, f, ensure_ascii=False, indent=1)
+    with open(os.path.join(BASE, "dados", f"cap{n:02d}_notas.json"), "w", encoding="utf-8") as f:
+        json.dump({"capitulo": nome, "cap_num": n, "notas": NOTAS}, f, ensure_ascii=False, indent=1)
     print(f"Capítulo {n} - {nome}: {len(out)} registros, {sum(1 for r in out if r['foto'])} com foto")
     for a in alertas:
         print("ALERTA", a)
