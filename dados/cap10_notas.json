@@ -1,0 +1,17 @@
+{
+ "capitulo": "Bolsas e Amortecedores Cabine",
+ "cap_num": 10,
+ "notas": [
+  "Cap. 10: as tabelas 'REFERÊNCIAS BINS' estão no PDF como imagens de ~120 px; campos de texto foram transcritos, números de referência só quando legíveis (marcados para conferência).",
+  "p85 cards 3, 6 e 9: cards só com logo (Volvo, Randon, Facchini).",
+  "p96 card 7: card só com o logo Scania.",
+  "p95 cards 4-6: espaços vazios.",
+  "p102: espaço vazio entre os cards ST337SF e ST297SF.",
+  "p99 card ST001SF: código interno não impresso; vinculado ao código 4990001 do índice Suspentech (p.88).",
+  "p110: o card lista ST045K antes de St045, mas os códigos seguem o índice da p.88 (4990045 = ST045 com base; 4990450 = ST045K sem base).",
+  "p109: o quadro do card ST307/ST307K repete o texto do ST016 (provável erro de diagramação do catálogo).",
+  "Págs. 114-116: cada card traz o código Continental/Firestone e as referências OEM; o código Continental/Firestone fica na descrição e as referências em Informações adicionais.",
+  "p121: as duas células superiores da página estão vazias no catálogo.",
+  "p117 e p122: páginas de capa (Jarflex / Filtro), sem produtos."
+ ]
+}

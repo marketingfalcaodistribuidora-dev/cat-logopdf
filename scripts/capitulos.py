@@ -16,4 +16,5 @@ CAPITULOS = {
     7: {"nome": "Anel Pista, Buchas e Eixos", "ini": 48, "fim": 56},
     8: {"nome": "Sistema de Roda", "ini": 57, "fim": 73},
     9: {"nome": "Retentores e Diafragmas", "ini": 74, "fim": 83},
+    10: {"nome": "Bolsas e Amortecedores Cabine", "ini": 84, "fim": 122},
 }

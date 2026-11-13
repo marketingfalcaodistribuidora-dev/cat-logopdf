@@ -131,6 +131,148 @@ def tipo_auto(desc, tipos):
     return w[0].upper() if w else ""
 
 
+_RAW_CACHE = {}
+
+
+def _raw(pno):
+    if pno not in _RAW_CACHE:
+        _RAW_CACHE[pno] = json.load(open(os.path.join(WORK, "raw", f"p{pno:03d}.json"), encoding="utf-8"))
+    return _RAW_CACHE[pno]
+
+
+def preencher_faixa(doc, r):
+    """Registro manual com 'faixa': [x0,y0,x1,y1] -> título (fonte grande), textos pequenos e maior imagem da faixa."""
+    x0, y0, x1, y1 = r.pop("faixa")
+    big = r.pop("fonte_titulo", 15.5)
+    spans = []
+    for c in _raw(r["pagina"])["cards"]:
+        for ln in c["lines"]:
+            for s in ln:
+                cx, cy = (s["x"] + s["x1"]) / 2, s["y"] + s["size"] / 2
+                if x0 <= cx <= x1 and y0 <= cy <= y1:
+                    spans.append(s)
+    spans.sort(key=lambda s: (round(s["y"] / 3), s["x"]))
+    titulo, pequenos = [], []
+    for s in spans:
+        t = s["t"].strip()
+        if s["red"] and CODE_RE.match(t.replace(" ", "")):
+            continue
+        (titulo if s["size"] >= big else pequenos).append(s)
+    if not r.get("descricao"):
+        r["descricao"] = norm_txt(" ".join(s["t"] for s in titulo))
+    # agrupa textos pequenos em linhas
+    linhas = []
+    for s in pequenos:
+        if linhas and abs(linhas[-1][0] - s["y"]) < max(2.5, s["size"] * 0.5):
+            linhas[-1][1].append(s["t"])
+        else:
+            linhas.append([s["y"], [s["t"]]])
+    textos = [norm_txt(" ".join(l[1])) for l in linhas]
+    ref, apl, info = [], [], []
+    for t in textos:
+        if re.match(r"^(C[óo]d\.?\s*Original|OEM|REF\.?\s*ORIG|Subst)", t, re.I):
+            ref.append(re.sub(r"^[^:]*:\s*", "", t))
+        elif re.match(r"^Aplica", t, re.I):
+            apl.append(re.sub(r"^[^:]*:\s*", "", t))
+        else:
+            info.append(t)
+    if ref and not r.get("cod_ref"):
+        r["cod_ref"] = " / ".join(ref)
+    if apl and not r.get("aplicacao"):
+        r["aplicacao"] = " / ".join(apl)
+    r["info"] = norm_txt(" | ".join(x for x in (" | ".join(info), r.get("info", "")) if x))
+    if "foto_spec" not in r:
+        best, area = None, 0
+        page = doc[r["pagina"] - 1]
+        for im in page.get_image_info(xrefs=True):
+            b = fitz.Rect(im["bbox"])
+            c = (b.tl + b.br) / 2
+            if x0 <= c.x <= x1 and y0 <= c.y <= y1 and b.width * b.height > area:
+                best, area = im, b.width * b.height
+        if best:
+            tf = best.get("transform") or [1, 0, 0, 1]
+            ok = best["xref"] > 0 and abs(tf[1]) < 1e-3 and abs(tf[2]) < 1e-3 and tf[0] > 0 and tf[3] > 0
+            r["foto_spec"] = {"xref": best["xref"], "rect": list(best["bbox"])} if ok else {"rect": list(best["bbox"])}
+    return r
+
+
+CAMPOS_TXT = ("tipo", "cod_ref", "variacoes", "aplicacao", "info", "montadora", "marca")
+
+
+def _riqueza(r):
+    s = sum(len(str(r.get(k) or "")) for k in CAMPOS_TXT + ("descricao",))
+    spec = r.get("foto_spec") or {}
+    return (1 if spec.get("xref") or spec.get("rect") else 0, s)
+
+
+def _junta(a, b, sep=" / "):
+    a, b = (a or "").strip(), (b or "").strip()
+    if not b or b in a:
+        return a
+    if not a or a in b:
+        return b
+    return a + sep + b
+
+
+def _junta_lista(a, b):
+    itens = [x.strip() for x in (a or "").split(",") if x.strip()]
+    for x in (b or "").split(","):
+        if x.strip() and x.strip() not in itens:
+            itens.append(x.strip())
+    return ", ".join(itens)
+
+
+def mesclar_repetidos(regs):
+    """O mesmo código interno repetido dentro do capítulo vira uma linha só (páginas e informações somadas)."""
+    grupos = {}
+    ordem = []
+    for r in regs:
+        k = r["codigo"]
+        if k not in grupos:
+            grupos[k] = []
+            ordem.append(k)
+        grupos[k].append(r)
+    out = []
+    for k in ordem:
+        g = grupos[k]
+        if len(g) == 1:
+            g[0]["pagina"] = str(g[0]["pagina"])
+            out.append(g[0])
+            continue
+        orig = max(g, key=_riqueza)
+        base = dict(orig)
+        paginas = []
+        for r in g:
+            if str(r["pagina"]) not in paginas:
+                paginas.append(str(r["pagina"]))
+        outras_desc = []
+        for r in g:
+            if r is orig:
+                continue
+            for f in CAMPOS_TXT:
+                if f in ("montadora", "marca"):
+                    base[f] = _junta_lista(base.get(f), r.get(f))
+                elif f == "tipo":
+                    base[f] = base.get(f) or r.get(f)
+                else:
+                    base[f] = _junta(base.get(f), r.get(f))
+            d = (r.get("descricao") or "").strip()
+            if d and d != base.get("descricao") and d not in outras_desc:
+                outras_desc.append(f"{d} (p.{r['pagina']})")
+        if outras_desc:
+            base["info"] = _junta(base.get("info"), "Também descrito no catálogo como: " + "; ".join(outras_desc), " | ")
+        base["pagina"] = ", ".join(paginas)
+        base["ordem"] = min(r["ordem"] for r in g)
+        if not base.get("foto_spec"):
+            for r in g:
+                if r.get("foto_spec"):
+                    base["foto_spec"] = r["foto_spec"]
+                    base["pagina_foto"] = r["pagina_foto"]
+                    break
+        out.append(base)
+    return out
+
+
 def load_ajustes(n):
     path = os.path.join(BASE, "ajustes", f"cap{n:02d}.py")
     if not os.path.exists(path):
@@ -311,6 +453,20 @@ def build_card(page, card):
         "_y": lines[li0][si0]["y"],
         "_x": lines[li0][si0]["x"],
     })
+    # card com mais de um código interno (ex.: versão com base / sem base): uma linha por código
+    if other_codes:
+        todos = [recs[0]["codigo"]] + other_codes
+        m = re.match(r"^\s*((?:[\w.\-]+\s*/\s*)+[\w.\-]+)\s+(.*)$", desc)
+        alts = [a.strip() for a in m.group(1).split("/")] if m else []
+        if len(alts) == len(todos):
+            recs[0]["descricao"] = norm_txt(alts[0] + " " + m.group(2))
+        nota = "Card com os códigos " + " / ".join(todos) + (f" ({' / '.join(alts)})" if len(alts) == len(todos) else "")
+        recs[0]["info"] = norm_txt(" | ".join(x for x in (recs[0]["info"], nota) if x))
+        for k, cod in enumerate(other_codes, 1):
+            d = dict(recs[0], codigo=cod)
+            if len(alts) == len(todos):
+                d["descricao"] = norm_txt(alts[k] + " " + m.group(2))
+            recs.append(d)
     return recs, lines
 
 
@@ -348,7 +504,7 @@ def main():
                 for k in ("cod_ref", "variacoes", "aplicacao", "info", "marca", "montadora"):
                     r.setdefault(k, "")
                 for k, v in aj.items():
-                    if k in ("skip", "records", "foto", "por_codigo"):
+                    if k in ("skip", "records", "foto", "por_codigo", "ref_oem"):
                         continue
                     if k.startswith("+"):  # acrescenta ao campo
                         f = k[1:]
@@ -357,6 +513,22 @@ def main():
                         r[k] = v
                 for k, v in aj.get("por_codigo", {}).get(r["codigo"], {}).items():
                     r[k] = v
+                if aj.get("ref_oem"):  # só trechos "OEM ..." ficam como referência; o resto vai para informações
+                    partes = [x.strip() for x in re.split(r"\s+/\s+|\s+\|\s+", " / ".join(
+                        x for x in (r.get("cod_ref"), r.get("info")) if x)) if x.strip()]
+                    oem, resto, em_oem = [], [], False
+                    for x in partes:
+                        if re.match(r"^OEM", x, re.I):
+                            oem.append(re.sub(r"^OEM[^:]*:\s*", "", x, flags=re.I))
+                            em_oem = True
+                        elif em_oem and ":" not in x and re.search(r"\d", x) and re.fullmatch(r"[A-Z0-9 .\-/]{3,30}", x):
+                            oem.append(x)
+                        else:
+                            em_oem = False
+                            if not re.match(r"^REFER[ÊE]NCIAS?:?$", x, re.I):
+                                resto.append(x)
+                    r["cod_ref"] = " / ".join(oem)
+                    r["info"] = " | ".join(resto)
                 r["capitulo"] = nome
                 r["cap_num"] = n
                 r["pagina"] = pno
@@ -366,6 +538,8 @@ def main():
                 out.append(r)
     for r in ADD:
         r = dict(r)
+        if "faixa" in r:
+            r = preencher_faixa(doc, r)
         for k in ("tipo", "cod_ref", "variacoes", "aplicacao", "info", "marca", "montadora"):
             r.setdefault(k, "")
         r.update(capitulo=nome, cap_num=n)
@@ -383,9 +557,14 @@ def main():
         r["cod_ref"] = limpar_ref(r.get("cod_ref"))
         r["aplicacao"] = limpar_apl(r.get("aplicacao"))
 
+    for r in out:
+        r["pagina_foto"] = r["pagina"]
+    out = mesclar_repetidos(out)
+
     # fotos
     nomes_usados = {}
     for r in out:
+        pag_foto = int(r.pop("pagina_foto"))
         if not r.get("foto_spec"):
             r["foto"] = ""
             r.pop("foto_spec", None)
@@ -398,7 +577,7 @@ def main():
         else:
             nomes_usados[k] = 1
         fn = base + ".jpg"
-        salvar_foto(doc, r["pagina"], r.pop("foto_spec"), os.path.join(pasta, fn))
+        salvar_foto(doc, pag_foto, r.pop("foto_spec"), os.path.join(pasta, fn))
         r["foto"] = os.path.relpath(os.path.join(pasta, fn), BASE).replace("\\", "/")
     # limpa campos auxiliares
     for r in out:

@@ -24,7 +24,7 @@ COLS = [
     ("Aplicação", 40, "aplicacao"),
     ("Informações adicionais", 50, "info"),
     ("Foto", 16, "foto"),
-    ("Página", 8, "pagina"),
+    ("Página(s)", 12, "pagina"),
 ]
 
 
@@ -129,7 +129,7 @@ def main():
         nome = regs[0]["capitulo"]
         ws = wb.create_sheet(aba_nome(n, nome, usados))
         escrever(ws, regs, com_categoria=False)
-        pags = [r["pagina"] for r in regs]
+        pags = [int(x) for r in regs for x in str(r["pagina"]).split(",")]
         resumo.append([n, nome, f"{min(pags)}–{max(pags)}", len(regs), len({r['codigo'] for r in regs}),
                        sum(1 for r in regs if r.get("foto")), ws.title])
     ws = wb.create_sheet("Todos os produtos", 1)
