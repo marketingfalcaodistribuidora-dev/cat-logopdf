@@ -390,7 +390,7 @@ def main():
             r["foto"] = ""
             r.pop("foto_spec", None)
             continue
-        base = safe_name(f"{r['descricao'] or r['tipo']} - {r['codigo']}")
+        base = safe_name(r["descricao"] or r["tipo"], 100) + " - " + safe_name(r["codigo"])
         k = base.lower()
         if k in nomes_usados:
             nomes_usados[k] += 1
