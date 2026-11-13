@@ -1,0 +1,10 @@
+# arquivos anteriores da pasta (não fazem parte deste trabalho)
+fotos/
+*.af
+*.af~lock~
+catalogo_produtos.csv
+lote_*.csv
+planilha_catalogo_12_produtos_corrigida.csv
+relatorio_geracao.txt
+__pycache__/
+~$*.xlsx
