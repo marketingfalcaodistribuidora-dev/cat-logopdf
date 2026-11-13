@@ -27,8 +27,12 @@ for p in range(cap["ini"], cap["fim"] + 1):
                     buf += s["t"].replace(" ", "")
                     continue
                 if len(buf) >= 5:
-                    pdf[buf] += 1
-                    onde.setdefault(buf, f"p{p}.{c['id']}")
+                    partes = [buf]
+                    if len(buf) > 12 and len(buf) % 7 == 0:  # códigos de 7 dígitos colados na mesma linha
+                        partes = [buf[i:i + 7] for i in range(0, len(buf), 7)]
+                    for b in partes:
+                        pdf[b] += 1
+                        onde.setdefault(b, f"p{p}.{c['id']}")
                 buf = ""
                 if s["red"]:
                     for m in re.findall(r"\b\d{6,12}\b", s["t"]):
