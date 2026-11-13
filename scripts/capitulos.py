@@ -11,4 +11,5 @@ CAPITULOS = {
     2: {"nome": "Cuícas, Catracas e Acessórios", "ini": 12, "fim": 19},
     3: {"nome": "Reparo Freio", "ini": 20, "fim": 32},
     4: {"nome": "Sapata e Lona Freio", "ini": 33, "fim": 39},
+    5: {"nome": "Mola Freio e Rebite Lona", "ini": 40, "fim": 42},
 }

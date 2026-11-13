@@ -134,11 +134,11 @@ def tipo_auto(desc, tipos):
 def load_ajustes(n):
     path = os.path.join(BASE, "ajustes", f"cap{n:02d}.py")
     if not os.path.exists(path):
-        return {}, [], [], []
+        return {}, [], [], [], set()
     spec = importlib.util.spec_from_file_location(f"aj{n}", path)
     mod = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(mod)
-    return getattr(mod, "AJ", {}), getattr(mod, "ADD", []), getattr(mod, "TIPOS", []), getattr(mod, "NOTAS", [])
+    return getattr(mod, "AJ", {}), getattr(mod, "ADD", []), getattr(mod, "TIPOS", []), getattr(mod, "NOTAS", []), set(getattr(mod, "MANUAIS", set()))
 
 
 def photo_spec(card):
@@ -318,7 +318,7 @@ def main():
     n = int(sys.argv[1])
     cap = CAPITULOS[n]
     nome, p0, p1 = cap["nome"], cap["ini"], cap["fim"]
-    AJ, ADD, TIPOS, NOTAS = load_ajustes(n)
+    AJ, ADD, TIPOS, NOTAS, MANUAIS = load_ajustes(n)
     doc = fitz.open(PDF)
     pasta = os.path.join(FOTOS_DIR, f"{n:02d} - {safe_name(nome)}")
     os.makedirs(pasta, exist_ok=True)
@@ -328,6 +328,8 @@ def main():
     out, alertas = [], []
     for pno in range(p0, p1 + 1):
         raw = json.load(open(os.path.join(WORK, "raw", f"p{pno:03d}.json"), encoding="utf-8"))
+        if pno in MANUAIS:  # página lida e registrada manualmente (ADD)
+            continue
         for card in raw["cards"]:
             key = f"{pno}.{card['id']}"
             aj = AJ.get(key, {})
