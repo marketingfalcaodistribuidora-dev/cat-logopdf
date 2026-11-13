@@ -23,9 +23,10 @@ from capitulos import CAPITULOS, PDF, WORK  # noqa: E402
 FOTOS_DIR = os.path.join(BASE, "Fotos Catálogo 2026")
 CODE_RE = re.compile(r"^\d{5,12}$")
 
-LBL_REF = re.compile(r"(REF|ORIG|C[ÓO]D|CODIGO|CÓDIGO|SUBST|OEM|N[º°]\s*ORIG)", re.I)
-LBL_SIM = re.compile(r"(SIMILAR|CONVERS|EQUIVAL|INTERCAMB|OUTRAS\s+REF)", re.I)
-LBL_APL = re.compile(r"(APLICA|COMPAT|VE[IÍ]CULO|MODELO)", re.I)
+_P = r"^[\s»•*\-–>]*"
+LBL_REF = re.compile(_P + r"(REF|REF\.|REFER|ORIG|C[ÓO]D|SUBST|OEM|N[º°]\s*ORIG)", re.I)
+LBL_SIM = re.compile(_P + r"(SIMILAR|C[ÓO]D(IGO)?\.?\s+SIMILAR|CONVERS|EQUIVAL|INTERCAMB|OUTRAS\s+REF)", re.I)
+LBL_APL = re.compile(_P + r"(APLICA|COMPAT|VE[IÍ]CULO)", re.I)
 
 
 def norm_txt(s):
@@ -181,8 +182,14 @@ def build_card(page, card):
         title = None
         titles_at = {}
         for li, l in enumerate(lines):
-            if li not in code_lines and max(s["size"] for s in l) >= rs * 1.35 and not all(s["red"] for s in l):
-                title = line_text([s for s in l if not s["red"]])
+            if li not in code_lines and max(s["size"] for s in l) >= rs * 1.35:
+                if all(s["red"] for s in l) and line_text(l).isupper() and not any(ch.isdigit() for ch in line_text(l)):
+                    title = line_text(l)
+                elif not all(s["red"] for s in l):
+                    title = line_text([s for s in l if not s["red"]])
+                else:
+                    titles_at[li] = title
+                    continue
                 used.add(li)
             titles_at[li] = title
         first_title = next((t for t in titles_at.values() if t), None)
