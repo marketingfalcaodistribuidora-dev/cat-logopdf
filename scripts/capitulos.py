@@ -7,4 +7,5 @@ WORK = os.environ.get("CATALOGO_WORK", r"C:\Users\compr\AppData\Local\Temp\claud
 CAPITULOS = {
     1: {"nome": "Importados", "ini": 4, "fim": 11},
     2: {"nome": "Cuícas, Catracas e Acessórios", "ini": 12, "fim": 19},
+    3: {"nome": "Reparo Freio", "ini": 20, "fim": 32},
 }

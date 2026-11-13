@@ -24,7 +24,7 @@ FOTOS_DIR = os.path.join(BASE, "Fotos Catálogo 2026")
 CODE_RE = re.compile(r"^\d{5,12}$")
 
 _P = r"^[\s»•*\-–>]*"
-LBL_REF = re.compile(_P + r"(REF|REF\.|REFER|ORIG|C[ÓO]D|SUBST|OEM|N[º°]\s*ORIG)", re.I)
+LBL_REF = re.compile(_P + r"(REF\b|REF\.|REFER|ORIG|C[ÓO]D|SUBST|OEM|N[º°]\s*ORIG|BALC)", re.I)
 LBL_SIM = re.compile(_P + r"(SIMILAR|C[ÓO]D(IGO)?\.?\s+SIMILAR|CONVERS|EQUIVAL|INTERCAMB|OUTRAS\s+REF)", re.I)
 LBL_APL = re.compile(_P + r"(APLICA|COMPAT|VE[IÍ]CULO)", re.I)
 
@@ -74,20 +74,71 @@ def classify_info(lines_txt):
             cur = apl
         elif LBL_REF.search(head):
             cur = ref
+            ref.append(t)
+            # "REF: 00973" já traz o valor: as linhas seguintes não são referência (salvo continuação com "/")
+            if re.search(r":\s*\S", t) and not t.rstrip().endswith("/"):
+                cur = None
+            continue
         elif cur is not None and (t.endswith(":") or len(t) > 60):
             cur = None
         (cur if cur is not None else info).append(t)
     return ref, sim, apl, info
 
 
+MONT_KW = [
+    (r"\bVOLVO\b", "Volvo"), (r"\bSCANIA\b|\bSC\b", "Scania"), (r"MERCEDES|\bMBB?\b|\bM\.?B\.?\b", "Mercedes-Benz"),
+    (r"\bVW\b|VOLKSWAGEN", "Volkswagen"), (r"\bFORD\b", "Ford"), (r"\bIVECO\b", "Iveco"), (r"\bDAF\b", "DAF"),
+    (r"\bMAN\b", "MAN"), (r"\bAGRALE\b", "Agrale"), (r"\bRANDON\b", "Randon"), (r"\bGUERRA\b", "Guerra"),
+    (r"\bFACCHINI\b", "Facchini"), (r"\bNOMA\b", "Noma"), (r"\bLIBRELATO\b", "Librelato"), (r"\bKRONE\b", "Krone"),
+]
+
+
+def montadora_texto(desc):
+    out = []
+    for pat, nome in MONT_KW:
+        if re.search(pat, desc or "", re.I) and nome not in out:
+            out.append(nome)
+    return ", ".join(out)
+
+
+_REF_LBL = re.compile(r"^\s*(Refer[êe]ncias?:?|REF\b\.?\s*(ORIGINAL|ORIG)?\b\.?\s*:?|C[ÓO]D(IGO)?\.?\s*(DE\s+F[ÁA]BRICA|ORIG(INAL)?)\.?\s*:?|Subst\.\s*o\s*c[óo]d\.\s*original:?|C[óo]digos?\s+originais:?|Original:?)\s*", re.I)
+
+
+def limpar_ref(t):
+    partes = [p.strip() for p in (t or "").split(" / ")]
+    out = []
+    for p in partes:
+        q = _REF_LBL.sub("", p).strip(" :/")
+        if q:
+            out.append(q)
+    return " / ".join(out)
+
+
+def limpar_apl(t):
+    t = re.sub(r"\s*/\s*-\s*", ", ", t or "")
+    t = re.sub(r"^\s*(Aplica[çc][ãa]o|Aplica[çc][õo]es|APLICA[ÇC][ÃA]O|Ve[íi]culos?)\s*:?\s*(/|,)?\s*", "", t, flags=re.I)
+    t = re.sub(r"(Ve[íi]culos?|Aplica[çc][ãa]o)\s*:\s*,", r"\1:", t, flags=re.I)
+    t = re.sub(r"\s+", " ", t).strip(" ,/")
+    return t
+
+
+def tipo_auto(desc, tipos):
+    d = desc or ""
+    for pat, t in tipos:
+        if re.search(pat, d, re.I):
+            return t
+    w = re.sub(r"^[\d\s\-–]+", "", d).split()
+    return w[0].upper() if w else ""
+
+
 def load_ajustes(n):
     path = os.path.join(BASE, "ajustes", f"cap{n:02d}.py")
     if not os.path.exists(path):
-        return {}, []
+        return {}, [], []
     spec = importlib.util.spec_from_file_location(f"aj{n}", path)
     mod = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(mod)
-    return getattr(mod, "AJ", {}), getattr(mod, "ADD", [])
+    return getattr(mod, "AJ", {}), getattr(mod, "ADD", []), getattr(mod, "TIPOS", [])
 
 
 def photo_spec(card):
@@ -264,7 +315,7 @@ def main():
     n = int(sys.argv[1])
     cap = CAPITULOS[n]
     nome, p0, p1 = cap["nome"], cap["ini"], cap["fim"]
-    AJ, ADD = load_ajustes(n)
+    AJ, ADD, TIPOS = load_ajustes(n)
     doc = fitz.open(PDF)
     pasta = os.path.join(FOTOS_DIR, f"{n:02d} - {safe_name(nome)}")
     os.makedirs(pasta, exist_ok=True)
@@ -315,6 +366,17 @@ def main():
         r.update(capitulo=nome, cap_num=n)
         r.setdefault("ordem", r["pagina"] * 1000 + r.get("card", 0) * 50 + 49)
         out.append(r)
+
+    # pós-processamento: tipo, montadora pelo texto, limpeza de rótulos
+    for r in out:
+        if r.pop("_manual", False):
+            pass
+        if not r.get("tipo"):
+            r["tipo"] = tipo_auto(r["descricao"], TIPOS)
+        if not r.get("montadora"):
+            r["montadora"] = montadora_texto(r["descricao"])
+        r["cod_ref"] = limpar_ref(r.get("cod_ref"))
+        r["aplicacao"] = limpar_apl(r.get("aplicacao"))
 
     # fotos
     nomes_usados = {}
