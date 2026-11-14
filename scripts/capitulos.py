@@ -21,4 +21,5 @@ CAPITULOS = {
     12: {"nome": "Sistema de Direção", "ini": 151, "fim": 157},
     13: {"nome": "Válvulas", "ini": 158, "fim": 171},
     14: {"nome": "Quinelato", "ini": 172, "fim": 182},
+    15: {"nome": "Mangueiras Valman", "ini": 183, "fim": 190},
 }
