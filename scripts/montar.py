@@ -169,13 +169,27 @@ def preencher_faixa(doc, r):
             linhas.append([s["y"], [s["t"]]])
     textos = [norm_txt(" ".join(l[1])) for l in linhas]
     ref, apl, info = [], [], []
+    sim = []
     for t in textos:
-        if re.match(r"^(C[óo]d\.?\s*Original|OEM|REF\.?\s*ORIG|Subst)", t, re.I):
+        if re.match(r"^(REF\.?\s*SIM|SIMILAR|C[óo]d\.?\s*Similar|REF\.?\s*LNG|LNG|Convers|Similares)", t, re.I):
+            sim.append(t)
+        elif re.match(r"^(C[óo]d\.?\s*Original|OEM|REF\.?\s*OR[IG]|REF\.?\s*PRIG|REF\.?\s*ORG|Subst|REF\s*:)", t, re.I):
             ref.append(re.sub(r"^[^:]*:\s*", "", t))
-        elif re.match(r"^Aplica", t, re.I):
-            apl.append(re.sub(r"^[^:]*:\s*", "", t))
+        elif re.match(r"^(Aplica|Compat[ií]vel)", t, re.I):
+            apl.append(re.sub(r"^Aplica[çc][ãa]o\s*:\s*", "", t, flags=re.I))
         else:
             info.append(t)
+    m_ref = re.search(r"\s+REF\.?\s*(ORIG|PRIG|ORG)?\.?\s*:\s*(\S.*)$", r.get("descricao") or "", re.I)
+    if m_ref:
+        ref.insert(0, m_ref.group(2))
+        r["descricao"] = r["descricao"][:m_ref.start()].strip()
+    lan = re.findall(r"LAN[ÇC]AMENTO(?:\s+\d{2}/\d{2,4})?", r.get("descricao") or "")
+    if lan:
+        r["descricao"] = norm_txt(re.sub(r"LAN[ÇC]AMENTO|\d{2}/20\d{2}|\d{2}/\d{2}(?=\s|$)", " ", r["descricao"]))
+        info.insert(0, "LANÇAMENTO" + (" " + re.search(r"\d{2}/\d{2,4}", " ".join(lan + [r.get("descricao", "")])).group(0)
+                                        if re.search(r"\d{2}/\d{2,4}", " ".join(lan)) else ""))
+    if sim and not r.get("variacoes"):
+        r["variacoes"] = " / ".join(sim)
     if ref and not r.get("cod_ref"):
         r["cod_ref"] = " / ".join(ref)
     if apl and not r.get("aplicacao"):
@@ -488,6 +502,36 @@ def agrupar_cards(regs, nao_agrupar):
     return out
 
 
+def gerar_grade(doc, pno, cfg):
+    """Página em grade (molduras sobrepostas): cfg = {"cells": [[x0,y0,x1,y1],...]} ou {"cols": [...], "rows": [...]},
+    opcional "fonte" (tamanho mínimo do título), "cod_min" (tamanho mínimo do código interno)."""
+    cells = list(cfg.get("cells", []))
+    if "rows" in cfg:
+        rows = cfg["rows"]
+        cols_por_linha = cfg.get("cols_linha", {})
+        for i in range(len(rows) - 1):
+            cols = cols_por_linha.get(i, cfg.get("cols", [25, 570]))
+            for j in range(len(cols) - 1):
+                cells.append([cols[j], rows[i], cols[j + 1], rows[i + 1]])
+    cod_min = cfg.get("cod_min", 9)
+    spans = [s for c in _raw(pno)["cards"] for ln in c["lines"] for s in merge_codes(ln)]
+    out, n = [], 0
+    for cell in cells:
+        x0, y0, x1, y1 = cell
+        cods = [s for s in spans if is_code(s) and s["size"] >= cod_min and x0 <= (s["x"] + s["x1"]) / 2 <= x1 and y0 <= s["y"] + 3 <= y1]
+        vistos = []
+        for s in sorted(cods, key=lambda s: (s["y"], s["x"])):
+            if s["t"] not in vistos:
+                vistos.append(s["t"])
+        if not vistos:
+            continue
+        n += 1
+        for c in vistos:
+            out.append(preencher_faixa(doc, dict(pagina=pno, card=n, codigo=c, faixa=list(cell),
+                                                fonte_titulo=cfg.get("fonte", 9.5), _nao_agrupar=len(vistos) > 1)))
+    return out
+
+
 CAMPOS_TXT = ("tipo", "cod_ref", "variacoes", "aplicacao", "info", "montadora", "marca", "itens")
 
 
@@ -793,6 +837,9 @@ def main():
     ADD = list(ADD)
     for _p in sorted(FAIXA_TAB):
         ADD += parse_faixas_tabela(doc, _p, _raw(_p), *FAIXA_TAB[_p])
+        MANUAIS.add(_p)
+    for _p, _cfg in sorted((getattr(mod, "GRADES", {}) if mod else {}).items()):
+        ADD += gerar_grade(doc, _p, _cfg)
         MANUAIS.add(_p)
     pasta = os.path.join(FOTOS_DIR, f"{n:02d} - {safe_name(nome)}")
     os.makedirs(pasta, exist_ok=True)

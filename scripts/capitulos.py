@@ -19,4 +19,5 @@ CAPITULOS = {
     10: {"nome": "Bolsas e Amortecedores Cabine", "ini": 84, "fim": 122},
     11: {"nome": "Filtros", "ini": 123, "fim": 150},
     12: {"nome": "Sistema de Direção", "ini": 151, "fim": 157},
+    13: {"nome": "Válvulas", "ini": 158, "fim": 171},
 }
