@@ -20,7 +20,8 @@ COLS = [
     ("Código interno", 14, "codigo"),
     ("Descrição", 48, "descricao"),
     ("Código ref. (original)", 30, "cod_ref"),
-    ("Variações / outras referências", 40, "variacoes"),
+    ("Variações do produto (código – descrição)", 55, "itens"),
+    ("Outras referências / similares", 40, "variacoes"),
     ("Aplicação", 40, "aplicacao"),
     ("Informações adicionais", 50, "info"),
     ("Foto", 16, "foto"),
@@ -104,7 +105,7 @@ def escrever(ws, regs, com_categoria=True):
             c = ws.cell(row=i, column=j, value=v)
             if k == "codigo":
                 c.number_format = "@"
-            c.alignment = Alignment(vertical="top", wrap_text=k in ("descricao", "cod_ref", "variacoes", "aplicacao", "info"))
+            c.alignment = Alignment(vertical="top", wrap_text=k in ("descricao", "cod_ref", "variacoes", "aplicacao", "info", "itens"))
     ws.freeze_panes = "A2"
     ws.auto_filter.ref = f"A1:{get_column_letter(len(cols))}{max(1, len(regs) + 1)}"
 
@@ -118,7 +119,7 @@ def main():
     wb = Workbook()
     resumo = wb.active
     resumo.title = "Resumo"
-    resumo.append(["Nº", "Categoria", "Páginas do PDF", "Produtos (linhas)", "Códigos únicos", "Com foto", "Aba"])
+    resumo.append(["Nº", "Categoria", "Páginas do PDF", "Produtos (linhas)", "Códigos internos", "Com foto", "Aba"])
     for c in resumo[1]:
         c.fill, c.font = HDR_FILL, HDR_FONT
     usados = {"Resumo", "Todos os produtos"}
@@ -130,17 +131,18 @@ def main():
         ws = wb.create_sheet(aba_nome(n, nome, usados))
         escrever(ws, regs, com_categoria=False)
         pags = [int(x) for r in regs for x in str(r["pagina"]).split(",")]
-        resumo.append([n, nome, f"{min(pags)}–{max(pags)}", len(regs), len({r['codigo'] for r in regs}),
+        resumo.append([n, nome, f"{min(pags)}–{max(pags)}", len(regs), len({c for r in regs for c in r['codigo'].split(' / ')}),
                        sum(1 for r in regs if r.get("foto")), ws.title])
     ws = wb.create_sheet("Todos os produtos", 1)
     escrever(ws, todos, com_categoria=True)
     resumo.append([])
-    resumo.append(["", "TOTAL", "", len(todos), len({r['codigo'] for r in todos}), sum(1 for r in todos if r.get("foto"))])
+    resumo.append(["", "TOTAL", "", len(todos), len({c for r in todos for c in r['codigo'].split(' / ')}), sum(1 for r in todos if r.get("foto"))])
     for j, w in enumerate([5, 36, 14, 16, 15, 10, 32], 1):
         resumo.column_dimensions[get_column_letter(j)].width = w
     resumo.append([])
     resumo.append(["", "Ordenação: categoria → marca (montadora) → marca do produto → tipo → tamanho crescente."])
     resumo.append(["", "Fotos: pasta 'Fotos Catálogo 2026', um arquivo por produto, nomeado com a descrição e o código."])
+    resumo.append(["", "Card com vários códigos (tamanhos/versões) = 1 produto; os códigos e descrições ficam na coluna 'Variações do produto'."])
     resumo.append(["", "Produtos repetidos no catálogo (mais de uma marca/categoria) aparecem em cada lugar onde constam."])
     obs = wb.create_sheet("Observações")
     obs.append(["Categoria", "Observação da leitura (cards sem código interno, repetições, marcas não visíveis etc.)"])

@@ -43,7 +43,7 @@ ADD = [
     M(40, 20, "5660204", "MOLA A ACEL. MERCEDES MACIA", "MOLA ACELERADOR", cel(6, 1), montadora="Mercedes-Benz"),
     M(40, 21, "5660512", "MOLA A BICA RANDON TP ALFINETE", "MOLA BICA", cel(6, 2), montadora="Randon"),
     M(40, 22, "5660009", "TRAVA PORCA 5/8 CARROCERIA", "TRAVA PORCA", cel(7, 0)),
-    M(40, 23, "5669005", "TRAVA PORCA 3/4 CARROCERIA", "TRAVA PORCA", cel(7, 0)),
+    M(40, 22, "5669005", "TRAVA PORCA 3/4 CARROCERIA", "TRAVA PORCA", cel(7, 0)),
     M(40, 24, "5660868", "MOLA RT PEDAL/ACEL 1420 14150/14200/ONIBUS 16180CO", "MOLA ACELERADOR", cel(7, 1), cod_ref="TAR.721.619", montadora="Volkswagen"),
     M(40, 25, "5660872", "MOLA RT CABO ACELERADOR 14170BT/16220/16300/24220/35300", "MOLA ACELERADOR", cel(7, 2), cod_ref="TAR.721.619A", montadora="Volkswagen", info="150mm"),
     M(40, 26, "5668927", "MOLA A ACELE 65MM 7.90/7.110 VOLKS 7.90S/7.110S", "MOLA ACELERADOR", cel(8, 0), cod_ref="T12.721.339", montadora="Volkswagen"),

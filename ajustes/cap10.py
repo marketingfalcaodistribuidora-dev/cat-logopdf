@@ -347,9 +347,9 @@ ADD += [
     F(120, 1, "4960885", 95, 342, 34, 561, descricao="CJ SUSPENSOR 6.13 TRUCK MB1513 -S/GRAMP 850MM", tipo="CONJUNTO SUSPENSOR",
       info="Medidas 560 / 280 / 520 / 850 | Obs.: bolsa pneumática 6.13 | Suspensor truck chassi até 860 mm reto", fonte_titulo=99,
       montadora=MBZ, marca="Jarflex"),
-    F(120, 2, "4963805", 342, 455, 34, 561, descricao="SUPORTE SUSPENSOR FIXAÇÃO REBAIXO 110MM", tipo="SUPORTE SUSPENSOR",
-      info="18X27MM", fonte_titulo=99, marca="Jarflex"),
-    F(120, 3, "4960451", 455, 790, 34, 561, descricao="KIT PNEUMÁTICO SUSPENSOR DO TERCEIRO EIXO TRUCK", tipo="KIT PNEUMÁTICO SUSPENSOR",
+    F(120, 2, "4963805", 342, 540, 34, 561, descricao="SUPORTE SUSPENSOR FIXAÇÃO REBAIXO 110MM", tipo="SUPORTE SUSPENSOR",
+      info="18X27MM", foto_spec={"rect": [395, 400, 530, 500]}, fonte_titulo=99, marca="Jarflex"),
+    F(120, 3, "4960451", 540, 790, 34, 561, descricao="KIT PNEUMÁTICO SUSPENSOR DO TERCEIRO EIXO TRUCK", tipo="KIT PNEUMÁTICO SUSPENSOR",
       info="Rosca 1/4\" - tubo Ø 1/4\" | Itens: " + _KIT, fonte_titulo=99, marca="Jarflex"),
 ]
 _C121 = [(25, 307), (307, 570)]
@@ -381,3 +381,5 @@ ADD += [
 ]
 NOTAS += ["p121: as duas células superiores da página estão vazias no catálogo.",
           "p117 e p122: páginas de capa (Jarflex / Filtro), sem produtos."]
+NAO_AGRUPAR = {"85.11"}
+AJ["cod:4963805"] = {"info": "18X27MM | Medidas 116 / 75 / 105 / 70 / 10"}

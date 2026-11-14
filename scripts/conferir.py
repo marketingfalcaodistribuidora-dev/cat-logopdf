@@ -13,7 +13,7 @@ BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 n = int(sys.argv[1])
 cap = CAPITULOS[n]
 regs = json.load(open(os.path.join(BASE, "dados", f"cap{n:02d}.json"), encoding="utf-8"))
-tem = Counter(r["codigo"] for r in regs)
+tem = Counter(c for r in regs for c in r["codigo"].split(" / "))
 pdf = Counter()
 onde = {}
 for p in range(cap["ini"], cap["fim"] + 1):

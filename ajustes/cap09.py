@@ -202,3 +202,4 @@ NOTAS = [
     "p75 card 3: o código 8802049 aparece com o título 'RETENTOR (01923-BG) / ARCA 5122 RODA TRAS VW' (texto repetido do 8801923).",
 ]
 ADD = []
+NAO_AGRUPAR = {"77.3", "81.1", "81.2"}

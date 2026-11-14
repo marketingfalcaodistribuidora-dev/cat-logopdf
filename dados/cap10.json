@@ -371,6 +371,7 @@
   "capitulo": "Bolsas e Amortecedores Cabine",
   "cap_num": 10,
   "ordem": 88000,
+  "itens": "",
   "foto": "Fotos Catálogo 2026/10 - Bolsas e Amortecedores Cabine/ST001SF AMORT SCANIA PNEU CABINE DIANT S4 - 4990001.jpg"
  },
  {
@@ -388,24 +389,26 @@
   "capitulo": "Bolsas e Amortecedores Cabine",
   "cap_num": 10,
   "ordem": 88001,
+  "itens": "",
   "foto": "Fotos Catálogo 2026/10 - Bolsas e Amortecedores Cabine/ST002SF AMORT SCANIA CABINE TRAS PNEU S4 - 4990002.jpg"
  },
  {
   "pagina": "88, 107",
   "card": 1,
-  "codigo": "4991440",
+  "codigo": "4990144 / 4991440",
   "montadora": "Facchini",
   "marca": "Suspentech",
-  "descricao": "St144 MOLA PNEU COMP SUSP FACCHINI VANDERLEIA",
+  "descricao": "BOLSA SUSPENSÃO (MOLA PNEUMÁTICA)",
   "variacoes": "BINS 401.7202",
-  "info": "ST 144 / ST 144 K SEM BASE | MOLA PNEUMÁTICA SUSPENSÃO EIXO | FACCHINI VANDERLEIA SRF | Também descrito no catálogo como: ST144 MOLA PNEU COMP SUSP FACCHINI VANDERLEIA (p.88)",
+  "info": "ST 144 / ST 144 K SEM BASE | MOLA PNEUMÁTICA SUSPENSÃO EIXO | FACCHINI VANDERLEIA SRF | Também descrito no catálogo como: ST144 MOLA PNEU COMP SUSP FACCHINI VANDERLEIA (p.88); ST144K MOLA PNEU S/B SUSP FACCHINI VANDERLEIA (p.88)",
   "tipo": "BOLSA SUSPENSÃO (MOLA PNEUMÁTICA)",
   "cod_ref": "",
   "aplicacao": "",
   "capitulo": "Bolsas e Amortecedores Cabine",
   "cap_num": 10,
   "ordem": 88002,
-  "foto": "Fotos Catálogo 2026/10 - Bolsas e Amortecedores Cabine/St144 MOLA PNEU COMP SUSP FACCHINI VANDERLEIA - 4991440.jpg"
+  "itens": "4990144 – ST144K MOLA PNEUM SUSP FACCHINI VANDERLEIA\n4991440 – St144 MOLA PNEU COMP SUSP FACCHINI VANDERLEIA",
+  "foto": "Fotos Catálogo 2026/10 - Bolsas e Amortecedores Cabine/BOLSA SUSPENSÃO (MOLA PNEUMÁTICA) - 4990144 e mais 1.jpg"
  },
  {
   "pagina": "88, 96",
@@ -422,24 +425,8 @@
   "capitulo": "Bolsas e Amortecedores Cabine",
   "cap_num": 10,
   "ordem": 88003,
+  "itens": "",
   "foto": "Fotos Catálogo 2026/10 - Bolsas e Amortecedores Cabine/St012 MOLA PNEUM CABINE TRAS S4 - 4990012.jpg"
- },
- {
-  "pagina": "88, 107",
-  "card": 1,
-  "codigo": "4990144",
-  "montadora": "Facchini",
-  "marca": "Suspentech",
-  "descricao": "ST144K MOLA PNEUM SUSP FACCHINI VANDERLEIA",
-  "variacoes": "BINS 401.7202",
-  "info": "ST 144 / ST 144 K SEM BASE | MOLA PNEUMÁTICA SUSPENSÃO EIXO | FACCHINI VANDERLEIA SRF | Também descrito no catálogo como: ST144K MOLA PNEU S/B SUSP FACCHINI VANDERLEIA (p.88)",
-  "tipo": "BOLSA SUSPENSÃO (MOLA PNEUMÁTICA)",
-  "cod_ref": "",
-  "aplicacao": "",
-  "capitulo": "Bolsas e Amortecedores Cabine",
-  "cap_num": 10,
-  "ordem": 88004,
-  "foto": "Fotos Catálogo 2026/10 - Bolsas e Amortecedores Cabine/ST144K MOLA PNEUM SUSP FACCHINI VANDERLEIA - 4990144.jpg"
  },
  {
   "pagina": "88, 96",
@@ -456,6 +443,7 @@
   "capitulo": "Bolsas e Amortecedores Cabine",
   "cap_num": 10,
   "ordem": 88005,
+  "itens": "",
   "foto": "Fotos Catálogo 2026/10 - Bolsas e Amortecedores Cabine/St013 SCANIA MOLA PNEU CABINE TRAS SERIE 3T - 4990013.jpg"
  },
  {
@@ -473,6 +461,7 @@
   "capitulo": "Bolsas e Amortecedores Cabine",
   "cap_num": 10,
   "ordem": 88006,
+  "itens": "",
   "foto": "Fotos Catálogo 2026/10 - Bolsas e Amortecedores Cabine/St171 SCANIA MOLA PNEU CABINE DIANTEIRA - 4990171.jpg"
  },
  {
@@ -490,6 +479,7 @@
   "capitulo": "Bolsas e Amortecedores Cabine",
   "cap_num": 10,
   "ordem": 88007,
+  "itens": "",
   "foto": "Fotos Catálogo 2026/10 - Bolsas e Amortecedores Cabine/St014 SCANIA MOLA PNEU CABINE TRAS SERIE 3R - 4990014.jpg"
  },
  {
@@ -507,6 +497,7 @@
   "capitulo": "Bolsas e Amortecedores Cabine",
   "cap_num": 10,
   "ordem": 88008,
+  "itens": "",
   "foto": "Fotos Catálogo 2026/10 - Bolsas e Amortecedores Cabine/ST172ES CJ SCANIA MOLA PNEU DIANT SERIE 5 - 4990172.jpg"
  },
  {
@@ -524,6 +515,7 @@
   "capitulo": "Bolsas e Amortecedores Cabine",
   "cap_num": 10,
   "ordem": 88009,
+  "itens": "",
   "foto": "Fotos Catálogo 2026/10 - Bolsas e Amortecedores Cabine/St015 MOLA PNEUM CABINE S4 - 4990015.jpg"
  },
  {
@@ -541,24 +533,26 @@
   "capitulo": "Bolsas e Amortecedores Cabine",
   "cap_num": 10,
   "ordem": 88010,
+  "itens": "",
   "foto": "Fotos Catálogo 2026/10 - Bolsas e Amortecedores Cabine/ST173B MB MOLA PNEU ACTROS DIANT - 4991730.jpg"
  },
  {
   "pagina": "88, 108",
   "card": 3,
-  "codigo": "4990160",
+  "codigo": "4990016 / 4990160",
   "montadora": "Randon",
   "marca": "Suspentech",
-  "descricao": "St016 MOLA PNEUM COMPL 4 PINO RANDON",
+  "descricao": "PINO EXCÊNTRICO",
   "variacoes": "BINS 401.7204",
-  "info": "ST 016 / ST 016 K SEM BASE | MOLA PNEUMÁTICA SUSPENSÃO EIXO | RANDON / SUSPENSYS / NOMA / IBERO | BASE INFERIOR | Também descrito no catálogo como: ST016 MOLA PNEUM COMPL 4 PINO RANDON (p.88)",
+  "info": "ST 016 / ST 016 K SEM BASE | MOLA PNEUMÁTICA SUSPENSÃO EIXO | RANDON / SUSPENSYS / NOMA / IBERO | BASE INFERIOR | Também descrito no catálogo como: ST016 MOLA PNEUM COMPL 4 PINO RANDON (p.88); ST016K MOLA PNEUM RANDON S/BASE 4 PINOS (p.88)",
   "tipo": "PINO EXCÊNTRICO",
   "cod_ref": "",
   "aplicacao": "",
   "capitulo": "Bolsas e Amortecedores Cabine",
   "cap_num": 10,
   "ordem": 88011,
-  "foto": "Fotos Catálogo 2026/10 - Bolsas e Amortecedores Cabine/St016 MOLA PNEUM COMPL 4 PINO RANDON - 4990160.jpg"
+  "itens": "4990016 – ST016K MOLA PNEUM RANDON S/BASE 4 PINOS\n4990160 – St016 MOLA PNEUM COMPL 4 PINO RANDON",
+  "foto": "Fotos Catálogo 2026/10 - Bolsas e Amortecedores Cabine/PINO EXCÊNTRICO - 4990016 e mais 1.jpg"
  },
  {
   "pagina": "88, 103, 104",
@@ -575,24 +569,8 @@
   "capitulo": "Bolsas e Amortecedores Cabine",
   "cap_num": 10,
   "ordem": 88012,
+  "itens": "",
   "foto": "Fotos Catálogo 2026/10 - Bolsas e Amortecedores Cabine/St173 SF CONJ MOLA PNEUM MB ACTROS DIANT - 4991173.jpg"
- },
- {
-  "pagina": "88, 108",
-  "card": 3,
-  "codigo": "4990016",
-  "montadora": "Randon",
-  "marca": "Suspentech",
-  "descricao": "ST016K MOLA PNEUM RANDON S/BASE 4 PINOS",
-  "variacoes": "BINS 401.7204",
-  "info": "ST 016 / ST 016 K SEM BASE | MOLA PNEUMÁTICA SUSPENSÃO EIXO | RANDON / SUSPENSYS / NOMA / IBERO | BASE INFERIOR",
-  "tipo": "PINO EXCÊNTRICO",
-  "cod_ref": "",
-  "aplicacao": "",
-  "capitulo": "Bolsas e Amortecedores Cabine",
-  "cap_num": 10,
-  "ordem": 88013,
-  "foto": "Fotos Catálogo 2026/10 - Bolsas e Amortecedores Cabine/ST016K MOLA PNEUM RANDON S-BASE 4 PINOS - 4990016.jpg"
  },
  {
   "pagina": "88, 104",
@@ -609,16 +587,17 @@
   "capitulo": "Bolsas e Amortecedores Cabine",
   "cap_num": 10,
   "ordem": 88014,
+  "itens": "",
   "foto": "Fotos Catálogo 2026/10 - Bolsas e Amortecedores Cabine/ST174B MB CONJUNTO MOLA PNEU CABINE TRASEIRA - 4991740.jpg"
  },
  {
   "pagina": "88, 100",
   "card": 2,
-  "codigo": "4990017",
+  "codigo": "4990017 / 4990170",
   "montadora": "Scania",
   "marca": "Suspentech",
-  "descricao": "St017 MOLA PNEUM COMPL TRACAO S4",
-  "info": "ST 017 / ST 017 K SEM BASE | MOLA PNEUMÁTICA SUSPENSÃO EIXO | SCANIA SERIE 4 E 5 1998 A 2009 | TRAÇÃO E TERCEIRO EIXO | Também descrito no catálogo como: ST017 MOLA PNEUM COMPL TRACAO S4 (p.88)",
+  "descricao": "BOLSA SUSPENSÃO (MOLA PNEUMÁTICA)",
+  "info": "ST 017 / ST 017 K SEM BASE | MOLA PNEUMÁTICA SUSPENSÃO EIXO | SCANIA SERIE 4 E 5 1998 A 2009 | TRAÇÃO E TERCEIRO EIXO | Também descrito no catálogo como: ST017 MOLA PNEUM COMPL TRACAO S4 (p.88); ST017K MOLA PNEUM S/BASE TRACAO S4/S5 (p.88)",
   "tipo": "BOLSA SUSPENSÃO (MOLA PNEUMÁTICA)",
   "cod_ref": "",
   "variacoes": "",
@@ -626,7 +605,8 @@
   "capitulo": "Bolsas e Amortecedores Cabine",
   "cap_num": 10,
   "ordem": 88015,
-  "foto": "Fotos Catálogo 2026/10 - Bolsas e Amortecedores Cabine/St017 MOLA PNEUM COMPL TRACAO S4 - 4990017.jpg"
+  "itens": "4990017 – St017 MOLA PNEUM COMPL TRACAO S4\n4990170 – ST017K MOLA PNEUM S/BASE TRACAO S4/S5",
+  "foto": "Fotos Catálogo 2026/10 - Bolsas e Amortecedores Cabine/BOLSA SUSPENSÃO (MOLA PNEUMÁTICA) - 4990017 e mais 1.jpg"
  },
  {
   "pagina": "88, 105",
@@ -643,24 +623,8 @@
   "capitulo": "Bolsas e Amortecedores Cabine",
   "cap_num": 10,
   "ordem": 88016,
+  "itens": "",
   "foto": "Fotos Catálogo 2026/10 - Bolsas e Amortecedores Cabine/ST174SF MB CONJUNTO MOLA PNEU CABINE TRASEIRA - 4990174.jpg"
- },
- {
-  "pagina": "88, 100",
-  "card": 2,
-  "codigo": "4990170",
-  "montadora": "Scania",
-  "marca": "Suspentech",
-  "descricao": "ST017K MOLA PNEUM S/BASE TRACAO S4/S5",
-  "info": "ST 017 / ST 017 K SEM BASE | MOLA PNEUMÁTICA SUSPENSÃO EIXO | SCANIA SERIE 4 E 5 1998 A 2009 | TRAÇÃO E TERCEIRO EIXO",
-  "tipo": "BOLSA SUSPENSÃO (MOLA PNEUMÁTICA)",
-  "cod_ref": "",
-  "variacoes": "",
-  "aplicacao": "",
-  "capitulo": "Bolsas e Amortecedores Cabine",
-  "cap_num": 10,
-  "ordem": 88017,
-  "foto": "Fotos Catálogo 2026/10 - Bolsas e Amortecedores Cabine/ST017K MOLA PNEUM S-BASE TRACAO S4-S5 - 4990170.jpg"
  },
  {
   "pagina": "88, 91",
@@ -677,6 +641,7 @@
   "capitulo": "Bolsas e Amortecedores Cabine",
   "cap_num": 10,
   "ordem": 88018,
+  "itens": "",
   "foto": "Fotos Catálogo 2026/10 - Bolsas e Amortecedores Cabine/ST184B VOLVO MOLA PNEU CABINE DIANTEIRA - 4990184.jpg"
  },
  {
@@ -694,6 +659,7 @@
   "capitulo": "Bolsas e Amortecedores Cabine",
   "cap_num": 10,
   "ordem": 88019,
+  "itens": "",
   "foto": "Fotos Catálogo 2026/10 - Bolsas e Amortecedores Cabine/St022 VOLVO MOLA PNEU CABINE TRAS - 4990022.jpg"
  },
  {
@@ -711,6 +677,7 @@
   "capitulo": "Bolsas e Amortecedores Cabine",
   "cap_num": 10,
   "ordem": 88020,
+  "itens": "",
   "foto": "Fotos Catálogo 2026/10 - Bolsas e Amortecedores Cabine/ST184SF VOLVO MOLA PNEU CABINE DIANTEIRA - 4991840.jpg"
  },
  {
@@ -728,6 +695,7 @@
   "capitulo": "Bolsas e Amortecedores Cabine",
   "cap_num": 10,
   "ordem": 88021,
+  "itens": "",
   "foto": "Fotos Catálogo 2026/10 - Bolsas e Amortecedores Cabine/St025 VOLVO MOLA PNEU BANCO FH NH 1999 A 2006 - 4990025.jpg"
  },
  {
@@ -745,16 +713,17 @@
   "capitulo": "Bolsas e Amortecedores Cabine",
   "cap_num": 10,
   "ordem": 88022,
+  "itens": "",
   "foto": "Fotos Catálogo 2026/10 - Bolsas e Amortecedores Cabine/ST186B VOLVO PNEU CABINE TRASEIRA - 4990186.jpg"
  },
  {
   "pagina": "88, 100",
   "card": 3,
-  "codigo": "4990030",
+  "codigo": "4990300 / 4990030",
   "montadora": "Scania",
   "marca": "Suspentech",
-  "descricao": "St030 SCANIA MOLA PNEU COMP SUP TERC EIXO",
-  "info": "ST 030 / ST 030 K SEM BASE | MOLA PNEUMÁTICA SUSPENSÃO EIXO | SCANIA SÉRIE 4, 5 E 6 | SUSPENSOR TERCEIRO EIXO | Também descrito no catálogo como: ST030 SCANIA MOLA PNEU COMP SUP TERC EIXO (p.88)",
+  "descricao": "BOLSA SUSPENSÃO (MOLA PNEUMÁTICA)",
+  "info": "ST 030 / ST 030 K SEM BASE | MOLA PNEUMÁTICA SUSPENSÃO EIXO | SCANIA SÉRIE 4, 5 E 6 | SUSPENSOR TERCEIRO EIXO | Também descrito no catálogo como: ST030 SCANIA MOLA PNEU COMP SUP TERC EIXO (p.88); ST030K SCANIA MOLA PNEU S/BASE SUP TERC EIXO (p.88)",
   "tipo": "BOLSA SUSPENSÃO (MOLA PNEUMÁTICA)",
   "cod_ref": "",
   "variacoes": "",
@@ -762,7 +731,8 @@
   "capitulo": "Bolsas e Amortecedores Cabine",
   "cap_num": 10,
   "ordem": 88023,
-  "foto": "Fotos Catálogo 2026/10 - Bolsas e Amortecedores Cabine/St030 SCANIA MOLA PNEU COMP SUP TERC EIXO - 4990030.jpg"
+  "itens": "4990300 – ST030K SCANIA MOLA PNEU S/BASE SUP TERC EIXO\n4990030 – St030 SCANIA MOLA PNEU COMP SUP TERC EIXO",
+  "foto": "Fotos Catálogo 2026/10 - Bolsas e Amortecedores Cabine/BOLSA SUSPENSÃO (MOLA PNEUMÁTICA) - 4990300 e mais 1.jpg"
  },
  {
   "codigo": "4991860",
@@ -779,24 +749,8 @@
   "pagina": "88, 112",
   "card": 9,
   "ordem": 88024,
+  "itens": "",
   "foto": "Fotos Catálogo 2026/10 - Bolsas e Amortecedores Cabine/ST186SF VOLVO CJ PNEU CABINE TRASEIRA FH 2004 A 2009 TRASEIRO REPOSIÇÃO ORIGINAL - 4991860.jpg"
- },
- {
-  "pagina": "88, 100",
-  "card": 3,
-  "codigo": "4990300",
-  "montadora": "Scania",
-  "marca": "Suspentech",
-  "descricao": "ST030K SCANIA MOLA PNEU S/BASE SUP TERC EIXO",
-  "info": "ST 030 / ST 030 K SEM BASE | MOLA PNEUMÁTICA SUSPENSÃO EIXO | SCANIA SÉRIE 4, 5 E 6 | SUSPENSOR TERCEIRO EIXO",
-  "tipo": "BOLSA SUSPENSÃO (MOLA PNEUMÁTICA)",
-  "cod_ref": "",
-  "variacoes": "",
-  "aplicacao": "",
-  "capitulo": "Bolsas e Amortecedores Cabine",
-  "cap_num": 10,
-  "ordem": 88025,
-  "foto": "Fotos Catálogo 2026/10 - Bolsas e Amortecedores Cabine/ST030K SCANIA MOLA PNEU S-BASE SUP TERC EIXO - 4990300.jpg"
  },
  {
   "pagina": "88, 104",
@@ -813,33 +767,35 @@
   "capitulo": "Bolsas e Amortecedores Cabine",
   "cap_num": 10,
   "ordem": 88026,
+  "itens": "",
   "foto": "Fotos Catálogo 2026/10 - Bolsas e Amortecedores Cabine/ST189K MB MOLA PNEU S-BASE TRACAO TERCE EIXO - 4991890.jpg"
  },
  {
   "pagina": "88, 100",
   "card": 5,
-  "codigo": "4993200",
+  "codigo": "4990032 / 4993200",
   "montadora": "Scania",
   "marca": "Suspentech",
-  "descricao": "St032 MOLA PNEUM SCANIA SÉRIE 5 E 6 -2010",
+  "descricao": "ST032K MOLA PNEUM S/BASE S5",
   "info": "ST 032 / ST 032 K SEM BASE | MOLA PNEUMÁTICA SUSPENSÃO EIXO | SCANIA SÉRIE 5 E 6 - 2009 EM DIANTE | TRAÇÃO E TERCEIRO EIXO | Também descrito no catálogo como: ST032 MOLA PNEUM SCANIA SÉRIE 5 E 6 -2010 (p.88)",
-  "tipo": "BOLSA (MOLA PNEUMÁTICA)",
+  "tipo": "BOLSA SUSPENSÃO (MOLA PNEUMÁTICA)",
   "cod_ref": "",
   "variacoes": "",
   "aplicacao": "",
   "capitulo": "Bolsas e Amortecedores Cabine",
   "cap_num": 10,
   "ordem": 88027,
-  "foto": "Fotos Catálogo 2026/10 - Bolsas e Amortecedores Cabine/St032 MOLA PNEUM SCANIA SÉRIE 5 E 6 -2010 - 4993200.jpg"
+  "itens": "4990032 – ST032K MOLA PNEUM S/BASE S5\n4993200 – St032 MOLA PNEUM SCANIA SÉRIE 5 E 6 -2010",
+  "foto": "Fotos Catálogo 2026/10 - Bolsas e Amortecedores Cabine/ST032K MOLA PNEUM S-BASE S5 - 4990032 e mais 1.jpg"
  },
  {
   "pagina": "88, 106",
   "card": 2,
-  "codigo": "4990207",
+  "codigo": "4992070 / 4990207",
   "montadora": "Mercedes-Benz",
   "marca": "Suspentech",
-  "descricao": "St207 MB MOLA PNEU COMP TRACAO TERC EIXO",
-  "info": "ST 207 / ST 207 K SEM BASE | MOLA PNEUMÁTICA SUSPENSÃO EIXO | MERCEDES-BENZ ACTROS / AXOR - 2010 A 2014 | TRAÇÃO E TERCEIRO EIXO COM SENSOR | Também descrito no catálogo como: ST207 MB MOLA PNEU COMP TRACAO TERC EIXO (p.88)",
+  "descricao": "BOLSA SUSPENSÃO (MOLA PNEUMÁTICA)",
+  "info": "ST 207 / ST 207 K SEM BASE | MOLA PNEUMÁTICA SUSPENSÃO EIXO | MERCEDES-BENZ ACTROS / AXOR - 2010 A 2014 | TRAÇÃO E TERCEIRO EIXO COM SENSOR | Também descrito no catálogo como: ST207 MB MOLA PNEU COMP TRACAO TERC EIXO (p.88); ST207K MB MOLA PNEU S/BASE TRACAO TERC EIXO (p.88)",
   "tipo": "BOLSA SUSPENSÃO (MOLA PNEUMÁTICA)",
   "cod_ref": "",
   "variacoes": "",
@@ -847,41 +803,8 @@
   "capitulo": "Bolsas e Amortecedores Cabine",
   "cap_num": 10,
   "ordem": 88028,
-  "foto": "Fotos Catálogo 2026/10 - Bolsas e Amortecedores Cabine/St207 MB MOLA PNEU COMP TRACAO TERC EIXO - 4990207.jpg"
- },
- {
-  "pagina": "88, 100",
-  "card": 5,
-  "codigo": "4990032",
-  "montadora": "Scania",
-  "marca": "Suspentech",
-  "descricao": "ST032K MOLA PNEUM S/BASE S5",
-  "info": "ST 032 / ST 032 K SEM BASE | MOLA PNEUMÁTICA SUSPENSÃO EIXO | SCANIA SÉRIE 5 E 6 - 2009 EM DIANTE | TRAÇÃO E TERCEIRO EIXO",
-  "tipo": "BOLSA SUSPENSÃO (MOLA PNEUMÁTICA)",
-  "cod_ref": "",
-  "variacoes": "",
-  "aplicacao": "",
-  "capitulo": "Bolsas e Amortecedores Cabine",
-  "cap_num": 10,
-  "ordem": 88029,
-  "foto": "Fotos Catálogo 2026/10 - Bolsas e Amortecedores Cabine/ST032K MOLA PNEUM S-BASE S5 - 4990032.jpg"
- },
- {
-  "pagina": "88, 106",
-  "card": 2,
-  "codigo": "4992070",
-  "montadora": "Mercedes-Benz",
-  "marca": "Suspentech",
-  "descricao": "ST207K MB MOLA PNEU S/BASE TRACAO TERC EIXO",
-  "info": "ST 207 / ST 207 K SEM BASE | MOLA PNEUMÁTICA SUSPENSÃO EIXO | MERCEDES-BENZ ACTROS / AXOR - 2010 A 2014 | TRAÇÃO E TERCEIRO EIXO COM SENSOR",
-  "tipo": "BOLSA SUSPENSÃO (MOLA PNEUMÁTICA)",
-  "cod_ref": "",
-  "variacoes": "",
-  "aplicacao": "",
-  "capitulo": "Bolsas e Amortecedores Cabine",
-  "cap_num": 10,
-  "ordem": 88030,
-  "foto": "Fotos Catálogo 2026/10 - Bolsas e Amortecedores Cabine/ST207K MB MOLA PNEU S-BASE TRACAO TERC EIXO - 4992070.jpg"
+  "itens": "4992070 – ST207K MB MOLA PNEU S/BASE TRACAO TERC EIXO\n4990207 – St207 MB MOLA PNEU COMP TRACAO TERC EIXO",
+  "foto": "Fotos Catálogo 2026/10 - Bolsas e Amortecedores Cabine/BOLSA SUSPENSÃO (MOLA PNEUMÁTICA) - 4992070 e mais 1.jpg"
  },
  {
   "pagina": "88, 107",
@@ -898,6 +821,7 @@
   "capitulo": "Bolsas e Amortecedores Cabine",
   "cap_num": 10,
   "ordem": 88031,
+  "itens": "",
   "foto": "Fotos Catálogo 2026/10 - Bolsas e Amortecedores Cabine/ST035K MOLA PNEUM FACCHINI - AGRÍCOLA - INDUS - 4990035.jpg"
  },
  {
@@ -915,6 +839,7 @@
   "capitulo": "Bolsas e Amortecedores Cabine",
   "cap_num": 10,
   "ordem": 88032,
+  "itens": "",
   "foto": "Fotos Catálogo 2026/10 - Bolsas e Amortecedores Cabine/ST209SF SCANIA CJ MOLA PNEU DIANT SERIE 5R - 4990209.jpg"
  },
  {
@@ -932,6 +857,7 @@
   "capitulo": "Bolsas e Amortecedores Cabine",
   "cap_num": 10,
   "ordem": 88033,
+  "itens": "",
   "foto": "Fotos Catálogo 2026/10 - Bolsas e Amortecedores Cabine/ST036B IVECO MOLA PNEU CABINE TRAS - 4990360.jpg"
  },
  {
@@ -949,6 +875,7 @@
   "capitulo": "Bolsas e Amortecedores Cabine",
   "cap_num": 10,
   "ordem": 88034,
+  "itens": "",
   "foto": "Fotos Catálogo 2026/10 - Bolsas e Amortecedores Cabine/ST211SF SCANIA AMORT PNEU CABINE DIANT S5 - 4990211.jpg"
  },
  {
@@ -966,6 +893,7 @@
   "capitulo": "Bolsas e Amortecedores Cabine",
   "cap_num": 10,
   "ordem": 88035,
+  "itens": "",
   "foto": "Fotos Catálogo 2026/10 - Bolsas e Amortecedores Cabine/St036 ES IVECO CONJ MOLA PNEU CABINE TRAS - 4990036.jpg"
  },
  {
@@ -983,6 +911,7 @@
   "capitulo": "Bolsas e Amortecedores Cabine",
   "cap_num": 10,
   "ordem": 88036,
+  "itens": "",
   "foto": "Fotos Catálogo 2026/10 - Bolsas e Amortecedores Cabine/ST213ES AMORT SCANIA AMORT CABINE DIANT S5 - 4990213.jpg"
  },
  {
@@ -1000,6 +929,7 @@
   "capitulo": "Bolsas e Amortecedores Cabine",
   "cap_num": 10,
   "ordem": 88037,
+  "itens": "",
   "foto": "Fotos Catálogo 2026/10 - Bolsas e Amortecedores Cabine/St037ES AMORT SCANIA PNEU CABINE DIAT S4 - 4990037.jpg"
  },
  {
@@ -1017,16 +947,17 @@
   "capitulo": "Bolsas e Amortecedores Cabine",
   "cap_num": 10,
   "ordem": 88038,
+  "itens": "",
   "foto": "Fotos Catálogo 2026/10 - Bolsas e Amortecedores Cabine/BOLSA CABINE (MOLA PNEUMÁTICA) - 4990218.jpg"
  },
  {
   "pagina": "88, 93",
   "card": 6,
-  "codigo": "4990038",
+  "codigo": "4990380 / 4990038",
   "montadora": "Volvo, Ford, Volkswagen",
   "marca": "Suspentech",
-  "descricao": "St038 MOLA PNEU COMP SUSP EIXO TRAC TER EIXO",
-  "info": "St038 MOLA PNEU COMP SUSP EIXO TRAC TER EIXO | ST038K MOLA PNEU S/BASE SUSP EIXO TRAC TER EX | ST 038 / ST 038 K SEM BASE | MOLA PNEUMÁTICA SUSPENSÃO EIXO VOLVO FH 12 / NH 12 | VOLKSWAGEN TITAN 2006 A 2012 | FORD CARGO ATÉ 2003 | TRAÇÃO E TERCEIRO EIXO | Também descrito no catálogo como: ST038 MOLA PNEU COMP SUSP EIXO TRAC TER EIXO (p.88)",
+  "descricao": "BOLSA SUSPENSÃO (MOLA PNEUMÁTICA)",
+  "info": "St038 MOLA PNEU COMP SUSP EIXO TRAC TER EIXO | ST038K MOLA PNEU S/BASE SUSP EIXO TRAC TER EX | ST 038 / ST 038 K SEM BASE | MOLA PNEUMÁTICA SUSPENSÃO EIXO VOLVO FH 12 / NH 12 | VOLKSWAGEN TITAN 2006 A 2012 | FORD CARGO ATÉ 2003 | TRAÇÃO E TERCEIRO EIXO | Também descrito no catálogo como: ST038 MOLA PNEU COMP SUSP EIXO TRAC TER EIXO (p.88); ST038K MOLA PNEU S/BASE SUSP EIXO TRAC TER EX (p.88)",
   "tipo": "BOLSA SUSPENSÃO (MOLA PNEUMÁTICA)",
   "cod_ref": "",
   "variacoes": "",
@@ -1034,7 +965,8 @@
   "capitulo": "Bolsas e Amortecedores Cabine",
   "cap_num": 10,
   "ordem": 88039,
-  "foto": "Fotos Catálogo 2026/10 - Bolsas e Amortecedores Cabine/St038 MOLA PNEU COMP SUSP EIXO TRAC TER EIXO - 4990038.jpg"
+  "itens": "4990380 – ST038K MOLA PNEU S/BASE SUSP EIXO TRAC TER EX\n4990038 – St038 MOLA PNEU COMP SUSP EIXO TRAC TER EIXO",
+  "foto": "Fotos Catálogo 2026/10 - Bolsas e Amortecedores Cabine/BOLSA SUSPENSÃO (MOLA PNEUMÁTICA) - 4990380 e mais 1.jpg"
  },
  {
   "pagina": "88, 98",
@@ -1051,33 +983,17 @@
   "capitulo": "Bolsas e Amortecedores Cabine",
   "cap_num": 10,
   "ordem": 88040,
+  "itens": "",
   "foto": "Fotos Catálogo 2026/10 - Bolsas e Amortecedores Cabine/St219 SCANIA MOLA PNEUMATICA CABINE TRAS - 4990219.jpg"
- },
- {
-  "pagina": "88, 93",
-  "card": 6,
-  "codigo": "4990380",
-  "montadora": "Volvo, Ford, Volkswagen",
-  "marca": "Suspentech",
-  "descricao": "ST038K MOLA PNEU S/BASE SUSP EIXO TRAC TER EX",
-  "info": "St038 MOLA PNEU COMP SUSP EIXO TRAC TER EIXO | ST038K MOLA PNEU S/BASE SUSP EIXO TRAC TER EX | ST 038 / ST 038 K SEM BASE | MOLA PNEUMÁTICA SUSPENSÃO EIXO VOLVO FH 12 / NH 12 | VOLKSWAGEN TITAN 2006 A 2012 | FORD CARGO ATÉ 2003 | TRAÇÃO E TERCEIRO EIXO",
-  "tipo": "BOLSA SUSPENSÃO (MOLA PNEUMÁTICA)",
-  "cod_ref": "",
-  "variacoes": "",
-  "aplicacao": "",
-  "capitulo": "Bolsas e Amortecedores Cabine",
-  "cap_num": 10,
-  "ordem": 88041,
-  "foto": "Fotos Catálogo 2026/10 - Bolsas e Amortecedores Cabine/ST038K MOLA PNEU S-BASE SUSP EIXO TRAC TER EX - 4990380.jpg"
  },
  {
   "pagina": "88, 94",
   "card": 3,
-  "codigo": "4990229",
+  "codigo": "4992290 / 4990229",
   "montadora": "Volvo",
   "marca": "Suspentech",
-  "descricao": "St229 VOLVO MOLA PNEU COMP SUSP EIXO TRACAO",
-  "info": "ST 229 / ST 229 K SEM BASE | MOLA PNEUMÁTICA SUSPENSÃO EIXO | VOLVO FH / FM 2015 EM DIANTE | TRAÇÃO (Ø MENOR) / SUSPENSOR | Também descrito no catálogo como: ST229 VOLVO MOLA PNEU COMP SUSP EIXO TRACAO (p.88)",
+  "descricao": "BOLSA SUSPENSÃO (MOLA PNEUMÁTICA)",
+  "info": "ST 229 / ST 229 K SEM BASE | MOLA PNEUMÁTICA SUSPENSÃO EIXO | VOLVO FH / FM 2015 EM DIANTE | TRAÇÃO (Ø MENOR) / SUSPENSOR | Também descrito no catálogo como: ST229 VOLVO MOLA PNEU COMP SUSP EIXO TRACAO (p.88); ST229K VOLV MOLA PNEU S/BASE SUSP EIXO TRACAO (p.88)",
   "tipo": "BOLSA SUSPENSÃO (MOLA PNEUMÁTICA)",
   "cod_ref": "",
   "variacoes": "",
@@ -1085,7 +1001,8 @@
   "capitulo": "Bolsas e Amortecedores Cabine",
   "cap_num": 10,
   "ordem": 88042,
-  "foto": "Fotos Catálogo 2026/10 - Bolsas e Amortecedores Cabine/St229 VOLVO MOLA PNEU COMP SUSP EIXO TRACAO - 4990229.jpg"
+  "itens": "4992290 – ST229K VOLV MOLA PNEU S/BASE SUSP EIXO TRACAO\n4990229 – St229 VOLVO MOLA PNEU COMP SUSP EIXO TRACAO",
+  "foto": "Fotos Catálogo 2026/10 - Bolsas e Amortecedores Cabine/BOLSA SUSPENSÃO (MOLA PNEUMÁTICA) - 4992290 e mais 1.jpg"
  },
  {
   "codigo": "4990039",
@@ -1105,23 +1022,6 @@
   "foto": ""
  },
  {
-  "pagina": "88, 94",
-  "card": 3,
-  "codigo": "4992290",
-  "montadora": "Volvo",
-  "marca": "Suspentech",
-  "descricao": "ST229K VOLV MOLA PNEU S/BASE SUSP EIXO TRACAO",
-  "info": "ST 229 / ST 229 K SEM BASE | MOLA PNEUMÁTICA SUSPENSÃO EIXO | VOLVO FH / FM 2015 EM DIANTE | TRAÇÃO (Ø MENOR) / SUSPENSOR",
-  "tipo": "BOLSA SUSPENSÃO (MOLA PNEUMÁTICA)",
-  "cod_ref": "",
-  "variacoes": "",
-  "aplicacao": "",
-  "capitulo": "Bolsas e Amortecedores Cabine",
-  "cap_num": 10,
-  "ordem": 88044,
-  "foto": "Fotos Catálogo 2026/10 - Bolsas e Amortecedores Cabine/ST229K VOLV MOLA PNEU S-BASE SUSP EIXO TRACAO - 4992290.jpg"
- },
- {
   "pagina": "88, 107",
   "card": 3,
   "codigo": "4993900",
@@ -1136,16 +1036,17 @@
   "capitulo": "Bolsas e Amortecedores Cabine",
   "cap_num": 10,
   "ordem": 88045,
+  "itens": "",
   "foto": "Fotos Catálogo 2026/10 - Bolsas e Amortecedores Cabine/ST039K SUSPENTECH MOLA PNEU C-SUP FACCHINI - HBZ - TRÊS EIXOS - 4993900.jpg"
  },
  {
   "pagina": "88, 94",
   "card": 2,
-  "codigo": "4990230",
+  "codigo": "4992300 / 4990230",
   "montadora": "Volvo",
   "marca": "Suspentech",
-  "descricao": "St230 VOLVO MOLA PNEU COMP SUSP EIXO TRACAO",
-  "info": "ST 230 / ST 230 K SEM BASE | MOLA PNEUMÁTICA SUSPENSÃO EIXO | VOLVO FH / FM 2015 EM DIANTE | TRAÇÃO (Ø MAIOR) | Também descrito no catálogo como: ST230 VOLVO MOLA PNEU COMP SUSP EIXO TRACAO (p.88)",
+  "descricao": "BOLSA SUSPENSÃO (MOLA PNEUMÁTICA)",
+  "info": "ST 230 / ST 230 K SEM BASE | MOLA PNEUMÁTICA SUSPENSÃO EIXO | VOLVO FH / FM 2015 EM DIANTE | TRAÇÃO (Ø MAIOR) | Também descrito no catálogo como: ST230 VOLVO MOLA PNEU COMP SUSP EIXO TRACAO (p.88); ST230K VOLVO MOLA PNEU S/BASE SUSP EIX TRACAO (p.88)",
   "tipo": "BOLSA SUSPENSÃO (MOLA PNEUMÁTICA)",
   "cod_ref": "",
   "variacoes": "",
@@ -1153,7 +1054,8 @@
   "capitulo": "Bolsas e Amortecedores Cabine",
   "cap_num": 10,
   "ordem": 88046,
-  "foto": "Fotos Catálogo 2026/10 - Bolsas e Amortecedores Cabine/St230 VOLVO MOLA PNEU COMP SUSP EIXO TRACAO - 4990230.jpg"
+  "itens": "4992300 – ST230K VOLVO MOLA PNEU S/BASE SUSP EIX TRACAO\n4990230 – St230 VOLVO MOLA PNEU COMP SUSP EIXO TRACAO",
+  "foto": "Fotos Catálogo 2026/10 - Bolsas e Amortecedores Cabine/BOLSA SUSPENSÃO (MOLA PNEUMÁTICA) - 4992300 e mais 1.jpg"
  },
  {
   "pagina": "88, 89",
@@ -1170,24 +1072,8 @@
   "capitulo": "Bolsas e Amortecedores Cabine",
   "cap_num": 10,
   "ordem": 88047,
+  "itens": "",
   "foto": "Fotos Catálogo 2026/10 - Bolsas e Amortecedores Cabine/ST040B MOLA PNEUM CABINE TRAS FH - 4990400.jpg"
- },
- {
-  "pagina": "88, 94",
-  "card": 2,
-  "codigo": "4992300",
-  "montadora": "Volvo",
-  "marca": "Suspentech",
-  "descricao": "ST230K VOLVO MOLA PNEU S/BASE SUSP EIX TRACAO",
-  "info": "ST 230 / ST 230 K SEM BASE | MOLA PNEUMÁTICA SUSPENSÃO EIXO | VOLVO FH / FM 2015 EM DIANTE | TRAÇÃO (Ø MAIOR)",
-  "tipo": "BOLSA SUSPENSÃO (MOLA PNEUMÁTICA)",
-  "cod_ref": "",
-  "variacoes": "",
-  "aplicacao": "",
-  "capitulo": "Bolsas e Amortecedores Cabine",
-  "cap_num": 10,
-  "ordem": 88048,
-  "foto": "Fotos Catálogo 2026/10 - Bolsas e Amortecedores Cabine/ST230K VOLVO MOLA PNEU S-BASE SUSP EIX TRACAO - 4992300.jpg"
  },
  {
   "codigo": "4990040",
@@ -1204,6 +1090,7 @@
   "pagina": "88, 112",
   "card": 8,
   "ordem": 88049,
+  "itens": "",
   "foto": "Fotos Catálogo 2026/10 - Bolsas e Amortecedores Cabine/ST040SF CONJ MOLA PNEUM CABINE FH FH 2004 A 2009 TRASEIRO REPOSIÇÃO ORIGINAL - 4990040.jpg"
  },
  {
@@ -1221,6 +1108,7 @@
   "pagina": "88, 112",
   "card": 7,
   "ordem": 88050,
+  "itens": "",
   "foto": "Fotos Catálogo 2026/10 - Bolsas e Amortecedores Cabine/ST232B MOLA VOLVO MOLA PNEU TRAS FH 2015 - 4992320.jpg"
  },
  {
@@ -1238,6 +1126,7 @@
   "capitulo": "Bolsas e Amortecedores Cabine",
   "cap_num": 10,
   "ordem": 88051,
+  "itens": "",
   "foto": "Fotos Catálogo 2026/10 - Bolsas e Amortecedores Cabine/ST042B IVECO MOLA PNEUM CABINE DIANT - 4990420.jpg"
  },
  {
@@ -1255,6 +1144,7 @@
   "capitulo": "Bolsas e Amortecedores Cabine",
   "cap_num": 10,
   "ordem": 88052,
+  "itens": "",
   "foto": "Fotos Catálogo 2026/10 - Bolsas e Amortecedores Cabine/ST232ES CJ VOLVO MOLA PNEU TRAS Fh2015 - 4990232.jpg"
  },
  {
@@ -1272,6 +1162,7 @@
   "capitulo": "Bolsas e Amortecedores Cabine",
   "cap_num": 10,
   "ordem": 88053,
+  "itens": "",
   "foto": "Fotos Catálogo 2026/10 - Bolsas e Amortecedores Cabine/ST042ES IVECO CJ MOLA PNEUM CABINE DIANT - 4990042.jpg"
  },
  {
@@ -1289,16 +1180,17 @@
   "capitulo": "Bolsas e Amortecedores Cabine",
   "cap_num": 10,
   "ordem": 88054,
+  "itens": "",
   "foto": "Fotos Catálogo 2026/10 - Bolsas e Amortecedores Cabine/ST234B VOLVO MOLA PNEU CABINE DIANT FH 2015 - 4990234.jpg"
  },
  {
   "pagina": "88, 110",
   "card": 4,
-  "codigo": "4990045",
+  "codigo": "4990450 / 4990045",
   "montadora": "Randon",
   "marca": "Suspentech",
-  "descricao": "St045 MOLA PNEUM COM BASE SUSP RANDON",
-  "info": "ST 045 / ST 045 K SEM BASE | MOLA PNEUMÁTICA SUSPENSÃO EIXO | RANDON / SUSPENSYS | Também descrito no catálogo como: ST045 MOLA PNEUM COM BASE SUSP RANDON (p.88)",
+  "descricao": "BOLSA SUSPENSÃO (MOLA PNEUMÁTICA)",
+  "info": "ST 045 / ST 045 K SEM BASE | MOLA PNEUMÁTICA SUSPENSÃO EIXO | RANDON / SUSPENSYS | Também descrito no catálogo como: ST045 MOLA PNEUM COM BASE SUSP RANDON (p.88); ST045K MOLA PNEUM S/BASE SUSP RANDON (p.88)",
   "tipo": "BOLSA SUSPENSÃO (MOLA PNEUMÁTICA)",
   "cod_ref": "",
   "variacoes": "",
@@ -1306,7 +1198,8 @@
   "capitulo": "Bolsas e Amortecedores Cabine",
   "cap_num": 10,
   "ordem": 88055,
-  "foto": "Fotos Catálogo 2026/10 - Bolsas e Amortecedores Cabine/St045 MOLA PNEUM COM BASE SUSP RANDON - 4990045.jpg"
+  "itens": "4990450 – ST045K MOLA PNEUM S/BASE SUSP RANDON\n4990045 – St045 MOLA PNEUM COM BASE SUSP RANDON",
+  "foto": "Fotos Catálogo 2026/10 - Bolsas e Amortecedores Cabine/BOLSA SUSPENSÃO (MOLA PNEUMÁTICA) - 4990450 e mais 1.jpg"
  },
  {
   "pagina": "88, 92",
@@ -1323,24 +1216,8 @@
   "capitulo": "Bolsas e Amortecedores Cabine",
   "cap_num": 10,
   "ordem": 88056,
+  "itens": "",
   "foto": "Fotos Catálogo 2026/10 - Bolsas e Amortecedores Cabine/ST234ES VOLVO CJ MOLA PNEU CABINE DIANT 2015 - 4992340.jpg"
- },
- {
-  "pagina": "88, 110",
-  "card": 4,
-  "codigo": "4990450",
-  "montadora": "Randon",
-  "marca": "Suspentech",
-  "descricao": "ST045K MOLA PNEUM S/BASE SUSP RANDON",
-  "info": "ST 045 / ST 045 K SEM BASE | MOLA PNEUMÁTICA SUSPENSÃO EIXO | RANDON / SUSPENSYS",
-  "tipo": "BOLSA SUSPENSÃO (MOLA PNEUMÁTICA)",
-  "cod_ref": "",
-  "variacoes": "",
-  "aplicacao": "",
-  "capitulo": "Bolsas e Amortecedores Cabine",
-  "cap_num": 10,
-  "ordem": 88057,
-  "foto": "Fotos Catálogo 2026/10 - Bolsas e Amortecedores Cabine/ST045K MOLA PNEUM S-BASE SUSP RANDON - 4990450.jpg"
  },
  {
   "pagina": "88, 92",
@@ -1357,6 +1234,7 @@
   "capitulo": "Bolsas e Amortecedores Cabine",
   "cap_num": 10,
   "ordem": 88058,
+  "itens": "",
   "foto": "Fotos Catálogo 2026/10 - Bolsas e Amortecedores Cabine/ST235ES VOLVO AMORT CABINE TRANSVERSAL 2015 - 4990235.jpg"
  },
  {
@@ -1374,6 +1252,7 @@
   "capitulo": "Bolsas e Amortecedores Cabine",
   "cap_num": 10,
   "ordem": 88059,
+  "itens": "",
   "foto": "Fotos Catálogo 2026/10 - Bolsas e Amortecedores Cabine/ST046B MOLA PNEUM DIANT FH - 4990046.jpg"
  },
  {
@@ -1391,6 +1270,7 @@
   "capitulo": "Bolsas e Amortecedores Cabine",
   "cap_num": 10,
   "ordem": 88060,
+  "itens": "",
   "foto": "Fotos Catálogo 2026/10 - Bolsas e Amortecedores Cabine/ST253B MB MOLA PNEU CABINE DIANT AXOR - 4990253.jpg"
  },
  {
@@ -1408,6 +1288,7 @@
   "capitulo": "Bolsas e Amortecedores Cabine",
   "cap_num": 10,
   "ordem": 88061,
+  "itens": "",
   "foto": "Fotos Catálogo 2026/10 - Bolsas e Amortecedores Cabine/ST046SF CONJ MOLA PNEUM CABINE TRAS FH - 4990460.jpg"
  },
  {
@@ -1425,6 +1306,7 @@
   "capitulo": "Bolsas e Amortecedores Cabine",
   "cap_num": 10,
   "ordem": 88062,
+  "itens": "",
   "foto": "Fotos Catálogo 2026/10 - Bolsas e Amortecedores Cabine/ST253SF MB CJ MOLA PNEU CABINE DIANT AXOR - 4992530.jpg"
  },
  {
@@ -1442,6 +1324,7 @@
   "capitulo": "Bolsas e Amortecedores Cabine",
   "cap_num": 10,
   "ordem": 88063,
+  "itens": "",
   "foto": "Fotos Catálogo 2026/10 - Bolsas e Amortecedores Cabine/St056 TODOS CONJ COMP VALV NIVELADORA 1-4 NPT - 4990056.jpg"
  },
  {
@@ -1459,6 +1342,7 @@
   "capitulo": "Bolsas e Amortecedores Cabine",
   "cap_num": 10,
   "ordem": 88064,
+  "itens": "",
   "foto": "Fotos Catálogo 2026/10 - Bolsas e Amortecedores Cabine/ST292K LIBRELATO MOLA PNEU S-BASE SUSP EIXO - 4990292.jpg"
  },
  {
@@ -1476,6 +1360,7 @@
   "capitulo": "Bolsas e Amortecedores Cabine",
   "cap_num": 10,
   "ordem": 88065,
+  "itens": "",
   "foto": "Fotos Catálogo 2026/10 - Bolsas e Amortecedores Cabine/ST061ES AMORT VOLVO CABINE DIANT PNEU FH - 4990061.jpg"
  },
  {
@@ -1493,6 +1378,7 @@
   "capitulo": "Bolsas e Amortecedores Cabine",
   "cap_num": 10,
   "ordem": 88066,
+  "itens": "",
   "foto": "Fotos Catálogo 2026/10 - Bolsas e Amortecedores Cabine/ST297SF CJ VW MOLA PNEU CABINE TRASEIRA - 4990297.jpg"
  },
  {
@@ -1510,6 +1396,7 @@
   "pagina": "88, 112",
   "card": 5,
   "ordem": 88067,
+  "itens": "",
   "foto": "Fotos Catálogo 2026/10 - Bolsas e Amortecedores Cabine/ST063ES AMORT VOLVO CABINE TRAS HORIZONTAL FH - 4990063.jpg"
  },
  {
@@ -1527,16 +1414,17 @@
   "capitulo": "Bolsas e Amortecedores Cabine",
   "cap_num": 10,
   "ordem": 88068,
+  "itens": "",
   "foto": "Fotos Catálogo 2026/10 - Bolsas e Amortecedores Cabine/ST304SF SCANIA AMORT PNEU CABINE TRAS S5 - 4990304.jpg"
  },
  {
   "pagina": "88, 93",
   "card": 5,
-  "codigo": "4990064",
+  "codigo": "4990640 / 4990064",
   "montadora": "Volvo",
   "marca": "Suspentech",
-  "descricao": "St064 MOLA PNEUM TRACAO VOLVO DIANT MAIOR",
-  "info": "St064 MOLA PNEUM TRACAO VOLVO DIANT MAIOR | ST064K MOLA PNEUM S/BASE VOLVO DIANT MAIOR | ST 064 / ST 064 K SEM BASE | MOLA PNEUMÁTICA SUSPENSÃO EIXO | VOLVO FH / FM 2004 A 2014 | TRAÇÃO E TERCEIRO EIXO (Ø MAIOR) | Também descrito no catálogo como: ST064 MOLA PNEUM C/BASE VOLVO DIANT MAIOR (p.88)",
+  "descricao": "BOLSA SUSPENSÃO (MOLA PNEUMÁTICA)",
+  "info": "St064 MOLA PNEUM TRACAO VOLVO DIANT MAIOR | ST064K MOLA PNEUM S/BASE VOLVO DIANT MAIOR | ST 064 / ST 064 K SEM BASE | MOLA PNEUMÁTICA SUSPENSÃO EIXO | VOLVO FH / FM 2004 A 2014 | TRAÇÃO E TERCEIRO EIXO (Ø MAIOR) | Também descrito no catálogo como: ST064 MOLA PNEUM C/BASE VOLVO DIANT MAIOR (p.88); ST064K MOLA PNEUM S/BASE VOLVO DIANT MAIOR (p.88)",
   "tipo": "BOLSA SUSPENSÃO (MOLA PNEUMÁTICA)",
   "cod_ref": "",
   "variacoes": "",
@@ -1544,16 +1432,17 @@
   "capitulo": "Bolsas e Amortecedores Cabine",
   "cap_num": 10,
   "ordem": 88069,
-  "foto": "Fotos Catálogo 2026/10 - Bolsas e Amortecedores Cabine/St064 MOLA PNEUM TRACAO VOLVO DIANT MAIOR - 4990064.jpg"
+  "itens": "4990640 – ST064K MOLA PNEUM S/BASE VOLVO DIANT MAIOR\n4990064 – St064 MOLA PNEUM TRACAO VOLVO DIANT MAIOR",
+  "foto": "Fotos Catálogo 2026/10 - Bolsas e Amortecedores Cabine/BOLSA SUSPENSÃO (MOLA PNEUMÁTICA) - 4990640 e mais 1.jpg"
  },
  {
   "pagina": "88, 109",
   "card": 1,
-  "codigo": "4990307",
+  "codigo": "4993070 / 4990307",
   "montadora": "Noma, Randon",
   "marca": "Suspentech",
-  "descricao": "St307 MOLA PNEUM COM BASE SUSP CARRETA KLL",
-  "info": "ST 016 / ST 016 K SEM BASE | MOLA PNEUMÁTICA SUSPENSÃO EIXO | RANDON / SUSPENSYS / NOMA / IBERO | BASE INFERIOR | Obs.: o quadro do card repete o texto do ST 016 / ST 016 K (Randon / Suspensys / Noma / Ibero, base inferior) | Também descrito no catálogo como: ST307 MOLA PNEUM COM BASE SUSP CARRETA KLL (p.88)",
+  "descricao": "BOLSA SUSPENSÃO (MOLA PNEUMÁTICA)",
+  "info": "ST 016 / ST 016 K SEM BASE | MOLA PNEUMÁTICA SUSPENSÃO EIXO | RANDON / SUSPENSYS / NOMA / IBERO | BASE INFERIOR | Obs.: o quadro do card repete o texto do ST 016 / ST 016 K (Randon / Suspensys / Noma / Ibero, base inferior) | Também descrito no catálogo como: ST307 MOLA PNEUM COM BASE SUSP CARRETA KLL (p.88); ST307K MOLA PNEUM S/BASE SUSP CARRETA KLL (p.88)",
   "tipo": "BOLSA SUSPENSÃO (MOLA PNEUMÁTICA)",
   "cod_ref": "",
   "variacoes": "",
@@ -1561,41 +1450,8 @@
   "capitulo": "Bolsas e Amortecedores Cabine",
   "cap_num": 10,
   "ordem": 88070,
-  "foto": "Fotos Catálogo 2026/10 - Bolsas e Amortecedores Cabine/St307 MOLA PNEUM COM BASE SUSP CARRETA KLL - 4990307.jpg"
- },
- {
-  "pagina": "88, 93",
-  "card": 5,
-  "codigo": "4990640",
-  "montadora": "Volvo",
-  "marca": "Suspentech",
-  "descricao": "ST064K MOLA PNEUM S/BASE VOLVO DIANT MAIOR",
-  "info": "St064 MOLA PNEUM TRACAO VOLVO DIANT MAIOR | ST064K MOLA PNEUM S/BASE VOLVO DIANT MAIOR | ST 064 / ST 064 K SEM BASE | MOLA PNEUMÁTICA SUSPENSÃO EIXO | VOLVO FH / FM 2004 A 2014 | TRAÇÃO E TERCEIRO EIXO (Ø MAIOR)",
-  "tipo": "BOLSA SUSPENSÃO (MOLA PNEUMÁTICA)",
-  "cod_ref": "",
-  "variacoes": "",
-  "aplicacao": "",
-  "capitulo": "Bolsas e Amortecedores Cabine",
-  "cap_num": 10,
-  "ordem": 88071,
-  "foto": "Fotos Catálogo 2026/10 - Bolsas e Amortecedores Cabine/ST064K MOLA PNEUM S-BASE VOLVO DIANT MAIOR - 4990640.jpg"
- },
- {
-  "pagina": "88, 109",
-  "card": 1,
-  "codigo": "4993070",
-  "montadora": "Noma, Randon",
-  "marca": "Suspentech",
-  "descricao": "ST307K MOLA PNEUM S/BASE SUSP CARRETA KLL",
-  "info": "ST 016 / ST 016 K SEM BASE | MOLA PNEUMÁTICA SUSPENSÃO EIXO | RANDON / SUSPENSYS / NOMA / IBERO | BASE INFERIOR | Obs.: o quadro do card repete o texto do ST 016 / ST 016 K (Randon / Suspensys / Noma / Ibero, base inferior)",
-  "tipo": "BOLSA SUSPENSÃO (MOLA PNEUMÁTICA)",
-  "cod_ref": "",
-  "variacoes": "",
-  "aplicacao": "",
-  "capitulo": "Bolsas e Amortecedores Cabine",
-  "cap_num": 10,
-  "ordem": 88072,
-  "foto": "Fotos Catálogo 2026/10 - Bolsas e Amortecedores Cabine/ST307K MOLA PNEUM S-BASE SUSP CARRETA KLL - 4993070.jpg"
+  "itens": "4993070 – ST307K MOLA PNEUM S/BASE SUSP CARRETA KLL\n4990307 – St307 MOLA PNEUM COM BASE SUSP CARRETA KLL",
+  "foto": "Fotos Catálogo 2026/10 - Bolsas e Amortecedores Cabine/BOLSA SUSPENSÃO (MOLA PNEUMÁTICA) - 4993070 e mais 1.jpg"
  },
  {
   "pagina": "88, 90",
@@ -1612,6 +1468,7 @@
   "capitulo": "Bolsas e Amortecedores Cabine",
   "cap_num": 10,
   "ordem": 88073,
+  "itens": "",
   "foto": "Fotos Catálogo 2026/10 - Bolsas e Amortecedores Cabine/ST072SF VOLVO CJ MOLA HELICOIDAL CABINE DIANT - 4990072.jpg"
  },
  {
@@ -1629,6 +1486,7 @@
   "pagina": "88, 112",
   "card": 4,
   "ordem": 88074,
+  "itens": "",
   "foto": "Fotos Catálogo 2026/10 - Bolsas e Amortecedores Cabine/ST308 AMORT VOLVO CABINE VM 2003 EM DIANTE VM 2003 EM DIANTE DIANTEIRO - 4990308.jpg"
  },
  {
@@ -1663,6 +1521,7 @@
   "capitulo": "Bolsas e Amortecedores Cabine",
   "cap_num": 10,
   "ordem": 88076,
+  "itens": "",
   "foto": "Fotos Catálogo 2026/10 - Bolsas e Amortecedores Cabine/ST309ES VOLVO CJ MOLA HELI CABINE DIANT TRAS - 4990309.jpg"
  },
  {
@@ -1680,6 +1539,7 @@
   "capitulo": "Bolsas e Amortecedores Cabine",
   "cap_num": 10,
   "ordem": 88077,
+  "itens": "",
   "foto": "Fotos Catálogo 2026/10 - Bolsas e Amortecedores Cabine/ST080SF VOLVO CJ MOLA HELICOIDAL CABINE DIANT - 4990080.jpg"
  },
  {
@@ -1697,6 +1557,7 @@
   "capitulo": "Bolsas e Amortecedores Cabine",
   "cap_num": 10,
   "ordem": 88078,
+  "itens": "",
   "foto": "Fotos Catálogo 2026/10 - Bolsas e Amortecedores Cabine/ST337SF MOLA PNEUM IVECO HI CABINE TRASEIRA - 4990337.jpg"
  },
  {
@@ -1714,6 +1575,7 @@
   "capitulo": "Bolsas e Amortecedores Cabine",
   "cap_num": 10,
   "ordem": 88079,
+  "itens": "",
   "foto": "Fotos Catálogo 2026/10 - Bolsas e Amortecedores Cabine/ST081SF VOLVO AMORT HELICOIDAL CABINE DIANT - 4990081.jpg"
  },
  {
@@ -1731,6 +1593,7 @@
   "capitulo": "Bolsas e Amortecedores Cabine",
   "cap_num": 10,
   "ordem": 88080,
+  "itens": "",
   "foto": "Fotos Catálogo 2026/10 - Bolsas e Amortecedores Cabine/St338 K MOLA PNEUM MB AXOR- ACTROS-SEM SENSOR - 4990338.jpg"
  },
  {
@@ -1748,6 +1611,7 @@
   "capitulo": "Bolsas e Amortecedores Cabine",
   "cap_num": 10,
   "ordem": 88081,
+  "itens": "",
   "foto": "Fotos Catálogo 2026/10 - Bolsas e Amortecedores Cabine/ST082ES VOLVO CJ MOLA HELICOIDAL CABINE TRASE - 4990082.jpg"
  },
  {
@@ -1765,16 +1629,17 @@
   "pagina": "88, 112",
   "card": 10,
   "ordem": 88082,
+  "itens": "",
   "foto": "Fotos Catálogo 2026/10 - Bolsas e Amortecedores Cabine/ST342 ES - CONJ MOLA HELICOIDAL CAB TRAS - 4990342.jpg"
  },
  {
   "pagina": "88, 107",
   "card": 7,
-  "codigo": "4990086",
+  "codigo": "4990086 / 4998600",
   "montadora": "Facchini",
   "marca": "Suspentech",
-  "descricao": "ST086 MOLA PNEUM FACCHINI C/BASE",
-  "info": "",
+  "descricao": "BOLSA SUSPENSÃO (MOLA PNEUMÁTICA)",
+  "info": "Também descrito no catálogo como: ST086 MOLA PNEUM FACCHINI C/BASE (p.88); ST086K MOLA PNEUM FACCHINI S/BASE (p.88)",
   "tipo": "BOLSA SUSPENSÃO (MOLA PNEUMÁTICA)",
   "cod_ref": "",
   "variacoes": "",
@@ -1782,16 +1647,17 @@
   "capitulo": "Bolsas e Amortecedores Cabine",
   "cap_num": 10,
   "ordem": 88083,
-  "foto": "Fotos Catálogo 2026/10 - Bolsas e Amortecedores Cabine/ST086 MOLA PNEUM FACCHINI C-BASE - 4990086.jpg"
+  "itens": "4990086 – ST086 MOLA PNEUM FACCHINI C/BASE\n4998600 – ST086K MOLA PNEUM FACCHINI S/BASE",
+  "foto": "Fotos Catálogo 2026/10 - Bolsas e Amortecedores Cabine/BOLSA SUSPENSÃO (MOLA PNEUMÁTICA) - 4990086 e mais 1.jpg"
  },
  {
   "pagina": "88, 106",
   "card": 1,
-  "codigo": "4990352",
+  "codigo": "4993520 / 4990352",
   "montadora": "Mercedes-Benz",
   "marca": "Suspentech",
-  "descricao": "St352 MB MOLA PNEU COMPLETA SUSP EIXO",
-  "info": "ST 352 / ST 352 K SEM BASE | MOLA PNEUMÁTICA SUSPENSÃO EIXO | MERCEDES-BENZ AXOR | ACTROS 2015 A 2022 / COM SENSOR | Também descrito no catálogo como: ST352 MB MOLA PNEU COMPLETA SUSP EIXO (p.88)",
+  "descricao": "BOLSA SUSPENSÃO (MOLA PNEUMÁTICA)",
+  "info": "ST 352 / ST 352 K SEM BASE | MOLA PNEUMÁTICA SUSPENSÃO EIXO | MERCEDES-BENZ AXOR | ACTROS 2015 A 2022 / COM SENSOR | Também descrito no catálogo como: ST352 MB MOLA PNEU COMPLETA SUSP EIXO (p.88); ST352K MB MOLA PNEU S/BASE SUSP EIXO (p.88)",
   "tipo": "BOLSA SUSPENSÃO (MOLA PNEUMÁTICA)",
   "cod_ref": "",
   "variacoes": "",
@@ -1799,41 +1665,8 @@
   "capitulo": "Bolsas e Amortecedores Cabine",
   "cap_num": 10,
   "ordem": 88084,
-  "foto": "Fotos Catálogo 2026/10 - Bolsas e Amortecedores Cabine/St352 MB MOLA PNEU COMPLETA SUSP EIXO - 4990352.jpg"
- },
- {
-  "pagina": "88, 107",
-  "card": 7,
-  "codigo": "4998600",
-  "montadora": "Facchini",
-  "marca": "Suspentech",
-  "descricao": "ST086K MOLA PNEUM FACCHINI S/BASE",
-  "info": "",
-  "tipo": "BOLSA SUSPENSÃO (MOLA PNEUMÁTICA)",
-  "cod_ref": "",
-  "variacoes": "",
-  "aplicacao": "",
-  "capitulo": "Bolsas e Amortecedores Cabine",
-  "cap_num": 10,
-  "ordem": 88085,
-  "foto": "Fotos Catálogo 2026/10 - Bolsas e Amortecedores Cabine/ST086K MOLA PNEUM FACCHINI S-BASE - 4998600.jpg"
- },
- {
-  "pagina": "88, 106",
-  "card": 1,
-  "codigo": "4993520",
-  "montadora": "Mercedes-Benz",
-  "marca": "Suspentech",
-  "descricao": "ST352K MB MOLA PNEU S/BASE SUSP EIXO",
-  "info": "ST 352 / ST 352 K SEM BASE | MOLA PNEUMÁTICA SUSPENSÃO EIXO | MERCEDES-BENZ AXOR | ACTROS 2015 A 2022 / COM SENSOR",
-  "tipo": "BOLSA SUSPENSÃO (MOLA PNEUMÁTICA)",
-  "cod_ref": "",
-  "variacoes": "",
-  "aplicacao": "",
-  "capitulo": "Bolsas e Amortecedores Cabine",
-  "cap_num": 10,
-  "ordem": 88086,
-  "foto": "Fotos Catálogo 2026/10 - Bolsas e Amortecedores Cabine/ST352K MB MOLA PNEU S-BASE SUSP EIXO - 4993520.jpg"
+  "itens": "4993520 – ST352K MB MOLA PNEU S/BASE SUSP EIXO\n4990352 – St352 MB MOLA PNEU COMPLETA SUSP EIXO",
+  "foto": "Fotos Catálogo 2026/10 - Bolsas e Amortecedores Cabine/BOLSA SUSPENSÃO (MOLA PNEUMÁTICA) - 4993520 e mais 1.jpg"
  },
  {
   "pagina": "88, 95",
@@ -1850,24 +1683,26 @@
   "capitulo": "Bolsas e Amortecedores Cabine",
   "cap_num": 10,
   "ordem": 88087,
+  "itens": "",
   "foto": "Fotos Catálogo 2026/10 - Bolsas e Amortecedores Cabine/St089 VOLVO VALV NIVELAD CABINE DIANT E TRAS - 4990089.jpg"
  },
  {
-  "pagina": "88, 108, 111",
+  "pagina": "88, 108",
   "card": 1,
-  "codigo": "4990353",
+  "codigo": "4993530 / 4990353",
   "montadora": "Randon",
   "marca": "Suspentech",
-  "descricao": "ST353 RANDON MOLA PNEU COMPLETA SUSP EIXO",
-  "cod_ref": "100000176552",
-  "info": "RANDON / SUSPENSYS | SUSPENSÃO TAS | FIRESTONE: 954208 / 1T19LC-7 | COMPONENTES: ST 353 K + ST 353 BSE / ST 353 / ST 353 K SEM BASE | MOLA PNEUMÁTICA EIXO | RANDON / SUSPENSYS / SUSPENSÃO TAS | Também descrito no catálogo como: St353 RANDON MOLA PNEU COMPLETA SUSP EIXO (p.108)",
+  "descricao": "BOLSA SUSPENSÃO (MOLA PNEUMÁTICA)",
+  "info": "ST 353 / ST 353 K SEM BASE | MOLA PNEUMÁTICA EIXO | RANDON / SUSPENSYS / SUSPENSÃO TAS | Também descrito no catálogo como: ST353 RANDON MOLA PNEU COMPLETA SUSP EIXO (p.88); ST353K RANDON MOLA PNEU S/BASE SUSP EIXO (p.88)",
   "tipo": "BOLSA SUSPENSÃO (MOLA PNEUMÁTICA)",
+  "cod_ref": "",
   "variacoes": "",
   "aplicacao": "",
   "capitulo": "Bolsas e Amortecedores Cabine",
   "cap_num": 10,
   "ordem": 88088,
-  "foto": "Fotos Catálogo 2026/10 - Bolsas e Amortecedores Cabine/ST353 RANDON MOLA PNEU COMPLETA SUSP EIXO - 4990353.jpg"
+  "itens": "4993530 – ST353K RANDON MOLA PNEU S/BASE SUSP EIXO\n4990353 – St353 RANDON MOLA PNEU COMPLETA SUSP EIXO",
+  "foto": "Fotos Catálogo 2026/10 - Bolsas e Amortecedores Cabine/BOLSA SUSPENSÃO (MOLA PNEUMÁTICA) - 4993530 e mais 1.jpg"
  },
  {
   "pagina": "88, 89",
@@ -1884,24 +1719,8 @@
   "capitulo": "Bolsas e Amortecedores Cabine",
   "cap_num": 10,
   "ordem": 88089,
+  "itens": "",
   "foto": "Fotos Catálogo 2026/10 - Bolsas e Amortecedores Cabine/St098 VOLVO MOLA GAS CABINE GRADE DIANT - 4990098.jpg"
- },
- {
-  "pagina": "88, 108",
-  "card": 1,
-  "codigo": "4993530",
-  "montadora": "Randon",
-  "marca": "Suspentech",
-  "descricao": "ST353K RANDON MOLA PNEU S/BASE SUSP EIXO",
-  "info": "ST 353 / ST 353 K SEM BASE | MOLA PNEUMÁTICA EIXO | RANDON / SUSPENSYS / SUSPENSÃO TAS",
-  "tipo": "BOLSA SUSPENSÃO (MOLA PNEUMÁTICA)",
-  "cod_ref": "",
-  "variacoes": "",
-  "aplicacao": "",
-  "capitulo": "Bolsas e Amortecedores Cabine",
-  "cap_num": 10,
-  "ordem": 88090,
-  "foto": "Fotos Catálogo 2026/10 - Bolsas e Amortecedores Cabine/ST353K RANDON MOLA PNEU S-BASE SUSP EIXO - 4993530.jpg"
  },
  {
   "pagina": "88, 105",
@@ -1918,6 +1737,7 @@
   "capitulo": "Bolsas e Amortecedores Cabine",
   "cap_num": 10,
   "ordem": 88091,
+  "itens": "",
   "foto": "Fotos Catálogo 2026/10 - Bolsas e Amortecedores Cabine/ST106SF CONJ MB MOLA HELICOIDAL CABINE DIANT - 4990106.jpg"
  },
  {
@@ -1935,6 +1755,7 @@
   "capitulo": "Bolsas e Amortecedores Cabine",
   "cap_num": 10,
   "ordem": 88092,
+  "itens": "",
   "foto": "Fotos Catálogo 2026/10 - Bolsas e Amortecedores Cabine/St366 VOLVO MOLA PENU COMP SUSP QUARTO EIXO - 4990366.jpg"
  },
  {
@@ -1952,6 +1773,7 @@
   "capitulo": "Bolsas e Amortecedores Cabine",
   "cap_num": 10,
   "ordem": 88093,
+  "itens": "",
   "foto": "Fotos Catálogo 2026/10 - Bolsas e Amortecedores Cabine/ST107SF CONJ MB MOLA HELICOIDAL CABINE TRAS - 4990107.jpg"
  },
  {
@@ -1969,6 +1791,7 @@
   "capitulo": "Bolsas e Amortecedores Cabine",
   "cap_num": 10,
   "ordem": 88094,
+  "itens": "",
   "foto": "Fotos Catálogo 2026/10 - Bolsas e Amortecedores Cabine/ST374B SCANIA MOLA PNEU CABINE DIANT SERIE 6 - 4990374.jpg"
  },
  {
@@ -1986,6 +1809,7 @@
   "capitulo": "Bolsas e Amortecedores Cabine",
   "cap_num": 10,
   "ordem": 88095,
+  "itens": "",
   "foto": "Fotos Catálogo 2026/10 - Bolsas e Amortecedores Cabine/ST108ES VOLKS CJ MOLA HELICOIDAL CABINE TRAS - 4990108.jpg"
  },
  {
@@ -2003,6 +1827,7 @@
   "capitulo": "Bolsas e Amortecedores Cabine",
   "cap_num": 10,
   "ordem": 88096,
+  "itens": "",
   "foto": "Fotos Catálogo 2026/10 - Bolsas e Amortecedores Cabine/ST374ES AMORT SCANIA PNEU CABINE DIANT S6 - 4993740.jpg"
  },
  {
@@ -2020,6 +1845,7 @@
   "capitulo": "Bolsas e Amortecedores Cabine",
   "cap_num": 10,
   "ordem": 88097,
+  "itens": "",
   "foto": "Fotos Catálogo 2026/10 - Bolsas e Amortecedores Cabine/ST109ES VOLKS CJ MOLA HELICOIDAL CABINE DIANT - 4990109.jpg"
  },
  {
@@ -2037,6 +1863,7 @@
   "capitulo": "Bolsas e Amortecedores Cabine",
   "cap_num": 10,
   "ordem": 88098,
+  "itens": "",
   "foto": "Fotos Catálogo 2026/10 - Bolsas e Amortecedores Cabine/ST375ES AMORT SCANIA PNEU CABINE SERIE 6 - 4990375.jpg"
  },
  {
@@ -2054,6 +1881,7 @@
   "capitulo": "Bolsas e Amortecedores Cabine",
   "cap_num": 10,
   "ordem": 88099,
+  "itens": "",
   "foto": "Fotos Catálogo 2026/10 - Bolsas e Amortecedores Cabine/St125 SCANIA MOLA PNEUM CABINE DIANT E TRAS - 4990125.jpg"
  },
  {
@@ -2071,6 +1899,7 @@
   "capitulo": "Bolsas e Amortecedores Cabine",
   "cap_num": 10,
   "ordem": 88100,
+  "itens": "",
   "foto": "Fotos Catálogo 2026/10 - Bolsas e Amortecedores Cabine/ST376B SCANIA MOLA PNEU CABINE TRAS - 4990376.jpg"
  },
  {
@@ -2088,6 +1917,7 @@
   "capitulo": "Bolsas e Amortecedores Cabine",
   "cap_num": 10,
   "ordem": 88101,
+  "itens": "",
   "foto": "Fotos Catálogo 2026/10 - Bolsas e Amortecedores Cabine/St130 SCANIA MOLA PNEUM CABINE DIANT SERIE 5 - 4990130.jpg"
  },
  {
@@ -2105,16 +1935,17 @@
   "pagina": "88, 112",
   "card": 1,
   "ordem": 88102,
+  "itens": "",
   "foto": "Fotos Catálogo 2026/10 - Bolsas e Amortecedores Cabine/ST377ES - AMORT SCANIA CANIE SERIE 6 DIANT-TRAS - 4990377.jpg"
  },
  {
   "pagina": "88, 94",
   "card": 1,
-  "codigo": "4991370",
+  "codigo": "4991370 / 4990137",
   "montadora": "Volvo",
   "marca": "Suspentech",
-  "descricao": "St137 MOLA PNEUM COMPL TRACAO VOLVO",
-  "info": "ST 137 / ST 137 K SEM BASE | MOLA PNEUMÁTICA SUSPENSÃO | EIXO VOLVO FH / FM 2004 A 2014 | TRAÇÃO (Ø MENOR) | Também descrito no catálogo como: ST137 MOLA PNEUM COMPL TRACAO VOLVO (p.88)",
+  "descricao": "BOLSA SUSPENSÃO (MOLA PNEUMÁTICA)",
+  "info": "ST 137 / ST 137 K SEM BASE | MOLA PNEUMÁTICA SUSPENSÃO | EIXO VOLVO FH / FM 2004 A 2014 | TRAÇÃO (Ø MENOR) | Também descrito no catálogo como: ST137 MOLA PNEUM COMPL TRACAO VOLVO (p.88); ST137K MOLA PNEUM S/BASE VOLVO 2004 2014 (p.88)",
   "tipo": "BOLSA SUSPENSÃO (MOLA PNEUMÁTICA)",
   "cod_ref": "",
   "variacoes": "",
@@ -2122,7 +1953,8 @@
   "capitulo": "Bolsas e Amortecedores Cabine",
   "cap_num": 10,
   "ordem": 88103,
-  "foto": "Fotos Catálogo 2026/10 - Bolsas e Amortecedores Cabine/St137 MOLA PNEUM COMPL TRACAO VOLVO - 4991370.jpg"
+  "itens": "4991370 – St137 MOLA PNEUM COMPL TRACAO VOLVO\n4990137 – ST137K MOLA PNEUM S/BASE VOLVO 2004 2014",
+  "foto": "Fotos Catálogo 2026/10 - Bolsas e Amortecedores Cabine/BOLSA SUSPENSÃO (MOLA PNEUMÁTICA) - 4991370 e mais 1.jpg"
  },
  {
   "pagina": "88, 93",
@@ -2139,24 +1971,8 @@
   "capitulo": "Bolsas e Amortecedores Cabine",
   "cap_num": 10,
   "ordem": 88104,
+  "itens": "",
   "foto": "Fotos Catálogo 2026/10 - Bolsas e Amortecedores Cabine/ST398ES AMORT VOLVO MOLA HELICOIDAL CAB TRAS - 4990398.jpg"
- },
- {
-  "pagina": "88, 94",
-  "card": 1,
-  "codigo": "4990137",
-  "montadora": "Volvo",
-  "marca": "Suspentech",
-  "descricao": "ST137K MOLA PNEUM S/BASE VOLVO 2004 2014",
-  "info": "ST 137 / ST 137 K SEM BASE | MOLA PNEUMÁTICA SUSPENSÃO | EIXO VOLVO FH / FM 2004 A 2014 | TRAÇÃO (Ø MENOR)",
-  "tipo": "BOLSA SUSPENSÃO (MOLA PNEUMÁTICA)",
-  "cod_ref": "",
-  "variacoes": "",
-  "aplicacao": "",
-  "capitulo": "Bolsas e Amortecedores Cabine",
-  "cap_num": 10,
-  "ordem": 88105,
-  "foto": "Fotos Catálogo 2026/10 - Bolsas e Amortecedores Cabine/ST137K MOLA PNEUM S-BASE VOLVO 2004 2014 - 4990137.jpg"
  },
  {
   "pagina": "88, 110",
@@ -2173,6 +1989,7 @@
   "capitulo": "Bolsas e Amortecedores Cabine",
   "cap_num": 10,
   "ordem": 88106,
+  "itens": "",
   "foto": "Fotos Catálogo 2026/10 - Bolsas e Amortecedores Cabine/St4000 FOLE PNEUM SUSP EIO DIANT 334 X 224 - 4994000.jpg"
  },
  {
@@ -2190,6 +2007,7 @@
   "capitulo": "Bolsas e Amortecedores Cabine",
   "cap_num": 10,
   "ordem": 88107,
+  "itens": "",
   "foto": "Fotos Catálogo 2026/10 - Bolsas e Amortecedores Cabine/ST139 MOLA SCANIA GAS BAGAGEIRO LATERAL S4 S5 - 4990139.jpg"
  },
  {
@@ -2207,6 +2025,7 @@
   "capitulo": "Bolsas e Amortecedores Cabine",
   "cap_num": 10,
   "ordem": 88108,
+  "itens": "",
   "foto": "Fotos Catálogo 2026/10 - Bolsas e Amortecedores Cabine/St4002 FOLE PNEUM SUSP DIANT 380 X 195 MM - 4994002.jpg"
  },
  {
@@ -2224,6 +2043,7 @@
   "capitulo": "Bolsas e Amortecedores Cabine",
   "cap_num": 10,
   "ordem": 88109,
+  "itens": "",
   "foto": "Fotos Catálogo 2026/10 - Bolsas e Amortecedores Cabine/ST142K MOLA FACCHINI PNEU S-BASE SUSP EIXOLA - 4990142.jpg"
  },
  {
@@ -2241,16 +2061,17 @@
   "capitulo": "Bolsas e Amortecedores Cabine",
   "cap_num": 10,
   "ordem": 88110,
+  "itens": "",
   "foto": "Fotos Catálogo 2026/10 - Bolsas e Amortecedores Cabine/ST407ES AMORT VOLVO MOLA HELICOIDAL CAB DIANT - 4990407.jpg"
  },
  {
   "pagina": "88, 109",
   "card": 2,
-  "codigo": "4990143",
+  "codigo": "4991430 / 4990143",
   "montadora": "Guerra",
   "marca": "Suspentech",
-  "descricao": "St143 MOLA PNEUM COM BASE SUSP GUERRA",
-  "info": "Também descrito no catálogo como: ST143 MOLA PNEUM COM BASE SUSP GUERRA (p.88)",
+  "descricao": "BOLSA SUSPENSÃO (MOLA PNEUMÁTICA)",
+  "info": "Também descrito no catálogo como: ST143 MOLA PNEUM COM BASE SUSP GUERRA (p.88); ST143K MOLA PNEUM S/BASE SUSP GUERRA (p.88)",
   "tipo": "BOLSA SUSPENSÃO (MOLA PNEUMÁTICA)",
   "cod_ref": "",
   "variacoes": "",
@@ -2258,41 +2079,26 @@
   "capitulo": "Bolsas e Amortecedores Cabine",
   "cap_num": 10,
   "ordem": 88111,
-  "foto": "Fotos Catálogo 2026/10 - Bolsas e Amortecedores Cabine/St143 MOLA PNEUM COM BASE SUSP GUERRA - 4990143.jpg"
+  "itens": "4991430 – ST143K MOLA PNEUM S/BASE SUSP GUERRA\n4990143 – St143 MOLA PNEUM COM BASE SUSP GUERRA",
+  "foto": "Fotos Catálogo 2026/10 - Bolsas e Amortecedores Cabine/BOLSA SUSPENSÃO (MOLA PNEUMÁTICA) - 4991430 e mais 1.jpg"
  },
  {
   "pagina": "88, 104",
   "card": 3,
-  "codigo": "4990455",
+  "codigo": "4990455 / 4994550",
   "montadora": "Mercedes-Benz",
   "marca": "Suspentech",
-  "descricao": "ST455 MOLA MB PNEUM COMPLETA S/SENSOR TER EIX",
+  "descricao": "BOLSA (MOLA PNEUMÁTICA)",
   "cod_ref": "A9613206921 / A9613204221 / A9613204621 / A9613205421",
-  "info": "MOLA PNEUMÁTICA SUSPENSÃO EIXO | MERCEDES BENZ ACTROS 2021 EM DIANTE | TRAÇÃO E TERCEIRO EIXO - SEM SENSOR | CONTITECH: 6173 N P 42",
+  "info": "MOLA PNEUMÁTICA SUSPENSÃO EIXO | MERCEDES BENZ ACTROS 2021 EM DIANTE | TRAÇÃO E TERCEIRO EIXO - SEM SENSOR | CONTITECH: 6173 N P 42 | Também descrito no catálogo como: ST455 MOLA MB PNEUM COMPLETA S/SENSOR TER EIX (p.88)",
   "tipo": "BOLSA (MOLA PNEUMÁTICA)",
   "variacoes": "",
   "aplicacao": "",
   "capitulo": "Bolsas e Amortecedores Cabine",
   "cap_num": 10,
   "ordem": 88112,
-  "foto": "Fotos Catálogo 2026/10 - Bolsas e Amortecedores Cabine/ST455 MOLA MB PNEUM COMPLETA S-SENSOR TER EIX - 4990455.jpg"
- },
- {
-  "pagina": "88, 109",
-  "card": 2,
-  "codigo": "4991430",
-  "montadora": "Guerra",
-  "marca": "Suspentech",
-  "descricao": "ST143K MOLA PNEUM S/BASE SUSP GUERRA",
-  "info": "",
-  "tipo": "BOLSA SUSPENSÃO (MOLA PNEUMÁTICA)",
-  "cod_ref": "",
-  "variacoes": "",
-  "aplicacao": "",
-  "capitulo": "Bolsas e Amortecedores Cabine",
-  "cap_num": 10,
-  "ordem": 88113,
-  "foto": "Fotos Catálogo 2026/10 - Bolsas e Amortecedores Cabine/ST143K MOLA PNEUM S-BASE SUSP GUERRA - 4991430.jpg"
+  "itens": "4990455 – ST455 MOLA MB PNEUM COMPLETA S/SENSOR TER EIX\n4994550 – ST455K MOLA MB PNEUM COMPLETA S/SENSOR TER EIX",
+  "foto": "Fotos Catálogo 2026/10 - Bolsas e Amortecedores Cabine/BOLSA (MOLA PNEUMÁTICA) - 4990455 e mais 1.jpg"
  },
  {
   "pagina": "88, 105",
@@ -2309,6 +2115,7 @@
   "capitulo": "Bolsas e Amortecedores Cabine",
   "cap_num": 10,
   "ordem": 88114,
+  "itens": "",
   "foto": "Fotos Catálogo 2026/10 - Bolsas e Amortecedores Cabine/ST703 CONJ AMORT CABINE MB TRAS S-VALVULA - 4990703.jpg"
  },
  {
@@ -2326,6 +2133,7 @@
   "capitulo": "Bolsas e Amortecedores Cabine",
   "cap_num": 10,
   "ordem": 88115,
+  "itens": "",
   "foto": "Fotos Catálogo 2026/10 - Bolsas e Amortecedores Cabine/ST822 MOLA PNEUM SUSP EIXO 2 GOMOS FACCHINI - 4990822.jpg"
  },
  {
@@ -2343,6 +2151,7 @@
   "capitulo": "Bolsas e Amortecedores Cabine",
   "cap_num": 10,
   "ordem": 88116,
+  "itens": "",
   "foto": "Fotos Catálogo 2026/10 - Bolsas e Amortecedores Cabine/St829 MOLA PNEUM SUSP EIXO 2 GOMOS FACCHINI - 4990829.jpg"
  },
  {
@@ -2360,6 +2169,7 @@
   "capitulo": "Bolsas e Amortecedores Cabine",
   "cap_num": 10,
   "ordem": 88117,
+  "itens": "",
   "foto": "Fotos Catálogo 2026/10 - Bolsas e Amortecedores Cabine/St840 RANDON- GUERRA MOLA PNEU S-BASE SUSP ST 840 MOLA CONVOLUTADA RANDON - GUERRA SUSPENSOR EIXO - 4990840.jpg"
  },
  {
@@ -2377,6 +2187,7 @@
   "capitulo": "Bolsas e Amortecedores Cabine",
   "cap_num": 10,
   "ordem": 88118,
+  "itens": "",
   "foto": "Fotos Catálogo 2026/10 - Bolsas e Amortecedores Cabine/St852 MOLA PNEUM SUSP EIXO 2 GOMOS VOLVO - 4990852.jpg"
  },
  {
@@ -2394,6 +2205,7 @@
   "capitulo": "Bolsas e Amortecedores Cabine",
   "cap_num": 10,
   "ordem": 88119,
+  "itens": "",
   "foto": "Fotos Catálogo 2026/10 - Bolsas e Amortecedores Cabine/St853 MOLA PNEUM SUSP EIXO 2 GOMOS - 4990853.jpg"
  },
  {
@@ -2411,6 +2223,7 @@
   "capitulo": "Bolsas e Amortecedores Cabine",
   "cap_num": 10,
   "ordem": 88120,
+  "itens": "",
   "foto": "Fotos Catálogo 2026/10 - Bolsas e Amortecedores Cabine/ST861 MOLA PNEUM SUSP A AR - 4990861.jpg"
  },
  {
@@ -2428,6 +2241,7 @@
   "capitulo": "Bolsas e Amortecedores Cabine",
   "cap_num": 10,
   "ordem": 88121,
+  "itens": "",
   "foto": "Fotos Catálogo 2026/10 - Bolsas e Amortecedores Cabine/St866 FOLE PNEUM SUSP JOST - RANDON - 4990866.jpg"
  },
  {
@@ -2445,6 +2259,7 @@
   "capitulo": "Bolsas e Amortecedores Cabine",
   "cap_num": 10,
   "ordem": 88122,
+  "itens": "",
   "foto": "Fotos Catálogo 2026/10 - Bolsas e Amortecedores Cabine/ST878 MOLA PNEUM ESTAB QUINTA RODA S-RETORNO - 4990878.jpg"
  },
  {
@@ -2550,8 +2365,8 @@
   "foto": "Fotos Catálogo 2026/10 - Bolsas e Amortecedores Cabine/STB511 - CONTINENTAL 21129477 MOLA PNEU C-SUP - 4890511.jpg"
  },
  {
-  "codigo": "4890320",
-  "descricao": "ST032 CONTINENTAL 21127007 MOLA PNEU C/SUP",
+  "codigo": "4890320 / 4890032",
+  "descricao": "BOLSA (MOLA PNEUMÁTICA)",
   "tipo": "BOLSA (MOLA PNEUMÁTICA)",
   "cod_ref": "",
   "variacoes": "",
@@ -2564,24 +2379,8 @@
   "pagina": "114",
   "card": 2,
   "ordem": 114100,
-  "foto": "Fotos Catálogo 2026/10 - Bolsas e Amortecedores Cabine/ST032 CONTINENTAL 21127007 MOLA PNEU C-SUP - 4890320.jpg"
- },
- {
-  "codigo": "4890032",
-  "descricao": "ST032K CONTINENTAL 21127007 MOLA PNEU C/SUP",
-  "tipo": "BOLSA (MOLA PNEUMÁTICA)",
-  "cod_ref": "",
-  "variacoes": "",
-  "aplicacao": "",
-  "info": "St032 2357460 1903608 1944314 | 15005957 Firestone 095.0595 1T19F-14 | MOLA PNEUMÁTICA SUSPENSÃO EIXO | SCANIA SÉRIE 5 E 6 - 2010 EM DIANTE | TRAÇÃO E TERCEIRO EIXO | P 310, R 480, R 440, P 420, P 340, G 470, G 400, G 420, R 560, | R 500, P 360, R 420, R 124, R 470, P 440, P 250, G 440, G 380, | R 400, G 480, P 320, P 270, G 360, P 114, P 230, R 380, R 620, R 580 | Card com os códigos 4890320 | 4890032 (ST032 | ST032K)",
-  "marca": "Continental",
-  "montadora": "Scania",
-  "capitulo": "Bolsas e Amortecedores Cabine",
-  "cap_num": 10,
-  "pagina": "114",
-  "card": 2,
-  "ordem": 114101,
-  "foto": "Fotos Catálogo 2026/10 - Bolsas e Amortecedores Cabine/ST032K CONTINENTAL 21127007 MOLA PNEU C-SUP - 4890032.jpg"
+  "itens": "4890320 – ST032 CONTINENTAL 21127007 MOLA PNEU C/SUP\n4890032 – ST032K CONTINENTAL 21127007 MOLA PNEU C/SUP",
+  "foto": "Fotos Catálogo 2026/10 - Bolsas e Amortecedores Cabine/BOLSA (MOLA PNEUMÁTICA) - 4890320 e mais 1.jpg"
  },
  {
   "codigo": "4890500",
@@ -2601,8 +2400,8 @@
   "foto": "Fotos Catálogo 2026/10 - Bolsas e Amortecedores Cabine/STB500 CONTINENTAL 21129480 MOLA PNEU C-SUP - 4890500.jpg"
  },
  {
-  "codigo": "4890016",
-  "descricao": "ST016K CONTINENTAL 21084221 MOLA PNEU S/SUP MOLA PNEUMÁTICA SUSPENSÃO EIXO RANDON / SUSPENSYS / IBERO / NOMA",
+  "codigo": "4890016 / 4890160",
+  "descricao": "BOLSA SUSPENSÃO (MOLA PNEUMÁTICA)",
   "tipo": "BOLSA SUSPENSÃO (MOLA PNEUMÁTICA)",
   "cod_ref": "212100261 / MOP 059 000 001 / 9200164 / ST 016 K",
   "variacoes": "",
@@ -2615,24 +2414,8 @@
   "pagina": "114",
   "card": 4,
   "ordem": 114200,
-  "foto": "Fotos Catálogo 2026/10 - Bolsas e Amortecedores Cabine/ST016K CONTINENTAL 21084221 MOLA PNEU S-SUP MOLA PNEUMÁTICA SUSPENSÃO EIXO RANDON - SUSPENSYS - IBER - 4890016.jpg"
- },
- {
-  "codigo": "4890160",
-  "descricao": "St016 CONTINENTAL 21084221 MOLA PNEU S/SUP MOLA PNEUMÁTICA SUSPENSÃO EIXO RANDON / SUSPENSYS / IBERO / NOMA",
-  "tipo": "BOLSA SUSPENSÃO (MOLA PNEUMÁTICA)",
-  "cod_ref": "212100261 / MOP 059 000 001 / 9200164 / ST 016 K",
-  "variacoes": "",
-  "aplicacao": "",
-  "info": "KIT REPOSIÇÃO | FIRESTONE: 950735 | 950321 | GOODYEAR: 8754 | FIRESTONE: 950734 | 950736 | 954028 | 1T19L-11 | CONTITECH: 11 10.5-21 A 954 | GOODYEAR: 8550 | COMPONENTES: ST 016 K + ST 016 BSE OU ST 016 BSE N | Card com os códigos 4890016 | 4890160 (ST016K | St016)",
-  "marca": "Continental",
-  "montadora": "Randon, Noma",
-  "capitulo": "Bolsas e Amortecedores Cabine",
-  "cap_num": 10,
-  "pagina": "114",
-  "card": 4,
-  "ordem": 114201,
-  "foto": "Fotos Catálogo 2026/10 - Bolsas e Amortecedores Cabine/St016 CONTINENTAL 21084221 MOLA PNEU S-SUP MOLA PNEUMÁTICA SUSPENSÃO EIXO RANDON - SUSPENSYS - IBERO - 4890160.jpg"
+  "itens": "4890016 – ST016K CONTINENTAL 21084221 MOLA PNEU S/SUP MOLA PNEUMÁTICA SUSPENSÃO EIXO RANDON / SUSPENSYS / IBERO / NOMA\n4890160 – St016 CONTINENTAL 21084221 MOLA PNEU S/SUP MOLA PNEUMÁTICA SUSPENSÃO EIXO RANDON / SUSPENSYS / IBERO / NOMA",
+  "foto": "Fotos Catálogo 2026/10 - Bolsas e Amortecedores Cabine/BOLSA SUSPENSÃO (MOLA PNEUMÁTICA) - 4890016 e mais 1.jpg"
  },
  {
   "codigo": "4893530",
@@ -2686,8 +2469,8 @@
   "foto": "Fotos Catálogo 2026/10 - Bolsas e Amortecedores Cabine/ST824 CONTINENTAL 21195702 MOLA PNEU C-SUP FOLE CONVOLUTADO RANDON SUSPENSÃO EΙΧΟ - 4890824.jpg"
  },
  {
-  "codigo": "4893520",
-  "descricao": "St352K CONTINENTAL 21168090 MOLA PNEU S/SUP",
+  "codigo": "4890352 / 4893520",
+  "descricao": "BOLSA (MOLA PNEUMÁTICA)",
   "tipo": "BOLSA (MOLA PNEUMÁTICA)",
   "cod_ref": "A9583200421",
   "variacoes": "",
@@ -2700,24 +2483,8 @@
   "pagina": "114",
   "card": 8,
   "ordem": 114400,
-  "foto": "Fotos Catálogo 2026/10 - Bolsas e Amortecedores Cabine/St352K CONTINENTAL 21168090 MOLA PNEU S-SUP - 4893520.jpg"
- },
- {
-  "codigo": "4890352",
-  "descricao": "St352 CONTINENTAL 21168090 MOLA PNEU S/SUP",
-  "tipo": "BOLSA (MOLA PNEUMÁTICA)",
-  "cod_ref": "A9583200421",
-  "variacoes": "",
-  "aplicacao": "",
-  "info": "MERCEDES-BENZ AXOR/ | ACTROS 2015 A 2022 | COM SENSOR | MOLA PNEUMÁTICA SUSPENSÃO EIXO | CONTITECH: 9 9.5 SP-14.4-S 055 | COMPONENTES: ST 352 K + ST 207 BSE | Card com os códigos 4893520 | 4890352 (St352K | St352)",
-  "marca": "Continental",
-  "montadora": "Mercedes-Benz",
-  "capitulo": "Bolsas e Amortecedores Cabine",
-  "cap_num": 10,
-  "pagina": "114",
-  "card": 8,
-  "ordem": 114401,
-  "foto": "Fotos Catálogo 2026/10 - Bolsas e Amortecedores Cabine/St352 CONTINENTAL 21168090 MOLA PNEU S-SUP - 4890352.jpg"
+  "itens": "4890352 – St352 CONTINENTAL 21168090 MOLA PNEU S/SUP\n4893520 – St352K CONTINENTAL 21168090 MOLA PNEU S/SUP",
+  "foto": "Fotos Catálogo 2026/10 - Bolsas e Amortecedores Cabine/BOLSA (MOLA PNEUMÁTICA) - 4890352 e mais 1.jpg"
  },
  {
   "codigo": "4890338",
@@ -2737,8 +2504,8 @@
   "foto": "Fotos Catálogo 2026/10 - Bolsas e Amortecedores Cabine/ST338K - CONTINENTAL 21168107 MOLA PNEU S-SUP ST 338 K SEM BASE MOLA PNEUMÁTICA SUSPENSÃO EIXO MERCE - 4890338.jpg"
  },
  {
-  "codigo": "4890455",
-  "descricao": "ST455 CONTINENTAL 21200153 MOLA PNEU C/SUP MOLA PNEUMÁTICA SUSPENSÃO EIXO MERCEDES BENZ ACTROS 2021 EM DIANTE TRAÇÃO E TERCEIRO EIXO - SEM SENSOR",
+  "codigo": "4890455 / 4894550",
+  "descricao": "BOLSA SUSPENSÃO (MOLA PNEUMÁTICA)",
   "tipo": "BOLSA SUSPENSÃO (MOLA PNEUMÁTICA)",
   "cod_ref": "A9613206921 / A9613204221 / A9613204621 / A9613205421",
   "variacoes": "",
@@ -2751,27 +2518,11 @@
   "pagina": "114",
   "card": 10,
   "ordem": 114500,
-  "foto": "Fotos Catálogo 2026/10 - Bolsas e Amortecedores Cabine/ST455 CONTINENTAL 21200153 MOLA PNEU C-SUP MOLA PNEUMÁTICA SUSPENSÃO EIXO MERCEDES BENZ ACTROS 2021 - 4890455.jpg"
+  "itens": "4890455 – ST455 CONTINENTAL 21200153 MOLA PNEU C/SUP MOLA PNEUMÁTICA SUSPENSÃO EIXO MERCEDES BENZ ACTROS 2021 EM DIANTE TRAÇÃO E TERCEIRO EIXO - SEM SENSOR\n4894550 – ST455K CONTINENTAL 21200153 MOLA PNEU C/SUP MOLA PNEUMÁTICA SUSPENSÃO EIXO MERCEDES BENZ ACTROS 2021 EM DIANTE TRAÇÃO E TERCEIRO EIXO - SEM SENSOR",
+  "foto": "Fotos Catálogo 2026/10 - Bolsas e Amortecedores Cabine/BOLSA SUSPENSÃO (MOLA PNEUMÁTICA) - 4890455 e mais 1.jpg"
  },
  {
-  "codigo": "4894550",
-  "descricao": "ST455K CONTINENTAL 21200153 MOLA PNEU C/SUP MOLA PNEUMÁTICA SUSPENSÃO EIXO MERCEDES BENZ ACTROS 2021 EM DIANTE TRAÇÃO E TERCEIRO EIXO - SEM SENSOR",
-  "tipo": "BOLSA SUSPENSÃO (MOLA PNEUMÁTICA)",
-  "cod_ref": "A9613206921 / A9613204221 / A9613204621 / A9613205421",
-  "variacoes": "",
-  "aplicacao": "",
-  "info": "CONTITECH: 6173 N P 42 | Card com os códigos 4890455 | 4894550 (ST455 | ST455K)",
-  "marca": "Continental",
-  "montadora": "Mercedes-Benz",
-  "capitulo": "Bolsas e Amortecedores Cabine",
-  "cap_num": 10,
-  "pagina": "114",
-  "card": 10,
-  "ordem": 114501,
-  "foto": "Fotos Catálogo 2026/10 - Bolsas e Amortecedores Cabine/ST455K CONTINENTAL 21200153 MOLA PNEU C-SUP MOLA PNEUMÁTICA SUSPENSÃO EIXO MERCEDES BENZ ACTROS 2021 - 4894550.jpg"
- },
- {
-  "codigo": "4890380",
+  "codigo": "4890380 / 4890038",
   "descricao": "ST038K / St038 / CONTINENTAL 21053871 MOLA PNEU S/SUP MOLA PNEUMÁTICA SUSPENSÃO EIXO VOLVO FH 12/NH 12 VOLKSWAGEN TITAN 2006 A 2012 FORD CARGO ATÉ 2003 TRAÇÃO E TERCEIRO EIXO",
   "tipo": "BOLSA SUSPENSÃO (MOLA PNEUMÁTICA)",
   "cod_ref": "1076594",
@@ -2785,24 +2536,8 @@
   "pagina": "114",
   "card": 11,
   "ordem": 114550,
-  "foto": "Fotos Catálogo 2026/10 - Bolsas e Amortecedores Cabine/ST038K - St038 - CONTINENTAL 21053871 MOLA PNEU S-SUP MOLA PNEUMÁTICA SUSPENSÃO EIXO VOLVO FH 12-NH - 4890380.jpg"
- },
- {
-  "codigo": "4890038",
-  "descricao": "ST038K / St038 / CONTINENTAL 21053871 MOLA PNEU S/SUP MOLA PNEUMÁTICA SUSPENSÃO EIXO VOLVO FH 12/NH 12 VOLKSWAGEN TITAN 2006 A 2012 FORD CARGO ATÉ 2003 TRAÇÃO E TERCEIRO EIXO",
-  "tipo": "BOLSA SUSPENSÃO (MOLA PNEUMÁTICA)",
-  "cod_ref": "1076594",
-  "variacoes": "",
-  "aplicacao": "",
-  "info": "FIRESTONE: 950332/1T15M-6 GOODYEAR: 8663 | COMPONENTES: ST 038 K + ST 035 BSE | ST 038 K KIT REPOSIÇÃO FIRESTONE: 950333 GODYEAR: 8660 | Card com os códigos 4890380 | 4890038",
-  "marca": "Continental",
-  "montadora": "Volvo",
-  "capitulo": "Bolsas e Amortecedores Cabine",
-  "cap_num": 10,
-  "pagina": "114",
-  "card": 11,
-  "ordem": 114551,
-  "foto": "Fotos Catálogo 2026/10 - Bolsas e Amortecedores Cabine/ST038K - St038 - CONTINENTAL 21053871 MOLA PNEU S-SUP MOLA PNEUMÁTICA SUSPENSÃO EIXO VOLVO FH 12-NH - 4890038.jpg"
+  "itens": "4890380 – ST038K / St038 / CONTINENTAL 21053871 MOLA PNEU S/SUP MOLA PNEUMÁTICA SUSPENSÃO EIXO VOLVO FH 12/NH 12 VOLKSWAGEN TITAN 2006 A 2012 FORD CARGO ATÉ 2003 TRAÇÃO E TERCEIRO EIXO\n4890038 – ST038K / St038 / CONTINENTAL 21053871 MOLA PNEU S/SUP MOLA PNEUMÁTICA SUSPENSÃO EIXO VOLVO FH 12/NH 12 VOLKSWAGEN TITAN 2006 A 2012 FORD CARGO ATÉ 2003 TRAÇÃO E TERCEIRO EIXO",
+  "foto": "Fotos Catálogo 2026/10 - Bolsas e Amortecedores Cabine/ST038K - St038 - CONTINENTAL 21053871 MOLA PNEU S-SUP MOLA PNEUMÁTICA SUSPENSÃO EIXO VOLVO FH 12-NH - 4890380 e mais 1.jpg"
  },
  {
   "codigo": "4890143",
@@ -2822,8 +2557,8 @@
   "foto": "Fotos Catálogo 2026/10 - Bolsas e Amortecedores Cabine/ST143K CONTINENTAL 21200369 MOLA PNEU S-SUP - 4890143.jpg"
  },
  {
-  "codigo": "4890039",
-  "descricao": "ST039K CONTINENTAL 21201056 MOLA PNEU C/SUP FACCHINI / HBZ / TRÊS EIXOS",
+  "codigo": "4890390 / 4890039",
+  "descricao": "BOLSA SUSPENSÃO (MOLA PNEUMÁTICA)",
   "tipo": "BOLSA SUSPENSÃO (MOLA PNEUMÁTICA)",
   "cod_ref": "308501706",
   "variacoes": "",
@@ -2836,28 +2571,12 @@
   "pagina": "115",
   "card": 1,
   "ordem": 115050,
-  "foto": "Fotos Catálogo 2026/10 - Bolsas e Amortecedores Cabine/ST039K CONTINENTAL 21201056 MOLA PNEU C-SUP FACCHINI - HBZ - TRÊS EIXOS - 4890039.jpg"
+  "itens": "4890390 – ST039 CONTINENTAL 21201056 MOLA PNEU C/SUP FACCHINI / HBZ / TRÊS EIXOS\n4890039 – ST039K CONTINENTAL 21201056 MOLA PNEU C/SUP FACCHINI / HBZ / TRÊS EIXOS",
+  "foto": "Fotos Catálogo 2026/10 - Bolsas e Amortecedores Cabine/BOLSA SUSPENSÃO (MOLA PNEUMÁTICA) - 4890390 e mais 1.jpg"
  },
  {
-  "codigo": "4890390",
-  "descricao": "ST039 CONTINENTAL 21201056 MOLA PNEU C/SUP FACCHINI / HBZ / TRÊS EIXOS",
-  "tipo": "BOLSA SUSPENSÃO (MOLA PNEUMÁTICA)",
-  "cod_ref": "308501706",
-  "variacoes": "",
-  "aplicacao": "",
-  "info": "FIRESTONE: 950332 | 1T15M-6 | CONTITECH: 9 10-16 A 987 | GOODYEAR: 8663 | COMPONENTES: ST 039 K + ST 035 BSE | Card com os códigos 4890039 | 4890390 (ST039K | ST039)",
-  "marca": "Continental",
-  "montadora": "Facchini",
-  "capitulo": "Bolsas e Amortecedores Cabine",
-  "cap_num": 10,
-  "pagina": "115",
-  "card": 1,
-  "ordem": 115051,
-  "foto": "Fotos Catálogo 2026/10 - Bolsas e Amortecedores Cabine/ST039 CONTINENTAL 21201056 MOLA PNEU C-SUP FACCHINI - HBZ - TRÊS EIXOS - 4890390.jpg"
- },
- {
-  "codigo": "4891440",
-  "descricao": "ST144K CONTINENTAL 21200294 MOLA PNEU S/SUP ST 144 K KIT REPOSIÇÃO FIRESTONE: 950529/1T15M-9 CONTITECH: 9 10-19 X 953 ST 144/ST 144 K SEM BASE MOLA PNEUMÁTICA SUSPENSÃO EIXO FACCHINI VANDERLEIA SRF",
+  "codigo": "4891440 / 4890144",
+  "descricao": "BOLSA SUSPENSÃO (MOLA PNEUMÁTICA)",
   "tipo": "BOLSA SUSPENSÃO (MOLA PNEUMÁTICA)",
   "cod_ref": "308501719",
   "variacoes": "",
@@ -2870,24 +2589,8 @@
   "pagina": "115",
   "card": 2,
   "ordem": 115100,
-  "foto": "Fotos Catálogo 2026/10 - Bolsas e Amortecedores Cabine/ST144K CONTINENTAL 21200294 MOLA PNEU S-SUP ST 144 K KIT REPOSIÇÃO FIRESTONE- 950529-1T15M-9 CONTITE - 4891440.jpg"
- },
- {
-  "codigo": "4890144",
-  "descricao": "St144 CONTINENTAL 21200294 MOLA PNEU S/SUP ST 144 K KIT REPOSIÇÃO FIRESTONE: 950529/1T15M-9 CONTITECH: 9 10-19 X 953 ST 144/ST 144 K SEM BASE MOLA PNEUMÁTICA SUSPENSÃO EIXO FACCHINI VANDERLEIA SRF",
-  "tipo": "BOLSA SUSPENSÃO (MOLA PNEUMÁTICA)",
-  "cod_ref": "308501719",
-  "variacoes": "",
-  "aplicacao": "",
-  "info": "FIRESTONE: 950528/1T15M-9 | CONTITECH: 910-19 A 953 | COMPONENTES: ST 144 K+ ST 035 BSE | Card com os códigos 4891440 | 4890144 (ST144K | St144)",
-  "marca": "Continental",
-  "montadora": "Facchini",
-  "capitulo": "Bolsas e Amortecedores Cabine",
-  "cap_num": 10,
-  "pagina": "115",
-  "card": 2,
-  "ordem": 115101,
-  "foto": "Fotos Catálogo 2026/10 - Bolsas e Amortecedores Cabine/St144 CONTINENTAL 21200294 MOLA PNEU S-SUP ST 144 K KIT REPOSIÇÃO FIRESTONE- 950529-1T15M-9 CONTITEC - 4890144.jpg"
+  "itens": "4891440 – ST144K CONTINENTAL 21200294 MOLA PNEU S/SUP ST 144 K KIT REPOSIÇÃO FIRESTONE: 950529/1T15M-9 CONTITECH: 9 10-19 X 953 ST 144/ST 144 K SEM BASE MOLA PNEUMÁTICA SUSPENSÃO EIXO FACCHINI VANDERLEIA SRF\n4890144 – St144 CONTINENTAL 21200294 MOLA PNEU S/SUP ST 144 K KIT REPOSIÇÃO FIRESTONE: 950529/1T15M-9 CONTITECH: 9 10-19 X 953 ST 144/ST 144 K SEM BASE MOLA PNEUMÁTICA SUSPENSÃO EIXO FACCHINI VANDERLEIA SRF",
+  "foto": "Fotos Catálogo 2026/10 - Bolsas e Amortecedores Cabine/BOLSA SUSPENSÃO (MOLA PNEUMÁTICA) - 4891440 e mais 1.jpg"
  },
  {
   "codigo": "4890822",
@@ -3060,8 +2763,8 @@
   "foto": "Fotos Catálogo 2026/10 - Bolsas e Amortecedores Cabine/ST853 CONTITECH 68651 MOLA PNEU C-SUP CX - 4890853.jpg"
  },
  {
-  "codigo": "4880160",
-  "descricao": "ST016 FIRESTONE 950736 MOLA PNEU C/SUP MOLA PNEUMÁTICA SUSPENSÃO EIXO RANDON / SUSPENSYS / IBERO / NOMA",
+  "codigo": "4880160 / 4880016",
+  "descricao": "BOLSA SUSPENSÃO (MOLA PNEUMÁTICA)",
   "tipo": "BOLSA SUSPENSÃO (MOLA PNEUMÁTICA)",
   "cod_ref": "212100261 / MOP 059 000 001 / 9200164 / ST 016 K",
   "variacoes": "",
@@ -3074,24 +2777,8 @@
   "pagina": "116",
   "card": 1,
   "ordem": 116050,
-  "foto": "Fotos Catálogo 2026/10 - Bolsas e Amortecedores Cabine/ST016 FIRESTONE 950736 MOLA PNEU C-SUP MOLA PNEUMÁTICA SUSPENSÃO EIXO RANDON - SUSPENSYS - IBERO - N - 4880160.jpg"
- },
- {
-  "codigo": "4880016",
-  "descricao": "ST016K FIRESTONE 950736 MOLA PNEU C/SUP MOLA PNEUMÁTICA SUSPENSÃO EIXO RANDON / SUSPENSYS / IBERO / NOMA",
-  "tipo": "BOLSA SUSPENSÃO (MOLA PNEUMÁTICA)",
-  "cod_ref": "212100261 / MOP 059 000 001 / 9200164 / ST 016 K",
-  "variacoes": "",
-  "aplicacao": "",
-  "info": "KIT REPOSIÇÃO | FIRESTONE: 950735 | 950321 | GOODYEAR: 8754 | FIRESTONE: 950734 | 950736 | 954028 | 1T19L-11 | CONTITECH: 11 10.5-21 A 954 | GOODYEAR: 8550 | COMPONENTES: ST 016 K + ST 016 BSE OU ST 016 BSE N | Card com os códigos 4880160 | 4880016 (ST016 | ST016K)",
-  "marca": "Firestone",
-  "montadora": "Randon",
-  "capitulo": "Bolsas e Amortecedores Cabine",
-  "cap_num": 10,
-  "pagina": "116",
-  "card": 1,
-  "ordem": 116051,
-  "foto": "Fotos Catálogo 2026/10 - Bolsas e Amortecedores Cabine/ST016K FIRESTONE 950736 MOLA PNEU C-SUP MOLA PNEUMÁTICA SUSPENSÃO EIXO RANDON - SUSPENSYS - IBERO - - 4880016.jpg"
+  "itens": "4880160 – ST016 FIRESTONE 950736 MOLA PNEU C/SUP MOLA PNEUMÁTICA SUSPENSÃO EIXO RANDON / SUSPENSYS / IBERO / NOMA\n4880016 – ST016K FIRESTONE 950736 MOLA PNEU C/SUP MOLA PNEUMÁTICA SUSPENSÃO EIXO RANDON / SUSPENSYS / IBERO / NOMA",
+  "foto": "Fotos Catálogo 2026/10 - Bolsas e Amortecedores Cabine/BOLSA SUSPENSÃO (MOLA PNEUMÁTICA) - 4880160 e mais 1.jpg"
  },
  {
   "codigo": "4880144",
@@ -3468,23 +3155,6 @@
   "foto": "Fotos Catálogo 2026/10 - Bolsas e Amortecedores Cabine/ST032BSE BASE MOLA PNEUM S-BASE S5 - 4990320.jpg"
  },
  {
-  "pagina": "104",
-  "card": 3,
-  "codigo": "4994550",
-  "montadora": "Mercedes-Benz",
-  "marca": "Suspentech",
-  "descricao": "ST455K MOLA MB PNEUM COMPLETA S/SENSOR TER EIX",
-  "cod_ref": "A9613206921 / A9613204221 / A9613204621 / A9613205421",
-  "info": "MOLA PNEUMÁTICA SUSPENSÃO EIXO | MERCEDES BENZ ACTROS 2021 EM DIANTE | TRAÇÃO E TERCEIRO EIXO - SEM SENSOR | CONTITECH: 6173 N P 42",
-  "tipo": "BOLSA (MOLA PNEUMÁTICA)",
-  "variacoes": "",
-  "aplicacao": "",
-  "capitulo": "Bolsas e Amortecedores Cabine",
-  "cap_num": 10,
-  "ordem": 104199,
-  "foto": "Fotos Catálogo 2026/10 - Bolsas e Amortecedores Cabine/ST455K MOLA MB PNEUM COMPLETA S-SENSOR TER EIX - 4994550.jpg"
- },
- {
   "pagina": "106",
   "card": 4,
   "codigo": "4994008",
@@ -3551,6 +3221,23 @@
   "cap_num": 10,
   "ordem": 110149,
   "foto": "Fotos Catálogo 2026/10 - Bolsas e Amortecedores Cabine/St4001 FOLE PNEUM 3 EIXO 380 MM X 225 MM - 4994001.jpg"
+ },
+ {
+  "pagina": "111",
+  "card": 1,
+  "codigo": "4990353",
+  "montadora": "Randon",
+  "marca": "Suspentech",
+  "descricao": "ST353 RANDON MOLA PNEU COMPLETA SUSP EIXO",
+  "cod_ref": "100000176552",
+  "info": "RANDON / SUSPENSYS | SUSPENSÃO TAS | FIRESTONE: 954208 / 1T19LC-7 | COMPONENTES: ST 353 K + ST 353 BSE",
+  "tipo": "BOLSA SUSPENSÃO (MOLA PNEUMÁTICA)",
+  "variacoes": "",
+  "aplicacao": "",
+  "capitulo": "Bolsas e Amortecedores Cabine",
+  "cap_num": 10,
+  "ordem": 111099,
+  "foto": "Fotos Catálogo 2026/10 - Bolsas e Amortecedores Cabine/ST353 RANDON MOLA PNEU COMPLETA SUSP EIXO - 4990353.jpg"
  },
  {
   "pagina": "118",
@@ -3798,14 +3485,14 @@
   "marca": "Jarflex",
   "descricao": "SUPORTE SUSPENSOR FIXAÇÃO REBAIXO 110MM",
   "tipo": "SUPORTE SUSPENSOR",
-  "info": "850 | OBS: | BOLSA PNEUMÁTICA 6.13 | SUSPENSOR TRUCK CHASSI ATÉ 860 mm RETO | 18X27MM | 18X27MM",
+  "info": "18X27MM | Medidas 116 / 75 / 105 / 70 / 10",
   "cod_ref": "",
   "variacoes": "",
   "aplicacao": "",
   "capitulo": "Bolsas e Amortecedores Cabine",
   "cap_num": 10,
   "ordem": 120149,
-  "foto": ""
+  "foto": "Fotos Catálogo 2026/10 - Bolsas e Amortecedores Cabine/SUPORTE SUSPENSOR FIXAÇÃO REBAIXO 110MM - 4963805.jpg"
  },
  {
   "pagina": "120",
@@ -3815,7 +3502,7 @@
   "marca": "Jarflex",
   "descricao": "KIT PNEUMÁTICO SUSPENSOR DO TERCEIRO EIXO TRUCK",
   "tipo": "KIT PNEUMÁTICO SUSPENSOR",
-  "info": "SUPORTE SUSPENSOR | FIXAÇÃO REBAIXO 110MM | KIT PNEUMÁTICO SUSPENSOR DO TERCEIRO EIXO TRUCK | - Rosca 1/4 \" - Tubo Ø 1/4\" - Rosca 1/4 \" - Tubo Ø 1/4\" | 1 1 VÁLVULA ACIONAMENTO 1/4\" VÁLVULA ACIONAMENTO 1/4\" 1 un 1 un | 2 2 VÁLVULA DESCARGA RAPIDA 1/2\" x 1/4\" VÁLVULA DESCARGA RAPIDA 1/2\" x 1/4\" 1 un 1 un | 3 3 MANÔMETRO 1/8\" NPT x 40 mm MANÔMETRO 1/8\" NPT x 40 mm 1 un 1 un | 4 4 CONECTOR MACHO ROSCA 1/4\" x TUBO 1/4\" 1 un 1 un | 5 5 1 un 1 un CONECTOR MACHO ROSCA 1/2\" x TUBO 1/4\" CONECTOR MACHO ROSCA 1/2\" x TUBO 1/4\" | 6 6 BUJÃO 1/4\" BUJÃO 1/4\" 1 un 1 un | 7 7 COTOVELO MACHO ROSCA 1/4\" x TUBO 1/4\" 1 un 1 un | 8 8 CONECTOR T MACHO 1/4\" NPT x FÊMEA 1/8\" x TUBO 1/4\" CONECTOR T MACHO 1/4\" NPT x FÊMEA 1/8\" x TUBO 1/4\" 1 un 1 un | 9 9 NIPLE RETO M16 x 1/4\" NIPLE RETO M16 x 1/4\" 1 un 1 un | 10 10 INSERTO TUBO 1/4\" INSERTO TUBO 1/4\" 4 un 4 un | 11 11 TUBO NYLON 1/4\" x 1,00 mm TUBO NYLON 1/4\" x 1,00 mm 8 m 8 m | 12 12 PARAFUSO SEX RP UNC 3/16\" x 2\" PARAFUSO SEX RP UNC 3/16\" x 2\" 3 un 3 un | 13 13 PORCA SEX 3/16\" UNC CH 5/16\" PORCA SEX 3/16\" UNC CH 5/16\" 3 un 3 un | 14 14 BUCHA ESPAÇADORA VÁLV. ACIONAMENTO BUCHA ESPAÇADORA VÁLV. ACIONAMENTO 3 un 3 un | Rosca 1/4\" - tubo Ø 1/4\" | Itens: Válvula acionamento 1/4\" (1 un); válvula descarga rápida 1/2\" x 1/4\" (1 un); manômetro 1/8\" NPT x 40 mm (1 un); conector macho rosca 1/4\" x tubo 1/4\" (1 un); conector macho rosca 1/2\" x tubo 1/4\" (1 un); bujão 1/4\" (1 un); cotovelo macho rosca 1/4\" x tubo 1/4\" (1 un); conector T macho 1/4\" NPT x fêmea 1/8\" x tubo 1/4\" (1 un); niple reto M16 x 1/4\" (1 un); inserto tubo 1/4\" (4 un); tubo nylon 1/4\" x 1,00 mm (8 m); parafuso sex RP UNC 3/16\" x 2\" (3 un); porca sex 3/16\" UNC CH 5/16\" (3 un); bucha espaçadora válv. acionamento (3 un)",
+  "info": "KIT PNEUMÁTICO SUSPENSOR DO TERCEIRO EIXO TRUCK | - Rosca 1/4 \" - Tubo Ø 1/4\" - Rosca 1/4 \" - Tubo Ø 1/4\" | 1 1 VÁLVULA ACIONAMENTO 1/4\" VÁLVULA ACIONAMENTO 1/4\" 1 un 1 un | 2 2 VÁLVULA DESCARGA RAPIDA 1/2\" x 1/4\" VÁLVULA DESCARGA RAPIDA 1/2\" x 1/4\" 1 un 1 un | 3 3 MANÔMETRO 1/8\" NPT x 40 mm MANÔMETRO 1/8\" NPT x 40 mm 1 un 1 un | 4 4 CONECTOR MACHO ROSCA 1/4\" x TUBO 1/4\" 1 un 1 un | 5 5 1 un 1 un CONECTOR MACHO ROSCA 1/2\" x TUBO 1/4\" CONECTOR MACHO ROSCA 1/2\" x TUBO 1/4\" | 6 6 BUJÃO 1/4\" BUJÃO 1/4\" 1 un 1 un | 7 7 COTOVELO MACHO ROSCA 1/4\" x TUBO 1/4\" 1 un 1 un | 8 8 CONECTOR T MACHO 1/4\" NPT x FÊMEA 1/8\" x TUBO 1/4\" CONECTOR T MACHO 1/4\" NPT x FÊMEA 1/8\" x TUBO 1/4\" 1 un 1 un | 9 9 NIPLE RETO M16 x 1/4\" NIPLE RETO M16 x 1/4\" 1 un 1 un | 10 10 INSERTO TUBO 1/4\" INSERTO TUBO 1/4\" 4 un 4 un | 11 11 TUBO NYLON 1/4\" x 1,00 mm TUBO NYLON 1/4\" x 1,00 mm 8 m 8 m | 12 12 PARAFUSO SEX RP UNC 3/16\" x 2\" PARAFUSO SEX RP UNC 3/16\" x 2\" 3 un 3 un | 13 13 PORCA SEX 3/16\" UNC CH 5/16\" PORCA SEX 3/16\" UNC CH 5/16\" 3 un 3 un | 14 14 BUCHA ESPAÇADORA VÁLV. ACIONAMENTO BUCHA ESPAÇADORA VÁLV. ACIONAMENTO 3 un 3 un | Rosca 1/4\" - tubo Ø 1/4\" | Itens: Válvula acionamento 1/4\" (1 un); válvula descarga rápida 1/2\" x 1/4\" (1 un); manômetro 1/8\" NPT x 40 mm (1 un); conector macho rosca 1/4\" x tubo 1/4\" (1 un); conector macho rosca 1/2\" x tubo 1/4\" (1 un); bujão 1/4\" (1 un); cotovelo macho rosca 1/4\" x tubo 1/4\" (1 un); conector T macho 1/4\" NPT x fêmea 1/8\" x tubo 1/4\" (1 un); niple reto M16 x 1/4\" (1 un); inserto tubo 1/4\" (4 un); tubo nylon 1/4\" x 1,00 mm (8 m); parafuso sex RP UNC 3/16\" x 2\" (3 un); porca sex 3/16\" UNC CH 5/16\" (3 un); bucha espaçadora válv. acionamento (3 un)",
   "cod_ref": "",
   "variacoes": "",
   "aplicacao": "",

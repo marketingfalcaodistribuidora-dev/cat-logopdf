@@ -264,3 +264,4 @@ AJ = {
     "19.12": R("8799116", "FORQUILHA CATRACA AUTOMATICA", "FORQUILHA", marca="Eckisil"),
 }
 ADD = []
+NAO_AGRUPAR = {"14.3"}

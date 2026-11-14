@@ -196,7 +196,299 @@ def preencher_faixa(doc, r):
     return r
 
 
-CAMPOS_TXT = ("tipo", "cod_ref", "variacoes", "aplicacao", "info", "montadora", "marca")
+OEM_HDR = re.compile(r"^(C[ÓO]DIGO\s+)?(ORIGINAL|VOLKSWAGEN|VW|FORD|MERCEDES.*|MB|SCANIA|VOLVO|IVECO|AGRALE|DAF|MAN|"
+                     r"INTERNATIONAL|CUMMINS|MWM|RANDON|FIAT|GM|CHEVROLET|NAVISTAR|CATERPILLAR|JOHN DEERE|NEW HOLLAND|CASE)$", re.I)
+
+
+def _cols(hdr, row):
+    """Associa cada valor da linha à coluna do cabeçalho mais próxima (pelo centro)."""
+    cs = [((s["x"] + s["x1"]) / 2, s["t"].strip()) for s in hdr]
+    out = {}
+    for s in row:
+        cx = (s["x"] + s["x1"]) / 2
+        i = min(range(len(cs)), key=lambda k: abs(cs[k][0] - cx))
+        out.setdefault(i, []).append(s["t"].strip())
+    return [(cs[i][1], " ".join(out.get(i, []))) for i in range(len(cs))]
+
+
+def tem_amarelo(doc, pno, rect, cor=(1.0, 0.95, 0.07)):
+    r = fitz.Rect(rect)
+    for dr in doc[pno - 1].get_drawings():
+        f = dr.get("fill")
+        if f and tuple(round(x, 2) for x in f) == cor and r.contains((dr["rect"].tl + dr["rect"].br) / 2):
+            return True
+    return False
+
+
+def parse_tabela(doc, pno, card):
+    """Card de filtro: código + título, tabela(s) de equivalência por marca e tabela MONTADORA/MODELO/MOTOR/ANO."""
+    lines = [merge_codes(l) for l in card["lines"]]
+    codigos, titulo, i = [], [], 0
+    for l in lines:
+        for s in l:
+            if is_code(s) and s["size"] >= 12:
+                codigos.append(s["t"])
+            elif not s["red"] and s["size"] >= 9.5:
+                titulo.append(s["t"])
+    eq, oem, apl, mont, extra = [], [], [], [], []
+    k = 0
+    while k < len(lines):
+        l = [s for s in lines[k] if s["size"] < 9.5 and not is_code(s)]
+        txt = [s["t"].strip() for s in l]
+        if not l:
+            k += 1
+            continue
+        if [t.upper() for t in txt][:2] == ["MONTADORA", "MODELO"]:
+            k += 1
+            while k < len(lines):
+                row = [s for s in lines[k] if s["size"] < 9.5]
+                vals = _cols(l, row)
+                rt = [x["t"].strip() for x in row if x["t"].strip()]
+                if not row or (vals and vals[0][0].upper() == "MONTADORA" and row[0]["t"].upper() == "MONTADORA"):
+                    break
+                if len(rt) >= 2 and all(not re.search(r"\d", t) and t.isupper() and t not in ("-",) for t in rt)                         and any(re.search(r"C[ÓO]DIGO|ORIGINAL|PARKER|MANN|HENGST|RACOR|FLEETGUARD|TECFIL|WEGA", t) for t in rt):
+                    break
+                vals = [(h, "" if re.fullmatch(r"[\s\-–]*", v) else v) for h, v in vals]
+                if any(v for _, v in vals):
+                    d = {h.upper(): v for h, v in vals if v}
+                    partes = [d.get("MONTADORA", ""), d.get("MODELO", "")]
+                    if d.get("MOTOR"):
+                        partes.append(f"motor {d['MOTOR']}")
+                    if d.get("ANO"):
+                        partes.append(d["ANO"])
+                    apl.append(" ".join(p for p in partes if p))
+                    if d.get("MONTADORA"):
+                        mont.append(d["MONTADORA"])
+                k += 1
+            continue
+        is_hdr = all(not re.search(r"\d", t) for t in txt) and k + 1 < len(lines) and all(t.isupper() or not t.isalpha() for t in txt)
+        if is_hdr:
+            k += 1
+            while k < len(lines):
+                row = [s for s in lines[k] if s["size"] < 9.5 and not is_code(s)]
+                rt = [s["t"].strip() for s in row]
+                if not row or (all(not re.search(r"\d", t) for t in rt) and all(t.isupper() for t in rt if t != "-")
+                               and not all(t == "-" for t in rt)):
+                    break
+                for h, v in _cols(l, row):
+                    if v and not re.fullmatch(r"[\s\-–]*", v):
+                        (oem if OEM_HDR.match(h) else eq).append(f"{h} {v}" if not OEM_HDR.match(h) or h.upper() != "ORIGINAL" else v)
+                k += 1
+            continue
+        extra.append(" ".join(txt))
+        k += 1
+    desc = norm_txt(" ".join(titulo))
+    if re.search(r"LAN[ÇC]AMENTO", desc):
+        desc = norm_txt(re.sub(r"LAN[ÇC]AMENTO", "", desc))
+        extra.append("LANÇAMENTO")
+    m = sorted({x for x in (montadora_texto(" ".join(mont)) + ", " + montadora_texto(desc)).split(", ") if x})
+    base = dict(descricao=desc, cod_ref=" / ".join(oem), variacoes=" / ".join(eq), aplicacao=" / ".join(apl),
+                info=" | ".join(x for x in extra if x and x != "-"), montadora=", ".join(m),
+                marca="Parker" if tem_amarelo(doc, pno, card["rect"]) else "", tipo="")
+    return [dict(base, codigo=c) for c in codigos]
+
+
+OEM_NOME = re.compile(r"^(ORIGINAL|VOLKSWAGEN|VW|FORD|MERCEDES.*|M\.?\s?BENZ|MB|SCANIA|VOLVO|IVECO|AGRALE|DAF|MAN|"
+                      r"INTERNATIONAL|CUMMINS|MWM|FIAT|GM|CHEVROLET|NAVISTAR|CATERPILLAR|JOHN DEERE|NEW HOLLAND|CASE|"
+                      r"MASSEY FERGUSON|VALTRA|KOMATSU|PERKINS|DEUTZ|RANDON)$", re.I)
+_SKIP_TAB = re.compile(r"^(Fabricante(\s+C[óo]digo)?|C[óo]digo|C[OÓ]DIGOS EQUIVALENTES|Montadora|Modelo|Motor|Ano)$", re.I)
+
+
+def parse_faixas_tabela(doc, pno, raw, tit_min=14.5, logo_min=10.5):
+    """Página em faixas (um produto por faixa) com tabelas 'Fabricante | Código'."""
+    rects = [fitz.Rect(c["rect"]) for c in raw["cards"] if c["id"] != 0]
+    spans = [s for c in raw["cards"] for ln in c["lines"] for s in merge_codes(ln)]
+    cods = [s for s in spans if is_code(s) and s["size"] >= 14]
+    bordas = sorted({round(v, 1) for dr in doc[pno - 1].get_drawings() if dr["rect"].width >= 460
+                     for v in (dr["rect"].y0, dr["rect"].y1)})
+    out = []
+    for n, cs in enumerate(cods, 1):
+        pt = fitz.Point((cs["x"] + cs["x1"]) / 2, cs["y"] + 3)
+        cand = [r for r in rects if r.contains(pt) and r.width >= 240 and r.height >= 70]
+        fx = min(cand, key=lambda r: r.width * r.height) if cand else None
+        longe = [o for o in cods if fx and o is not cs and abs(o["y"] - cs["y"]) > 35
+                 and fx.contains(fitz.Point((o["x"] + o["x1"]) / 2, o["y"] + 3))] if fx else [1]
+        if fx is None or longe or fx.height > 330:
+            cols = [r for r in rects if r.contains(pt) and r.width >= 240]
+            col = min(cols, key=lambda r: r.width * r.height) if cols else fitz.Rect(25, 85, 570, 806)
+            if col.width > 450:
+                col = fitz.Rect(25, 85, 570, 806)
+            bd = sorted({round(v, 1) for dr in doc[pno - 1].get_drawings()
+                         if dr["rect"].width >= 0.8 * col.width and dr["rect"].x0 >= col.x0 - 6 and dr["rect"].x1 <= col.x1 + 6
+                         for v in (dr["rect"].y0, dr["rect"].y1)} | set(bordas))
+            topo = max([e for e in bd if e <= cs["y"] - 1] or [85])
+            base = min([e for e in bd if e >= cs["y"] + 14] or [806])
+            fx = fitz.Rect(col.x0, topo, col.x1, base)
+        dentro = [s for s in spans if fx.contains(fitz.Point((s["x"] + s["x1"]) / 2, s["y"] + s["size"] / 2)) and s is not cs]
+        # outros códigos internos na mesma faixa
+        outros = [s for s in dentro if is_code(s) and s["size"] >= 14]
+        titulo = [s for s in dentro if not s["red"] and s["size"] >= tit_min]
+        logos = [s for s in dentro if not s["red"] and logo_min <= s["size"] < tit_min and not _SKIP_TAB.match(s["t"].strip())]
+        peq = [s for s in dentro if s["size"] < logo_min and not is_code(s)]
+        peq.sort(key=lambda s: (round(s["y"] / 2.5), s["x"]))
+        linhas = []
+        for s in peq:
+            if linhas and abs(linhas[-1][0] - s["y"]) < 2.6:
+                linhas[-1][1].append(s)
+            else:
+                linhas.append([s["y"], [s]])
+        oem, eq, info = [], [], []
+        for _, ln in linhas:
+            ln.sort(key=lambda s: s["x"])
+            toks = [s["t"].strip() for s in ln if s["t"].strip() and not _SKIP_TAB.match(s["t"].strip())
+                    and not re.fullmatch(r"[.\-–\s]+", s["t"].strip())]
+            if not toks:
+                continue
+            j = " ".join(toks)
+            if re.match(r"^(LAN[ÇC]AMENTO|APLICA)", j, re.I):
+                info.append(j)
+                continue
+            limpos, k2 = [], 0
+            while k2 < len(toks):
+                if re.match(r"^OBSERVA", toks[k2], re.I):
+                    obs = toks[k2] if re.search(r":\s*\S", toks[k2]) or k2 + 1 >= len(toks) else toks[k2] + " " + toks[k2 + 1]
+                    info.append(obs)
+                    k2 += 1 if obs == toks[k2] else 2
+                    continue
+                limpos.append(toks[k2])
+                k2 += 1
+            toks = limpos
+            nome = None
+            for t in toks:
+                if not re.search(r"\d", t) and nome is None:
+                    nome = t
+                elif not re.search(r"\d", t):
+                    (oem if OEM_NOME.match(nome) else eq).append(nome)
+                    nome = t
+                elif nome is not None:
+                    (oem if OEM_NOME.match(nome) else eq).append(f"{nome} {t}")
+                    nome = None
+                else:
+                    mm = re.match(r"^([A-Za-zÀ-ú][A-Za-zÀ-ú .\-]+?)\s+(\S*\d\S*)$", t)
+                    if mm:
+                        (oem if OEM_NOME.match(mm.group(1)) else eq).append(t)
+                    else:
+                        info.append(t)
+            if nome:
+                info.append(nome)
+        desc = norm_txt(" ".join(s["t"] for s in sorted(titulo, key=lambda s: (round(s["y"] / 3), s["x"]))))
+        desc = re.sub(r"\bLAN[ÇC]AMENTO\b.*$", "", desc).strip()
+        lanc = "LANÇAMENTO" if re.search(r"LAN[ÇC]AMENTO", " ".join(s["t"] for s in dentro), re.I) else ""
+        if logos:
+            eq.insert(0, "Mann Filter / Tecfil (logos): " + " / ".join(s["t"].strip() for s in sorted(logos, key=lambda s: (s["y"], s["x"]))))
+        best, area = None, 0
+        for im in doc[pno - 1].get_image_info(xrefs=True):
+            b = fitz.Rect(im["bbox"])
+            if fx.contains((b.tl + b.br) / 2) and b.width * b.height > area and b.width > 40 and b.height > 40:
+                best, area = im, b.width * b.height
+        foto = None
+        if best:
+            tf = best.get("transform") or [1, 0, 0, 1]
+            ok = best["xref"] > 0 and abs(tf[1]) < 1e-3 and abs(tf[2]) < 1e-3 and tf[0] > 0 and tf[3] > 0
+            foto = {"xref": best["xref"], "rect": list(best["bbox"])} if ok else {"rect": list(best["bbox"])}
+        nomes_oem = " ".join(x.split(" ")[0] for x in oem)
+        mont = sorted({x for x in (montadora_texto(desc) + ", " + montadora_texto(nomes_oem.replace("M.", "MB "))).split(", ") if x})
+        out.append(dict(pagina=pno, card=n, codigo=cs["t"], descricao=desc, tipo="", cod_ref=" / ".join(oem),
+                        variacoes=" / ".join(eq), aplicacao="", info=" | ".join(x for x in info + [lanc] if x),
+                        montadora=", ".join(mont), marca="", foto_spec=foto,
+                        _faixa=[round(v, 1) for v in fx], _outros=[o["t"] for o in outros]))
+    return out
+
+
+def _tam(desc):
+    d = re.sub(r"\(\s*\d+[,.]?\d*\s*\)\s*$", "", desc or "")
+    d = re.sub(r"\bIMP\b.*$", "", d)
+    out = []
+    for t in re.findall(r"\d+(?:[.,]\d+)?(?:/\d+)?", d)[:6]:
+        t = t.replace(",", ".")
+        try:
+            out.append(float(t.split("/")[0]) / float(t.split("/")[1]) if "/" in t else float(t))
+        except (ValueError, ZeroDivisionError):
+            out.append(0.0)
+    return tuple(out)
+
+
+def agrupar_cards(regs, nao_agrupar):
+    """Card com vários códigos = 1 produto; os códigos viram 'itens' (variações) numa coluna."""
+    grupos, ordem = {}, []
+    for r in regs:
+        card_key = f"{r['pagina']}.{r.get('card', 0)}"
+        if r.get("card", 0) == 0 or card_key in nao_agrupar or r.get("_nao_agrupar"):
+            k = ("solo", id(r))
+        else:
+            k = (r["pagina"], r.get("card", 0), r.get("_titulo", ""))
+        if k not in grupos:
+            grupos[k] = []
+            ordem.append(k)
+        grupos[k].append(r)
+    out = []
+    for k in ordem:
+        g = grupos[k]
+        cods = []
+        for r in g:
+            if r["codigo"] not in cods:
+                cods.append(r["codigo"])
+        if len(cods) < 2:
+            out.extend(g)
+            continue
+        vistos, g2 = set(), []
+        for r in g:
+            if r["codigo"] not in vistos:
+                vistos.add(r["codigo"])
+                g2.append(r)
+        g = sorted(g2, key=lambda r: (_tam(r["descricao"]), r["descricao"]))
+        base = dict(g[0])
+        descs = [r["descricao"] for r in g]
+        palavras = [d.split() for d in descs]
+        pref = []
+        for ws in zip(*palavras):
+            if all(w == ws[0] for w in ws):
+                pref.append(ws[0])
+            else:
+                break
+        tipos = {r.get("tipo", "") for r in g}
+        titulo = g[0].get("_titulo") or ""
+        if titulo:
+            desc = titulo
+        elif len(pref) >= 2:
+            desc = " ".join(pref)
+        elif len(tipos) == 1 and list(tipos)[0]:
+            desc = list(tipos)[0]
+        else:
+            desc = descs[0]
+        base["descricao"] = norm_txt(desc)
+        base["itens"] = "\n".join(f"{r['codigo']} – {r['descricao']}" for r in g)
+        base["codigo"] = " / ".join(r["codigo"] for r in g)
+        for f in ("cod_ref", "variacoes", "aplicacao", "info"):
+            vals = []
+            for r in g:
+                v = (r.get(f) or "").strip()
+                if v and v not in [x[1] for x in vals]:
+                    vals.append((r["codigo"], v))
+            if len(vals) <= 1 or len({v for _, v in vals}) == 1:
+                base[f] = vals[0][1] if vals else ""
+            else:
+                base[f] = " | ".join(f"{c}: {v}" for c, v in vals)
+        for f in ("montadora", "marca"):
+            itens = []
+            for r in g:
+                for x in (r.get(f) or "").split(","):
+                    if x.strip() and x.strip() not in itens:
+                        itens.append(x.strip())
+            base[f] = ", ".join(itens)
+        if len(tipos) > 1:
+            base["tipo"] = g[0].get("tipo", "")
+        if not base.get("foto_spec"):
+            for r in g:
+                if r.get("foto_spec"):
+                    base["foto_spec"] = r["foto_spec"]
+                    break
+        base["ordem"] = min(r["ordem"] for r in g)
+        out.append(base)
+    return out
+
+
+CAMPOS_TXT = ("tipo", "cod_ref", "variacoes", "aplicacao", "info", "montadora", "marca", "itens")
 
 
 def _riqueza(r):
@@ -226,8 +518,15 @@ def mesclar_repetidos(regs):
     """O mesmo código interno repetido dentro do capítulo vira uma linha só (páginas e informações somadas)."""
     grupos = {}
     ordem = []
+    dono = {}
     for r in regs:
-        k = r["codigo"]
+        cs = r["codigo"].split(" / ")
+        if len(cs) > 1:
+            for c in cs:
+                dono.setdefault(c, r["codigo"])
+    for r in regs:
+        avulso = r.get("card", 0) == 0 or not r.get("foto_spec")
+        k = dono.get(r["codigo"], r["codigo"]) if avulso else r["codigo"]
         if k not in grupos:
             grupos[k] = []
             ordem.append(k)
@@ -239,7 +538,8 @@ def mesclar_repetidos(regs):
             g[0]["pagina"] = str(g[0]["pagina"])
             out.append(g[0])
             continue
-        orig = max(g, key=_riqueza)
+        multi = [r for r in g if r["codigo"] == k and " / " in k]
+        orig = multi[0] if multi else max(g, key=_riqueza)
         base = dict(orig)
         paginas = []
         for r in g:
@@ -273,14 +573,18 @@ def mesclar_repetidos(regs):
     return out
 
 
+_MOD = {}
+
+
 def load_ajustes(n):
     path = os.path.join(BASE, "ajustes", f"cap{n:02d}.py")
     if not os.path.exists(path):
-        return {}, [], [], [], set()
+        return {}, [], [], [], set(), set()
     spec = importlib.util.spec_from_file_location(f"aj{n}", path)
     mod = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(mod)
-    return getattr(mod, "AJ", {}), getattr(mod, "ADD", []), getattr(mod, "TIPOS", []), getattr(mod, "NOTAS", []), set(getattr(mod, "MANUAIS", set()))
+    _MOD["m"] = mod
+    return getattr(mod, "AJ", {}), getattr(mod, "ADD", []), getattr(mod, "TIPOS", []), getattr(mod, "NOTAS", []), set(getattr(mod, "MANUAIS", set())), set(getattr(mod, "TABELA", set()))
 
 
 def photo_spec(card):
@@ -379,13 +683,18 @@ def build_card(page, card):
         titles_at = {}
         for li, l in enumerate(lines):
             if li not in code_lines and max(s["size"] for s in l) >= rs * 1.35:
-                if all(s["red"] for s in l) and line_text(l).isupper() and not any(ch.isdigit() for ch in line_text(l)):
+                if all(s["red"] for s in l) and line_text(l).isupper() and not any(ch.isdigit() for ch in line_text(l))                         and len(line_text(l)) > 4:
                     title = line_text(l)
                 elif not all(s["red"] for s in l):
                     title = line_text([s for s in l if not s["red"]])
                 else:
                     titles_at[li] = title
                     continue
+                if (li - 1) in used and (li - 1) not in code_lines and titles_at.get(li - 1)                         and not all(x["red"] for x in l):
+                    title = titles_at[li - 1] + " " + title  # título em duas linhas
+                    for lj in list(titles_at):
+                        if titles_at[lj] == titles_at[li - 1] and lj >= li - 1:
+                            titles_at[lj] = title
                 used.add(li)
             titles_at[li] = title
         first_title = next((t for t in titles_at.values() if t), None)
@@ -400,6 +709,7 @@ def build_card(page, card):
                 "codigo": lines[li][si]["t"],
                 "descricao": line_text(desc_spans),
                 "tipo": titles_at.get(li) or first_title or "",
+                "_titulo": titles_at.get(li) or first_title or "",
                 "_y": lines[li][si]["y"],
                 "_x": lines[li][si]["x"],
             })
@@ -474,8 +784,16 @@ def main():
     n = int(sys.argv[1])
     cap = CAPITULOS[n]
     nome, p0, p1 = cap["nome"], cap["ini"], cap["fim"]
-    AJ, ADD, TIPOS, NOTAS, MANUAIS = load_ajustes(n)
+    AJ, ADD, TIPOS, NOTAS, MANUAIS, TABELA = load_ajustes(n)
     doc = fitz.open(PDF)
+    mod = _MOD.get("m")
+    FAIXA_TAB = getattr(mod, "FAIXA_TAB", {}) if mod else {}
+    if not isinstance(FAIXA_TAB, dict):
+        FAIXA_TAB = {p_: () for p_ in FAIXA_TAB}
+    ADD = list(ADD)
+    for _p in sorted(FAIXA_TAB):
+        ADD += parse_faixas_tabela(doc, _p, _raw(_p), *FAIXA_TAB[_p])
+        MANUAIS.add(_p)
     pasta = os.path.join(FOTOS_DIR, f"{n:02d} - {safe_name(nome)}")
     os.makedirs(pasta, exist_ok=True)
     for fn in os.listdir(pasta):  # regera as fotos do capítulo do zero
@@ -491,7 +809,10 @@ def main():
             aj = AJ.get(key, {})
             if aj.get("skip"):
                 continue
-            recs, _ = build_card(pno, card)
+            if pno in TABELA and card["id"] != 0:
+                recs = parse_tabela(doc, pno, card)
+            else:
+                recs, _ = build_card(pno, card)
             if "records" in aj:  # registros escritos manualmente para o card
                 recs = [dict(r) for r in aj["records"]]
             if not recs:
@@ -558,7 +879,19 @@ def main():
         r["aplicacao"] = limpar_apl(r.get("aplicacao"))
 
     for r in out:
+        for k, v in AJ.get("cod:" + r["codigo"], {}).items():
+            if k.startswith("-"):  # remove trecho (regex) do campo
+                f_ = k[1:]
+                r[f_] = re.sub(r"^(\s*[/|]\s*)+|(\s*[/|]\s*)+$", "", re.sub(r"(\s*[/|]\s*){2,}", " / ", re.sub(v, "", r.get(f_, ""))))
+            elif k.startswith("+"):
+                r[k[1:]] = norm_txt(" | ".join(x for x in (r.get(k[1:], ""), v) if x))
+            else:
+                r[k] = v
+    out = [r for r in out if not r.get("skip")]
+    for r in out:
         r["pagina_foto"] = r["pagina"]
+    nao_ag = set(getattr(_MOD.get("m"), "NAO_AGRUPAR", set())) if _MOD.get("m") else set()
+    out = agrupar_cards(out, nao_ag)
     out = mesclar_repetidos(out)
 
     # fotos
@@ -569,7 +902,8 @@ def main():
             r["foto"] = ""
             r.pop("foto_spec", None)
             continue
-        base = safe_name(r["descricao"] or r["tipo"], 100) + " - " + safe_name(r["codigo"])
+        _cs = r["codigo"].split(" / ")
+        base = safe_name(r["descricao"] or r["tipo"], 100) + " - " + safe_name(_cs[0]) + (f" e mais {len(_cs) - 1}" if len(_cs) > 1 else "")
         k = base.lower()
         if k in nomes_usados:
             nomes_usados[k] += 1
