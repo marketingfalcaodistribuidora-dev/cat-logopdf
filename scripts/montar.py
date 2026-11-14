@@ -888,6 +888,9 @@ def main():
             else:
                 r[k] = v
     out = [r for r in out if not r.get("skip")]
+    for _rx in getattr(_MOD.get("m"), "LIMPA_DESC", []) if _MOD.get("m") else []:
+        for r in out:
+            r["descricao"] = norm_txt(re.sub(_rx, " ", r.get("descricao", "")))
     for r in out:
         r["pagina_foto"] = r["pagina"]
     nao_ag = set(getattr(_MOD.get("m"), "NAO_AGRUPAR", set())) if _MOD.get("m") else set()
