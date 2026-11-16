@@ -1,0 +1,23 @@
+{
+ "capitulo": "Parafusos e Porcas",
+ "cap_num": 17,
+ "notas": [
+  "Pág. 209: o código 3662015 (PORCA RODA PF RANDON MARTELO R FINA Ch27) está no texto do PDF, mas coberto pelo card da Facchini (36878272); foi registrado mesmo assim.",
+  "Pág. 210: a lista de PF TRANSMISSAO repete códigos que também têm card próprio (750814, 75716112, 751190, 751232).",
+  "Págs. 203-210: a coluna 'Outras referências / similares' traz os códigos equivalentes ZM e FEY impressos em cada card.",
+  "Pág. 212: as tabelas do alto da página (dimensão x código x código Mercedes) não batem com as listas de códigos em vermelho (ex.: tabela do braço pneumático cita 27422240, a lista traz 27422180). Foram usadas as listas; os códigos originais de cada grupo estão na coluna de referência.",
+  "Pág. 213: na seção 08MM a caixinha 4411212 traz 'ARR.PRESSÃO PESADA 14MM' (na seção 12MM o mesmo código é 'ARR.PRESSÃO PESADA 12MM'); registrado uma vez só.",
+  "Pág. 220: a caixinha 4070020 traz a descrição 'ARR.LISA Z ZB 24MM X 43MM' (nas demais páginas 4070020 é ARR.LISA Z ZB 20MM e a de 24MM X 43MM é 4072400); mantida a descrição de 20MM.",
+  "Pág. 226: a porca travante 7/16 está com o código 3740078, o mesmo da PORCA TRAVANTE UNC 7/8 das págs. 223 e 228.",
+  "Pág. 233: página só com a grade de cards, sem produtos.",
+  "Pág. 235: o código 3171615 aparece com duas descrições (PORCA SEXT 16MM TORX MB FINA e PORCA SEXT 16MM TORQUE MB CH24 ZB); o 3178000 também aparece duas vezes (com e sem 'CH13').",
+  "Pág. 236: a lista de porcas travantes UNC termina com 3741283 'PORCA TRAVANTE D UNC 1/2' (já existe 3740012 'PORCA TR UNC E 1/2'). Na pág. 226 a porca travante 7/16 usa o código 3740078, o mesmo da UNC H 7/8 desta página.",
+  "Pág. 238: as listas de arruela lisa, funileiro e alumínio estão impressas como imagem (sem texto pesquisável) e foram transcritas da página. O item 4631620 da lista de alumínio só diz 'VER CODIGO (7711622)'.",
+  "Pág. 239: os códigos 790724 e 799166 têm a mesma descrição (PF CENTRO CARRETA 9/16 X 06); na lista de porcas para parafuso de centro aparecem 33516 'PORCA UNF A 5/16' e 3330716 'PORCA UNF C 7/16' (na pág. 235 os códigos são 333516 e 333716).",
+  "Pág. 239: o código 791204 (PF CENTRO CA 12 X 04 12 X 100) está impresso como '79.1204'.",
+  "Pág. 240: a parte de baixo da página tem molduras vazias (sem produtos).",
+  "Pág. 220: a lista de parafusos 10.9 rosca fina 24MM (6324136, 6324161, 6324181, 6324201, 6324221, 6324241, 6324261, 6324281, 6324301) repete a da pág. 219; registrada uma vez (pág. 219).",
+  "Págs. 207/210/215: 75716112, 750814, 751190 e 751232 têm card próprio e também aparecem na lista 'PF TRANSMISSAO' da pág. 210. Pág. 239: a lista 'porca para parafuso de centro' repete porcas já listadas na pág. 235.",
+  "Pág. 206: o card ao lado dos parafusos Volare é só uma ilustração do ônibus Volare (sem produto)."
+ ]
+}
