@@ -23,5 +23,5 @@ CAPITULOS = {
     14: {"nome": "Quinelato", "ini": 172, "fim": 182},
     15: {"nome": "Mangueiras Valman", "ini": 183, "fim": 190},
     16: {"nome": "Mangueiras e Conexões", "ini": 191, "fim": 202},
-    17: {"nome": "Parafusos e Porcas", "ini": 203, "fim": 240},
+    17: {"nome": "Parafusos e Porcas", "ini": 203, "fim": 241},
 }

@@ -1,4 +1,4 @@
-# Capítulo 17 - Parafusos e Porcas (págs. 203-240)
+# Capítulo 17 - Parafusos e Porcas (págs. 203-241)
 import json
 import os
 import re
@@ -498,16 +498,6 @@ fix(240, "7901404", foto_spec={"rect": [29, 99, 309, 244]})
 grupo(240, ["7916269", "7916300"], "PF CENTRO CDA 16MM ESP 10.9", [45, 283, 250, 422])
 NOTAS.append("Pág. 240: a parte de baixo da página tem molduras vazias (sem produtos).")
 
-# ---- fechamento: caixinha de acessório (arruela/porca) cujo código também está numa lista agrupada -> vira só referência
-#      de página dessa lista (sem foto própria), para não repetir o produto na planilha
-_EM_GRUPO = {}
-for _r in ADD:
-    if _r.get("_titulo"):
-        _EM_GRUPO.setdefault((_r["pagina"], _r["_titulo"]), []).append(_r["codigo"])
-_EM_GRUPO = {c for v in _EM_GRUPO.values() if len(v) > 1 for c in v}
-for _r in ADD:
-    if _r.get("_nao_agrupar") and not _r.get("_titulo") and _r["codigo"] in _EM_GRUPO:
-        _r["foto_spec"] = None
 
 # duplicatas e fotos finais
 fix(215, "3682215", _nao_agrupar=True, foto_spec=None)
@@ -523,3 +513,32 @@ fix(216, "2741645", foto_spec={"rect": [443, 700, 552, 793]})
 fix(229, "0828250", foto_spec={"rect": [45, 427, 186, 482]})
 fix(231, "1290351", foto_spec={"rect": [42, 249, 189, 350]})
 NOTAS.append("Pág. 206: o card ao lado dos parafusos Volare é só uma ilustração do ônibus Volare (sem produto).")
+
+# 241 - parafuso de centro aço
+tabela(241, gap_primeiro=130)
+grupo(241, ["7991606", "7991607", "7991608", "7991609", "7991601", "79916012", "79916014"], "PF CENTRO ACO CARRETA - 9/16",
+      [60, 158, 515, 327])
+grupo(241, ["795806", "795809", "795814"], "PF CENTRO ACO CB - 5/8 ACO UNF", [60, 158, 515, 327])
+grupo(241, ["791006", "791007", "791080"], "PF CENTRO ACO CB - 10MM", [60, 158, 515, 327])
+grupo(241, ["791260", "791270", "791280", "791211", "790012", "791200"], "PF CENTRO ACO CB - 12MM", [60, 158, 515, 327])
+grupo(241, ["791807", "791811"], "PF CENTRO ACO CB - 18MM", [60, 158, 515, 327])
+fix(241, "791004", foto_spec={"rect": [70, 665, 515, 745]})
+
+
+# ---- fechamento: caixinha de acessório (arruela/porca) cujo código também está numa lista agrupada -> vira só referência
+#      de página dessa lista (sem foto própria), para não repetir o produto na planilha
+def _fechamento():
+    em_grupo = {}
+    for r in ADD:
+        if r.get("_titulo"):
+            em_grupo.setdefault((r["pagina"], r["_titulo"]), []).append(r["codigo"])
+    em_grupo = {c for v in em_grupo.values() if len(v) > 1 for c in v}
+    for r in ADD:
+        if r.get("_nao_agrupar") and not r.get("_titulo") and r["codigo"] in em_grupo:
+            r["foto_spec"] = None
+
+
+_fechamento()
+for _c in ("3171215", "3330916"):
+    fix(241, _c, _titulo="", _nao_agrupar=True, foto_spec=None)
+NOTAS.append("Pág. 241: 795806, 795809 e 795814 também aparecem na pág. 239 (PF CENTRO CB 5/8 ACO UNF).")
