@@ -26,4 +26,5 @@ CAPITULOS = {
     17: {"nome": "Parafusos e Porcas", "ini": 203, "fim": 241},
     18: {"nome": "Grampos", "ini": 242, "fim": 248},
     19: {"nome": "Equipamentos de Solda", "ini": 249, "fim": 251},
+    20: {"nome": "Pinos e Buchas", "ini": 252, "fim": 264},
 }
