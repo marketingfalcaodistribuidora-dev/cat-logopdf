@@ -24,4 +24,5 @@ CAPITULOS = {
     15: {"nome": "Mangueiras Valman", "ini": 183, "fim": 190},
     16: {"nome": "Mangueiras e Conexões", "ini": 191, "fim": 202},
     17: {"nome": "Parafusos e Porcas", "ini": 203, "fim": 241},
+    18: {"nome": "Grampos", "ini": 242, "fim": 248},
 }

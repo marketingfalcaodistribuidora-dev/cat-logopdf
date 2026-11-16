@@ -17,6 +17,9 @@ from capitulos import PDF, WORK  # noqa: E402
 CODE = re.compile(r"^\d{5,12}$")
 
 
+_CIRIL = str.maketrans("хХвВаАеЕоОсСрРтТмМнНк", "xXBBaAeEoOcCpPTTMMHHk")  # letras cirílicas parecidas usadas no PDF
+
+
 def _spans(p):
     raw = json.load(open(os.path.join(WORK, "raw", f"p{p:03d}.json"), encoding="utf-8"))
     vistos, out, imgs = set(), [], []
@@ -26,7 +29,7 @@ def _spans(p):
                 k = (s["t"], round(s["x"]), round(s["y"]))
                 if s["t"].strip() and k not in vistos:
                     vistos.add(k)
-                    out.append(dict(s, t=s["t"].strip()))
+                    out.append(dict(s, t=s["t"].strip().translate(_CIRIL)))
         for i in c["images"]:
             b = tuple(round(v, 1) for v in i["bbox"])
             if b not in [tuple(x) for x in imgs]:
