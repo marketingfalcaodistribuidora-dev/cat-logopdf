@@ -28,4 +28,5 @@ CAPITULOS = {
     19: {"nome": "Equipamentos de Solda", "ini": 249, "fim": 251},
     20: {"nome": "Pinos e Buchas", "ini": 252, "fim": 264},
     21: {"nome": "Quinta Roda e Coxim", "ini": 265, "fim": 289},
+    22: {"nome": "Itens IABV", "ini": 290, "fim": 314},
 }
