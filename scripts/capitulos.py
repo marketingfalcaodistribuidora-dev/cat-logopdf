@@ -30,4 +30,5 @@ CAPITULOS = {
     21: {"nome": "Quinta Roda e Coxim", "ini": 265, "fim": 289},
     22: {"nome": "Itens IABV", "ini": 290, "fim": 314},
     23: {"nome": "Balanças, Suportes e Pinos", "ini": 315, "fim": 341},
+    24: {"nome": "Lançamentos - Suportes de Mola", "ini": 342, "fim": 347},
 }
