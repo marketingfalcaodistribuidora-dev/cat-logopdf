@@ -1,0 +1,12 @@
+{
+ "capitulo": "Elétrica - Terminais, Chicotes e Fios",
+ "cap_num": 33,
+ "notas": [
+  "Pág. 402: o número no canto de cada terminal (7020 C, 7009, 7022 A...) é a referência do fabricante e está em similares.",
+  "Pág. 403: o código 5587061 aparece em dois cards (soquete 2 polos transversais com dados de soquete de painel, e MB soquete lâmpada painel isol); o ETE de cada soquete está em similares; 55904244 está impresso com 8 dígitos.",
+  "Pág. 405: o ETE de cada conector está em similares e a descrição técnica (texto miúdo do card) em informações.",
+  "Pág. 406: 5518426 traz o mesmo 'CÓD.: CX02.8541' do 5518541; 5517599, 5586731 e 5587743 também estão na pág. 405; 5587743 e 5517743 trazem o mesmo CÓD. CX02.7743; a aplicação do 5587687 diz 'Volvo FH460/FH500/FH540 (1958 à 2015)'.",
+  "Pág. 407: o código DNI de cada sirene (DNI4001...) está em similares; a sirene DNI4127 tem código 5594027.",
+  "Pág. 408: 55921100 e 55921510 (fios bicolor) estão impressos com 8 dígitos; o fio 4,0 azul (5994100) aparece com foto de rolo branco."
+ ]
+}

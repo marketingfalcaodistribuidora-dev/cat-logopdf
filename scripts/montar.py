@@ -37,6 +37,8 @@ def safe_name(s, maxlen=120):
     s = unicodedata.normalize("NFC", s)
     s = re.sub(r'[\\/:*?"<>|]+', "-", s)
     s = re.sub(r"\s+", " ", s).strip().strip(".")
+    # nomes reservados do Windows (CON, PRN, AUX, NUL, COM1-9, LPT1-9) antes de "." ou fim: "CON. X" -> "CON X"
+    s = re.sub(r"^(CON|PRN|AUX|NUL|COM\d|LPT\d)(?=\.|$)\.?", r"\1 -", s, flags=re.I)
     return s[:maxlen].strip()
 
 
