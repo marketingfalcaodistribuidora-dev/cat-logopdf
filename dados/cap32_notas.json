@@ -1,0 +1,9 @@
+{
+ "capitulo": "Elétrica - Chaves, Alternadores e Partida",
+ "cap_num": 32,
+ "notas": [
+  "Págs. 400-401 (lançamentos ZM): o código ZM vai em similares junto das referências de outros fabricantes (Arielo, Bosch, Delco Remy, Prestolite, Mitsubishi, BZM, Zen, Lucas Indiel, WAI); a REF ORIG da montadora vai em referência.",
+  "Pág. 400: os códigos 1600040700 (relé auxiliar partida Ford FT8500) e 1690014820 (relé partida Ford 12V) estão impressos com 10 dígitos, diferente dos demais (9); foram mantidos como impressos.",
+  "Pág. 401: 160028180 (relé partida MB 24V) e 168581801 (impulsor partida 07 estrias) têm código impresso como imagem."
+ ]
+}

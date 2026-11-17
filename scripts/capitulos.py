@@ -38,4 +38,5 @@ CAPITULOS = {
     29: {"nome": "Peças Volkswagen e Ford", "ini": 386, "fim": 391},
     30: {"nome": "Peças Scania", "ini": 392, "fim": 395},
     31: {"nome": "Peças Volvo", "ini": 396, "fim": 398},
+    32: {"nome": "Elétrica - Chaves, Alternadores e Partida", "ini": 399, "fim": 401},
 }
