@@ -1,0 +1,15 @@
+{
+ "capitulo": "Molas",
+ "cap_num": 25,
+ "notas": [
+  "Págs. 350-367: em cada tabela de feixe só as lâminas com código Falcão (em vermelho) viraram produto; as demais linhas (referências Marchetti/R.Fama sem código) não têm código interno no catálogo.",
+  "Pág. 350: o código 491033005 está descrito como 'MOLA F MB 2A CENTRO TODOS EIXO' (mesma descrição do 491033002), com bitola 80X16 e medida 710X710.",
+  "Págs. 355-356: 491915601 aparece como lâmina SR-553.1 (Randon 11 ton.) e como SR-566.3 'MESMA 491915601' na tabela Randon/Suspensys 13 ton.",
+  "Pág. 358: o código 49144906 (lâmina FO-792.6 do Cargo 712/814/815/816) está impresso com 8 dígitos.",
+  "Págs. 359/361: os códigos 49144101, 49144102 e 49143702 estão impressos com 8 dígitos.",
+  "Pág. 362: os códigos 49100901, 49100902 e 49100903 (S-10) estão impressos com 8 dígitos; 491078631 e os códigos da Titan estão em verde (não vermelho).",
+  "Pág. 365: a metade de cima da página está vazia.",
+  "Pág. 366: 4910181 (feixe Uno/Prêmio, 7 dígitos), 49118101 (8 dígitos) e 4919110 (7 dígitos, lâmina Strada FIP-2101.2A) estão impressos com menos dígitos que o padrão.",
+  "Tipo: lâminas das páginas com cabeçalho 'PARABÓLICA' (360, 362-365) estão como MOLA PARABÓLICA; as demais como MOLA (LÂMINA) (convencional)."
+ ]
+}
