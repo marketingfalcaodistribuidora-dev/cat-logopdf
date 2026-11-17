@@ -34,4 +34,5 @@ CAPITULOS = {
     25: {"nome": "Molas", "ini": 348, "fim": 367},
     26: {"nome": "Para-lamas e Suportes", "ini": 368, "fim": 375},
     27: {"nome": "Acessórios e Ferragens Diversas", "ini": 376, "fim": 381},
+    28: {"nome": "Peças Mercedes-Benz", "ini": 382, "fim": 385},
 }
