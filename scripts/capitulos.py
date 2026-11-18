@@ -49,4 +49,5 @@ CAPITULOS = {
     40: {"nome": "Tacógrafo e Amarração de Carga", "ini": 462, "fim": 464},
     41: {"nome": "Peças Arla 32", "ini": 465, "fim": 472},
     42: {"nome": "Tampas de Tanque e Radiador, Antena, Registros e Cordas", "ini": 473, "fim": 477},
+    43: {"nome": "Fechaduras, Maçanetas e Acessórios de Cabine", "ini": 478, "fim": 483},
 }
