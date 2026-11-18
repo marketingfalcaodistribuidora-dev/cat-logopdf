@@ -42,4 +42,5 @@ CAPITULOS = {
     33: {"nome": "Elétrica - Terminais, Chicotes e Fios", "ini": 402, "fim": 409},
     34: {"nome": "Elétrica - Lâmpadas, LEDs e Lanternas", "ini": 410, "fim": 417},
     35: {"nome": "Faróis e Lanternas Pradolux", "ini": 418, "fim": 433},
+    36: {"nome": "Lanternas Traseiras e Acessórios", "ini": 434, "fim": 436},
 }
