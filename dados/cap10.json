@@ -2713,8 +2713,8 @@
  },
  {
   "codigo": "4890833",
-  "descricao": "ST833",
-  "tipo": "ST833",
+  "descricao": "ST833 CONTITECH 68650 MOLA PNEU C/SUP CX",
+  "tipo": "BOLSA SUSPENSÃO (MOLA PNEUMÁTICA)",
   "cod_ref": "308501702 / 8000-26 / CONTITECH 68650",
   "variacoes": "",
   "aplicacao": "",
@@ -2726,7 +2726,7 @@
   "pagina": "115",
   "card": 10,
   "ordem": 115500,
-  "foto": "Fotos Catálogo 2026/10 - Bolsas e Amortecedores Cabine/ST833 - 4890833.jpg"
+  "foto": "Fotos Catálogo 2026/10 - Bolsas e Amortecedores Cabine/ST833 CONTITECH 68650 MOLA PNEU C-SUP CX - 4890833.jpg"
  },
  {
   "codigo": "4890826",
@@ -2851,7 +2851,7 @@
  {
   "codigo": "4983530",
   "descricao": "ST353K FIRESTONE RANDON",
-  "tipo": "ST353K",
+  "tipo": "BOLSA SUSPENSÃO (MOLA PNEUMÁTICA)",
   "cod_ref": "100000176552",
   "variacoes": "",
   "aplicacao": "",
@@ -2867,12 +2867,12 @@
  },
  {
   "codigo": "4884000",
-  "descricao": "100000000312",
-  "tipo": "",
-  "cod_ref": "2210200094 / 9202304 / 100000042893 / 70000268008/AD001259J00",
+  "descricao": "ST4000 FIRESTONE 954029 FOLE PNEU CABINE 334 X 216 MM",
+  "tipo": "BOLSA CABINE (MOLA PNEUMÁTICA)",
+  "cod_ref": "2210200094 / 9202304 / 100000042893 / 70000268008/AD001259J00 / 100000000312",
   "variacoes": "",
   "aplicacao": "",
-  "info": "GOODYEAR: 8064 | St4000 | FIRESTONE | 954029 | FOLE PNEU 334 X 216 MM | CABINE | St4000",
+  "info": "GOODYEAR: 8064 | 6.13",
   "marca": "Firestone",
   "montadora": "",
   "capitulo": "Bolsas e Amortecedores Cabine",
@@ -2880,16 +2880,16 @@
   "pagina": "116",
   "card": 7,
   "ordem": 116350,
-  "foto": "Fotos Catálogo 2026/10 - Bolsas e Amortecedores Cabine/100000000312 - 4884000.jpg"
+  "foto": "Fotos Catálogo 2026/10 - Bolsas e Amortecedores Cabine/ST4000 FIRESTONE 954029 FOLE PNEU CABINE 334 X 216 MM - 4884000.jpg"
  },
  {
   "codigo": "4884001",
-  "descricao": "CABINE",
+  "descricao": "ST4001 FIRESTONE 980464 FOLE PNEU CABINE 380 X 226 MM",
   "tipo": "BOLSA CABINE (MOLA PNEUMÁTICA)",
   "cod_ref": "",
   "variacoes": "",
   "aplicacao": "",
-  "info": "St4001 | FIRESTONE | 980464 | FOLE PNEU | St4001 | 7.15",
+  "info": "7.15",
   "marca": "Firestone",
   "montadora": "",
   "capitulo": "Bolsas e Amortecedores Cabine",
@@ -2897,7 +2897,7 @@
   "pagina": "116",
   "card": 8,
   "ordem": 116400,
-  "foto": "Fotos Catálogo 2026/10 - Bolsas e Amortecedores Cabine/CABINE - 4884001.jpg"
+  "foto": "Fotos Catálogo 2026/10 - Bolsas e Amortecedores Cabine/ST4001 FIRESTONE 980464 FOLE PNEU CABINE 380 X 226 MM - 4884001.jpg"
  },
  {
   "codigo": "4880234",
@@ -2936,7 +2936,7 @@
  {
   "codigo": "4880232",
   "descricao": "ST232ES FIRESTONE 954143 CJ VOLVO PNEU TRAS",
-  "tipo": "ST232ES",
+  "tipo": "BOLSA CABINE (MOLA PNEUMÁTICA)",
   "cod_ref": "",
   "variacoes": "",
   "aplicacao": "",
