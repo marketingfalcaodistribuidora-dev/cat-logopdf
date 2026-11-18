@@ -66,4 +66,6 @@ CAPITULOS = {
     57: {"nome": "Soquetes de Impacto, Saca Filtros e Organização", "ini": 594, "fim": 603},
     58: {"nome": "Ferramentas Elétricas e Pneumáticas", "ini": 604, "fim": 613},
     59: {"nome": "Borracharia, Ar Comprimido e Compressores", "ini": 614, "fim": 623},
+    60: {"nome": "Macacos, Prensas e Equipamentos de Oficina", "ini": 624, "fim": 633},
+    61: {"nome": "Bombas, Carrinhos e Ferramentas Especiais", "ini": 634, "fim": 641},
 }
