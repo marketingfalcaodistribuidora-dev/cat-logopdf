@@ -64,4 +64,6 @@ CAPITULOS = {
     55: {"nome": "Ferramentas Manuais e Abrasivos", "ini": 569, "fim": 582},
     56: {"nome": "Ferramentas Gedore, MTX e Máquinas de Bancada", "ini": 583, "fim": 593},
     57: {"nome": "Soquetes de Impacto, Saca Filtros e Organização", "ini": 594, "fim": 603},
+    58: {"nome": "Ferramentas Elétricas e Pneumáticas", "ini": 604, "fim": 613},
+    59: {"nome": "Borracharia, Ar Comprimido e Compressores", "ini": 614, "fim": 623},
 }
