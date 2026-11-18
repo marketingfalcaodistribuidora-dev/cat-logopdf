@@ -60,4 +60,5 @@ CAPITULOS = {
     51: {"nome": "Reparos de Freio e Acessórios de Pneu", "ini": 543, "fim": 545},
     52: {"nome": "Adesivos, Silicones e Tintas Tekbond", "ini": 546, "fim": 551},
     53: {"nome": "Óleos, Graxas e Fluidos", "ini": 552, "fim": 557},
+    54: {"nome": "Aditivos e Químicos Automotivos", "ini": 558, "fim": 568},
 }
