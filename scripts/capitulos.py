@@ -61,4 +61,5 @@ CAPITULOS = {
     52: {"nome": "Adesivos, Silicones e Tintas Tekbond", "ini": 546, "fim": 551},
     53: {"nome": "Óleos, Graxas e Fluidos", "ini": 552, "fim": 557},
     54: {"nome": "Aditivos e Químicos Automotivos", "ini": 558, "fim": 568},
+    55: {"nome": "Ferramentas Manuais e Abrasivos", "ini": 569, "fim": 582},
 }
