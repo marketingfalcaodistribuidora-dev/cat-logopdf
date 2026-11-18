@@ -44,4 +44,5 @@ CAPITULOS = {
     35: {"nome": "Faróis e Lanternas Pradolux", "ini": 418, "fim": 433},
     36: {"nome": "Lanternas Traseiras e Acessórios", "ini": 434, "fim": 436},
     37: {"nome": "Antifurto, Palhetas e Limpador", "ini": 437, "fim": 442},
+    38: {"nome": "Buzinas e Mangueiras de Limpeza", "ini": 443, "fim": 447},
 }
