@@ -63,4 +63,5 @@ CAPITULOS = {
     54: {"nome": "Aditivos e Químicos Automotivos", "ini": 558, "fim": 568},
     55: {"nome": "Ferramentas Manuais e Abrasivos", "ini": 569, "fim": 582},
     56: {"nome": "Ferramentas Gedore, MTX e Máquinas de Bancada", "ini": 583, "fim": 593},
+    57: {"nome": "Soquetes de Impacto, Saca Filtros e Organização", "ini": 594, "fim": 603},
 }
