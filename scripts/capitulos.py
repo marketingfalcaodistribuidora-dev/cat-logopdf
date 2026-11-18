@@ -45,4 +45,5 @@ CAPITULOS = {
     36: {"nome": "Lanternas Traseiras e Acessórios", "ini": 434, "fim": 436},
     37: {"nome": "Antifurto, Palhetas e Limpador", "ini": 437, "fim": 442},
     38: {"nome": "Buzinas e Mangueiras de Limpeza", "ini": 443, "fim": 447},
+    39: {"nome": "Acessórios Cromados e Componentes Nicolini", "ini": 448, "fim": 461},
 }
