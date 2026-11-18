@@ -53,4 +53,5 @@ CAPITULOS = {
     44: {"nome": "Conexões Pneumáticas", "ini": 484, "fim": 497},
     45: {"nome": "Abraçadeiras", "ini": 498, "fim": 506},
     46: {"nome": "Pinos, Prisioneiros, Parafusos, Tuchos e Machos", "ini": 507, "fim": 512},
+    47: {"nome": "Terminais, Fusíveis e Anéis O-Ring", "ini": 513, "fim": 516},
 }
