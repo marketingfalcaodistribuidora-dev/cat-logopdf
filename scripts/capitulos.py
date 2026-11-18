@@ -56,4 +56,6 @@ CAPITULOS = {
     47: {"nome": "Terminais, Fusíveis e Anéis O-Ring", "ini": 513, "fim": 516},
     48: {"nome": "Bujões de Cárter e Câmbio", "ini": 517, "fim": 523},
     49: {"nome": "Ferragens, Fitas e Parafusos para Móveis", "ini": 524, "fim": 530},
+    50: {"nome": "Parafusos e Porcas de Roda", "ini": 531, "fim": 542},
+    51: {"nome": "Reparos de Freio e Acessórios de Pneu", "ini": 543, "fim": 545},
 }
