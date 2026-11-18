@@ -51,4 +51,5 @@ CAPITULOS = {
     42: {"nome": "Tampas de Tanque e Radiador, Antena, Registros e Cordas", "ini": 473, "fim": 477},
     43: {"nome": "Fechaduras, Maçanetas e Acessórios de Cabine", "ini": 478, "fim": 483},
     44: {"nome": "Conexões Pneumáticas", "ini": 484, "fim": 497},
+    45: {"nome": "Abraçadeiras", "ini": 498, "fim": 506},
 }
