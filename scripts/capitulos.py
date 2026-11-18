@@ -40,4 +40,5 @@ CAPITULOS = {
     31: {"nome": "Peças Volvo", "ini": 396, "fim": 398},
     32: {"nome": "Elétrica - Chaves, Alternadores e Partida", "ini": 399, "fim": 401},
     33: {"nome": "Elétrica - Terminais, Chicotes e Fios", "ini": 402, "fim": 409},
+    34: {"nome": "Elétrica - Lâmpadas, LEDs e Lanternas", "ini": 410, "fim": 417},
 }

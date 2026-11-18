@@ -1,0 +1,12 @@
+{
+ "capitulo": "Elétrica - Lâmpadas, LEDs e Lanternas",
+ "cap_num": 34,
+ "notas": [
+  "Pág. 410: o card LED Small mostra também a base H8, sem código próprio.",
+  "Pág. 411: 7340038 está no card 'TORPEDO GRA 24V' mas a descrição diz 'LAMPADA 14V TORPEDO GRD 44MM'.",
+  "Pág. 412: o código 7340036 aparece em dois cards (lâmpada 24V H7 100W e lâmpada 24V H7 70W imp. Teslla).",
+  "Pág. 414: o código 5514407 aparece em dois cards (farol redondo 7\" H4 angel eye e LED farol redondo 7\" H4 angel).",
+  "Pág. 415: nos giroleds premium a cor está só na linha 'COR ...' do card (âmbar, vermelho, azul) e foi acrescentada à descrição.",
+  "Pág. 416: 7061056 e 7061053 têm a mesma descrição impressa (SUP. LANTERNA 03 MARIA), com suportes de formato diferente na foto."
+ ]
+}
