@@ -55,4 +55,5 @@ CAPITULOS = {
     46: {"nome": "Pinos, Prisioneiros, Parafusos, Tuchos e Machos", "ini": 507, "fim": 512},
     47: {"nome": "Terminais, Fusíveis e Anéis O-Ring", "ini": 513, "fim": 516},
     48: {"nome": "Bujões de Cárter e Câmbio", "ini": 517, "fim": 523},
+    49: {"nome": "Ferragens, Fitas e Parafusos para Móveis", "ini": 524, "fim": 530},
 }
