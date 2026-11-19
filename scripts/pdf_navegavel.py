@@ -30,7 +30,8 @@ def main(entrada, saida):
         """Converte a página do catálogo (0 = capa) na página do PDF."""
         return (n + 1) // 2 if em_duplas else n
 
-    destinos = {"%d. %s" % (c["num"], c["nome"]): c["pagina"] - 1 for c in plano["capitulos"]}
+    # o link abre a primeira página de produtos, logo depois da capa do capítulo
+    destinos = {"%d. %s" % (c["num"], c["nome"]): c["pagina"] for c in plano["capitulos"]}
     links = 0
     for n in range(2, 2 + plano["indice"]):
         ops = json.load(open(os.path.join(DADOS, "paginas", "%05d.json" % n), encoding="ascii"))["ops"]

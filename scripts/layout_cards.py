@@ -251,18 +251,23 @@ def cards_de(p):
 
 
 def abertura(cap, x0):
+    """Capa do capítulo: faixa amarela em diagonal, nome grande centralizado e logo no rodapé."""
     nome = cap["nome"]
-    pt, n = 44, 1
-    for pt in (44, 38, 32, 26):
-        n = linhas(nome, "bi", pt, 2196)
-        if n * pt * PX * 1.2 <= 500:
+    pt, n = 120, 1
+    for pt in (120, 110, 100, 90, 80, 72, 64, 58, 52, 46, 40):
+        n = linhas(nome, "bi", pt, 1960)
+        palavra_cabe = max(larg(w, "bi", pt) for w in nome.split()) <= 1960  # nunca quebrar no meio da palavra
+        if palavra_cabe and n <= 3 and n * pt * PX * 1.15 <= 1150:
             break
-    alt = n * pt * PX * 1.2
-    y = 2870 - alt
-    return [r(x0, 0, 2480, 3508, AM, "Abertura fundo"),
-            ["p", [[x0, 2350], [x0 + 2480, 1434], [x0 + 2480, 3508], [x0, 3508]], PR, "Abertura diagonal"],
-            ["h", round(x0 + 142), round(y), 2196, round(alt + 20), [[[nome, "bi", pt, AM]]], "Capítulo: " + nome, "r"],
-            r(x0 + 1538, 2890, 800, 12, AM, "Abertura filete")]
+    alt = n * pt * PX * 1.15
+    y = 2230 - alt / 2
+    return [r(x0, 0, 2480, 3508, PR, "Abertura fundo"),
+            ["p", [[x0, 0], [x0 + 2480, 0], [x0 + 2480, 820], [x0, 1420]], AM, "Abertura diagonal"],
+            ["p", [[x0, 1520], [x0 + 2480, 920], [x0 + 2480, 962], [x0, 1562]], AM, "Abertura faixa"],
+            t(x0 + 142, y - 330, 2196, 260, [[["//", "bi", 60, AM]]], "Abertura marca", "c"),
+            ["h", round(x0 + 142), round(y), 2196, round(alt + 40), [[[nome, "bi", pt, BR]]], "Capítulo: " + nome, "c"],
+            r(x0 + 980, y + alt + 90, 520, 18, AM, "Abertura filete"),
+            ["logo", x0 + 852, 3090]]
 
 
 def arte_final(x0, nome):
